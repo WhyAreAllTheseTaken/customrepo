@@ -5,7 +5,7 @@ nvim-linux64.deb:
 	cp neovim/build/nvim-linux64.deb .
 
 PACKER_VERSION = 1.0
-PACKER_REVISION = 1
+PACKER_REVISION = 2
 PACKER_PACKAGE = packer-nvim_$(PACKER_VERSION)-$(PACKER_REVISION)
 
 $(PACKER_PACKAGE).deb:
