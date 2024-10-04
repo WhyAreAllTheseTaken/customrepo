@@ -1,12 +1,10 @@
 Package: custom-repo
-Version: 0.2.2-1
+Version: 0.2.2-2
 Architecture: amd64
 Section: misc
 Priority: optional
 Description: A custom updater system.
-Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ninja-build, gettext, cmake, libstdc++6, git, sudo, build-essential, gcc, curl, patch, wget, tar,
-    autoconf, pkg-config, libpam0g-dev, libcairo2-dev, libfontconfig1-dev, libxcb-composite0-dev, libev-dev, libx11-xcb-dev, libxcb-xkb-dev, libxcb-xinerama0-dev, libxcb-randr0-dev,
-    libxcb-image0-dev, libxcb-util0-dev, libxcb-xrm-dev, libxkbcommon-dev, libxkbcommon-x11-dev, libjpeg-dev
+Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ninja-build, gettext, cmake, libstdc++6, git, sudo
 Pre-Depends: bash
 Maintainer: WhyAreAllTheseTaken
 
