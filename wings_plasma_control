@@ -1,0 +1,9 @@
+Package: wings-plasma-themes
+Version: 0.0.0-1
+Architecture: amd64
+Section: x11
+Priority: optional
+Description: Wings Themes For Plasma Desktop
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://github.com/L4ki/Wings-Plasma-Themes
+
