@@ -3,6 +3,7 @@ nvim-linux64.deb:
 	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 	cd neovim && cd build && cpack -G DEB
 	cp neovim/build/nvim-linux64.deb .
+	rm -rf neovim
 
 PACKER_VERSION = 1.0
 PACKER_REVISION = 2
@@ -13,4 +14,5 @@ $(PACKER_PACKAGE).deb:
 	mkdir -p $(PACKER_PACKAGE)/DEBIAN
 	cp packer_control $(PACKER_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(PACKER_PACKAGE)
+	rm -rf $(PACKER_PACKAGE) 
 

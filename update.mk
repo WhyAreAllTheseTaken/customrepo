@@ -20,4 +20,5 @@ $(UPDATER_PACKAGE).deb:
 	cp update_postrm.sh $(UPDATER_PACKAGE)/DEBIAN/postrm
 	chmod +x $(UPDATER_PACKAGE)/DEBIAN/postrm
 	dpkg-deb --build $(UPDATER_PACKAGE)
+	rm -rf $(UPDATER_PACKAGE)
 

@@ -13,4 +13,6 @@ $(CPMV_PACKAGE).deb:
 	cp ./advcpmv_control $(CPMV_PATH)/DEBIAN/control
 	dpkg-deb --build $(CPMV_PATH)
 	cp advcpmv/$(CPMV_PACKAGE).deb .
+	rm -rf advcpmv
+	rm -rf $(CPMV_PATH)
 

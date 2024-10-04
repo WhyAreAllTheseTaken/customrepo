@@ -12,4 +12,6 @@ $(WINGS_PLASMA_PACKAGE).deb:
 	mkdir -p $(WINGS_PLASMA_PACKAGE)/DEBIAN
 	cp wings_plasma_control $(WINGS_PLASMA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WINGS_PLASMA_PACKAGE)
+	rm -rf Wings-Plasma-Themes
+	rm -rf $(WINGS_PLASMA_PACKAGE)
 

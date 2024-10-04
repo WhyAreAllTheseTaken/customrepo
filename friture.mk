@@ -15,4 +15,7 @@ $(FRITURE_PACKAGE).deb:
 	cp friture_postinst.sh $(FRITURE_PACKAGE)/DEBIAN/postinst
 	chmod +x $(FRITURE_PACKAGE)/DEBIAN/postinst
 	dpkg-deb --build $(FRITURE_PACKAGE)
+	rm -rf friture
+	rm -rf $(FRITURE_PACKAGE)
+
 

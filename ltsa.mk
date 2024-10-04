@@ -14,4 +14,6 @@ $(LTSA_PACKAGE).deb:
 	mkdir -p $(LTSA_PACKAGE)/DEBIAN
 	cp ltsa_control $(LTSA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(LTSA_PACKAGE)
+	rm -rf ltsatool
+	rm -rf $(LTSA_PACKAGE)
 

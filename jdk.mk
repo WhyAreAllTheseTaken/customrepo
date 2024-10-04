@@ -13,4 +13,6 @@ $(JDK_PACKAGE).deb:
 	cp jdk_prerm.sh $(JDK_PACKAGE)/DEBIAN/prerm
 	chmod +x $(JDK_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(JDK_PACKAGE)
+	rm -rf openjdk-$(JDK_VERSION).tar.gz
+	rm -rf $(JDK_PACKAGE)
 

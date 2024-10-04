@@ -10,4 +10,7 @@ $(I3_BLOCKS_PACKAGE).deb:
 	mkdir -p $(I3_BLOCKS_PACKAGE)/DEBIAN
 	cp i3_blocks_control $(I3_BLOCKS_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(I3_BLOCKS_PACKAGE)
+	rm -rf i3blocks-contrib
+	rm -rf $(I3_BLOCKS_PACKAGE)
+
 
