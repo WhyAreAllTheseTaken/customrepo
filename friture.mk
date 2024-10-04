@@ -1,5 +1,5 @@
 FRITURE_VERSION = 0.49
-FRITURE_REVISION = 1
+FRITURE_REVISION = 2
 FRITURE_PACKAGE = friture_$(FRITURE_VERSION)-$(FRITURE_REVISION)
 
 $(FRITURE_PACKAGE).deb:
@@ -14,6 +14,8 @@ $(FRITURE_PACKAGE).deb:
 	cp friture_control $(FRITURE_PACKAGE)/DEBIAN/control
 	cp friture_postinst.sh $(FRITURE_PACKAGE)/DEBIAN/postinst
 	chmod +x $(FRITURE_PACKAGE)/DEBIAN/postinst
+	cp friture_postrm.sh $(FRITURE_PACKAGE)/DEBIAN/postrm
+	chmod +x $(FRITURE_PACKAGE)/DEBIAN/postrm
 	dpkg-deb --build $(FRITURE_PACKAGE)
 	rm -rf friture
 	rm -rf $(FRITURE_PACKAGE)
