@@ -2,7 +2,7 @@ advcpmv
 *.deb
 *.zip
 openjdk_23-*
-ltsa_3.0-*
-packer-nvim_1.0-*
-custom-repo_0.*
-
+ltsa_3*
+packer-nvim_*
+custom-repo_0*
+friture_0*
