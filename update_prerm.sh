@@ -1,3 +1,7 @@
 #!/usr/bin/bash
-rm -rv /usr/customrepo
+
+if [ $1 = "remove" ]; then
+    echo "Removing custom repo..."
+    rm -rf /usr/customrepo
+fi
 

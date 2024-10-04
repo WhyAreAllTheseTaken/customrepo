@@ -1,4 +1,7 @@
 #!/usr/bin/bash
 
-userdel customrepo
+if [ $1 = "remove" ]; then
+    echo "Removing custom repo user..."
+    userdel customrepo
+fi
 
