@@ -1,5 +1,5 @@
 FRITURE_VERSION = 0.51
-FRITURE_REVISION = 2
+FRITURE_REVISION = 3
 FRITURE_PACKAGE = friture_$(FRITURE_VERSION)-$(FRITURE_REVISION)
 
 $(FRITURE_PACKAGE).deb:
@@ -7,6 +7,7 @@ $(FRITURE_PACKAGE).deb:
 	git clone --depth 1 --branch v0.51 https://github.com/tlecomte/friture.git
 	mkdir -p $(FRITURE_PACKAGE)/usr/share/friture
 	cp -rv ./friture/* $(FRITURE_PACKAGE)/usr/share/friture
+	cp friture_requirements.txt $(FRITURE_PACKAGE)/usr/share/friture/requirements.txt
 	mkdir -p $(FRITURE_PACKAGE)/usr/bin/
 	cp friture.sh $(FRITURE_PACKAGE)/usr/bin/friture
 	chmod +x $(FRITURE_PACKAGE)/usr/bin/friture

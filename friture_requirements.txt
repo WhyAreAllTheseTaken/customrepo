@@ -1,0 +1,8 @@
+sounddevice==0.4.5
+rtmixer==0.1.4
+docutils==0.21.2
+numpy==2.0.1
+PyQt5==5.15.10
+appdirs==1.4.4
+pyrr==0.10.3
+
