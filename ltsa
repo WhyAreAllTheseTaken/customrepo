@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
-java -Xmx2G -jar /usr/local/share/ltsatool/ltsa.jar
+java -Xmx2G -jar /usr/share/ltsatool/ltsa.jar
+
