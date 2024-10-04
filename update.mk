@@ -6,7 +6,7 @@ $(UPDATER_PACKAGE).deb:
 	rm -rfv $(UPDATER_PACKAGE)
 	mkdir -p $(UPDATER_PACKAGE)/usr/
 	mkdir -p $(UPDATER_PACKAGE)/usr/sbin/
-	mkdir -p $(UPDATER_PACKAGE)/etc/apt/source.list.d/
+	mkdir -p $(UPDATER_PACKAGE)/etc/apt/sources.list.d/
 	cp ./custom_repo_build.sh $(UPDATER_PACKAGE)/usr/sbin/custom_repo_build
 	chmod +x $(UPDATER_PACKAGE)/usr/sbin/custom_repo_build
 	cp ./custom_repo.list $(UPDATER_PACKAGE)/etc/apt/sources.list.d/
