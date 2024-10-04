@@ -4,7 +4,7 @@ I3LOCK_COLOR_PACKAGE = i3lock-color_$(I3LOCK_COLOR_VERSION)-$(I3LOCK_COLOR_REVIS
 I3LOCK_COLOR_PACKAGE_REAL = $(realpath ./$(I3LOCK_COLOR_PACKAGE))
 
 $(I3LOCK_COLOR_PACKAGE).deb:
-	rm -rf nnn
+	rm -rf i3lock-color
 	git clone --depth 1 --branch $(I3LOCK_COLOR_VERSION) https://github.com/Raymo111/i3lock-color.git
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/etc
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/usr
@@ -16,6 +16,6 @@ $(I3LOCK_COLOR_PACKAGE).deb:
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/DEBIAN
 	cp i3lock-color_control $(I3LOCK_COLOR_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(I3LOCK_COLOR_PACKAGE)
-	rm -rf nnn
+	rm -rf i3lock-color
 	rm -rf $(I3LOCK_COLOR_PACKAGE)
 
