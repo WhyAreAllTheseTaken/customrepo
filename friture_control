@@ -1,5 +1,5 @@
 Package: friture
-Version: 0.49-2
+Version: 0.51-1
 Architecture: amd64
 Section: sound
 Priority: optional
@@ -7,6 +7,6 @@ Description: Friture is an application to visualize and analyze live audio data 
     Friture displays audio data in several widgets, such as a scope, a spectrum analyzer, or a rolling 2D spectrogram.
     This program can be useful to analyze and equalize the audio response of a hall, or for educational purposes, etc.
     The name Friture is a french word for frying, also used for noise in a sound..
-Pre-Depends: bash, python3.11-dev, virtualenv, libportaudio2
+Pre-Depends: bash, python3.11-dev, virtualenv, libportaudio2, python3-setuptools
 Maintainer: WhyAreAllTheseTaken
 
