@@ -10,5 +10,7 @@ Description: i3lock is a simple screen locker like slock. After starting it, you
     convert image.jpg -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
     You can specify whether i3lock should bell upon a wrong password.
     i3lock uses PAM and therefore is compatible with LDAP etc. On OpenBSD, i3lock uses the bsd_auth(3) framework.
+Depends: libpam0g, libcairo2, libfontconfig1, libxcb-composite0, libev, libx11-xcb, libxcb-xkb, libxcb-xinerama0, libxcb-randr0,
+    libxcb-image0, libxcb-util0, libxcb-xrm, libxkbcommon, libxkbcommon-x11, libjpeg
 Maintainer: WhyAreAllTheseTaken
 
