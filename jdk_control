@@ -1,0 +1,8 @@
+Package: openjdk-23
+Version: 23-1
+Architecture: amd64
+Section: java
+Priority: optional
+Description: OpenJDK 23 backported to Debian Bookworm.
+Maintainer: tomasjoshea@gmail.com
+

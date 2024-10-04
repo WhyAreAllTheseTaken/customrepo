@@ -1,0 +1,10 @@
+Package: ltsa
+Version: 3.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Description: Labelled Transition System Analyser.
+Maintainer: tomasjoshea@gmail.com
+Depends: openjdk-23, bash
+Homepage: https://www.doc.ic.ac.uk/ltsa/
+

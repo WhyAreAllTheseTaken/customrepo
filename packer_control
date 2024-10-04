@@ -1,0 +1,10 @@
+Package: packer-nvim
+Version: 1.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Description: A plugin for neovim that provides plugin management.
+Maintainer: tomasjoshea@gmail.com
+Depends: neovim (>=0.5.0), npm, python3, nodejs, luarocks
+Homepage: https://github.com/wbthomason/packer.nvim
+
