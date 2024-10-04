@@ -1,0 +1,10 @@
+Package: nnn-plugins
+Version: 4.7-1
+Architecture: amd64
+Section: x11
+Priority: optional
+Description: This package contains all default plugins for nnn.
+Depends: nnn (>=4.7)
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://github.com/jarun/nnn/tree/v4.7/plugins
+
