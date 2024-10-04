@@ -15,5 +15,5 @@ install:
 
 packages: $(CPMV_PACKAGE).deb $(JDK_PACKAGE).deb $(LTSA_PACKAGE).deb nvim-linux64.deb $(PACKER_PACKAGE).deb \
 	$(UPDATER_PACKAGE).deb $(FRITURE_PACKAGE).deb $(I3_BLOCKS_PACKAGE).deb $(WINGS_PLASMA_PACKAGE).deb \
-	$(NNN_PLUGS_PACKAGE).deb
+	$(NNN_PLUGS_PACKAGE).deb $(I3LOCK_COLOR_PACKAGE).deb
 
