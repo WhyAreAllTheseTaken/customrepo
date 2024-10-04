@@ -4,6 +4,7 @@ LTSA_PACKAGE = ltsa_$(LTSA_VERSION)-$(LTSA_REVISION)
 
 $(LTSA_PACKAGE).deb:
 	wget --show-progress -O ltsatool.zip https://www.doc.ic.ac.uk/~jnm/book/ltsa/ltsatool.zip
+	rm -rfv ltsatool
 	unzip ltsatool.zip
 	mkdir -p $(LTSA_PACKAGE)/usr/share/
 	mkdir -p $(LTSA_PACKAGE)/usr/bin/
