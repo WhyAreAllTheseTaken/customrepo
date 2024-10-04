@@ -4,7 +4,7 @@ I3LOCK_COLOR_PACKAGE = i3lock-color_$(I3LOCK_COLOR_VERSION)-$(I3LOCK_COLOR_REVIS
 
 $(I3LOCK_COLOR_PACKAGE).deb:
 	rm -rf nnn
-	git clone --depth 1 --branch v$(I3LOCK_COLOR_VERSION) https://github.com/Raymo111/i3lock-color.git
+	git clone --depth 1 --branch $(I3LOCK_COLOR_VERSION) https://github.com/Raymo111/i3lock-color.git
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/etc
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/usr
 	cd i3lock-color && autoreconf -fiv
