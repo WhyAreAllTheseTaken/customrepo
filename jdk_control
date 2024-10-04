@@ -1,9 +1,9 @@
-Package: openjdk-23
-Version: 23-4
+Package: openjdk-latest-23
+Version: 23-5
 Architecture: amd64
 Section: java
 Priority: optional
-Description: OpenJDK 23 backported to Debian Bookworm.
+Description: The latest version of OpenJDK backported to Debian Bookworm.
 Pre-Depends: bash
 Maintainer: WhyAreAllTheseTaken
 
