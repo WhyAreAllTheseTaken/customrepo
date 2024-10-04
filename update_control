@@ -4,7 +4,6 @@ Architecture: amd64
 Section: misc
 Priority: optional
 Description: A custom updater system.
-Maintainer: tomasjoshea@gmail.com
 Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ninja-build, gettext, cmake, libstdc++6, git, sudo
 Pre-Depends: bash
 
