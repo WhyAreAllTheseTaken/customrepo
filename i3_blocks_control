@@ -1,0 +1,9 @@
+Package: i3blocks-contrib
+Version: 2.0.0-1
+Architecture: amd64
+Section: x11
+Priority: optional
+Description: This repository contains a set of scripts (a.k.a. blocklets) for i3blocks, contributed by the community.
+Depends: i3blocks
+Maintainer: WhyAreAllTheseTaken
+
