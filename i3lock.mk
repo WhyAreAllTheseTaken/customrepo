@@ -10,7 +10,7 @@ $(I3LOCK_COLOR_PACKAGE).deb:
 	cd i3lock-color/build && ../configure --prefix=/usr --sysconfdir=/etc
 	cd i3lock-color/build && make
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
-	cp i3lock-color/* $(IRLOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
+	cp i3lock-color/* $(I3LOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/DEBIAN
 	cp i3lock-color_control $(I3LOCK_COLOR_PACKAGE)/DEBIAN/control
 	cp i3lock-color_postinst.sh $(I3LOCK_COLOR_PACKAGE)/DEBIAN/postinst
