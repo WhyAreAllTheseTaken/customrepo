@@ -9,6 +9,8 @@ $(JDK_PACKAGE).deb:
 	mkdir -p $(JDK_PACKAGE)/DEBIAN
 	cp jdk_control $(JDK_PACKAGE)/DEBIAN/control
 	cp jdk_postinst.sh $(JDK_PACKAGE)/DEBIAN/postinst
+	chmod +x $(JDK_PACKAGE)/DEBIAN/postinst
 	cp jdk_prerm.sh $(JDK_PACKAGE)/DEBIAN/prerm
+	chmod +x $(JDK_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(JDK_PACKAGE)
 

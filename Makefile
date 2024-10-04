@@ -1,4 +1,6 @@
-.PHONY: packages repo install
+.PHONY: build packages repo install
+
+build: updater
 
 repo: packages
 	mkdir -p repo
@@ -6,8 +8,10 @@ repo: packages
 
 include *.mk
 
-install: $(UPDATER_PACKAGE).deb
-	apt install $(UPDATER_PACKAGE).deb
+updater: $(UPDATER_PACKAGE).deb
+
+install:
+	apt install ./$(UPDATER_PACKAGE).deb
 
 packages: $(CPMV_PACKAGE).deb $(JDK_PACKAGE).deb $(LTSA_PACKAGE).deb nvim-linux64.deb $(PACKER_PACKAGE).deb $(UPDATER_PACKAGE).deb
 
