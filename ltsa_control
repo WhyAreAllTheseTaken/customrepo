@@ -1,10 +1,10 @@
 Package: ltsa
-Version: 3.0-3
+Version: 3.0-4
 Architecture: amd64
 Section: devel
 Priority: optional
 Description: Labelled Transition System Analyser.
-Depends: openjdk-23, bash
+Depends: bash, default-jre | java-runtime (>= 17)
 Homepage: https://www.doc.ic.ac.uk/ltsa/
 Maintainer: WhyAreAllTheseTaken
 
