@@ -4,3 +4,5 @@ advcpmv
 openjdk_23-*
 ltsa_3.0-*
 packer-nvim_1.0-*
+custom-repo_0.*
+

@@ -1,14 +1,3 @@
 # Common
-apt install -y dpkg-dev make
+apt install -y dpkg-dev make build-essential gcc curl patch wget tar unzip ninja-build gettext cmake unzip libstdc++6 gcc git
 
-# Advcpmv
-apt install -y gcc curl patch
-
-# Java
-apt install -y wget tar
-
-# Ltsa
-apt install -y wget unzip
-
-# NVIM
-apt install -y ninja-build gettext cmake unzip curl tar libstdc++6 gcc

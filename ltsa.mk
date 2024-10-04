@@ -7,9 +7,9 @@ $(LTSA_PACKAGE).deb:
 	unzip ltsatool.zip
 	mkdir -p $(LTSA_PACKAGE)/usr/share/
 	mkdir -p $(LTSA_PACKAGE)/usr/bin/
-	sudo cp -rv ./ltsatool $(LTSA_PACKAGE)/usr/share/
-	sudo cp ./ltsa $(LTSA_PACKAGE)/usr/bin/
-	sudo chmod +x $(LTSA_PACKAGE)/usr/bin/ltsa
+	cp -rv ./ltsatool $(LTSA_PACKAGE)/usr/share/
+	cp ./ltsa $(LTSA_PACKAGE)/usr/bin/
+	chmod +x $(LTSA_PACKAGE)/usr/bin/ltsa
 	mkdir -p $(LTSA_PACKAGE)/DEBIAN
 	cp ltsa_control $(LTSA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(LTSA_PACKAGE)

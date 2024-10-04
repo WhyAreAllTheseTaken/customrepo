@@ -5,5 +5,4 @@ Section: utils
 Priority: optional
 Description: A modified version of cp and mv with progress bars.
 Homepage: https://github.com/jarun/advcpmv
-Maintainer: tomasjoshea@gmail.com
 
