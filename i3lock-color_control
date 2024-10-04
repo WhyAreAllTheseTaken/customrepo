@@ -1,5 +1,5 @@
 Package: i3lock-color
-Version: 2.13.c.5-3
+Version: 2.13.c.5-4
 Architecture: amd64
 Section: x11
 Priority: optional
@@ -11,5 +11,6 @@ Description: i3lock is a simple screen locker like slock. After starting it, you
     You can specify whether i3lock should bell upon a wrong password.
     i3lock uses PAM and therefore is compatible with LDAP etc. On OpenBSD, i3lock uses the bsd_auth(3) framework.
 Depends: libpam0g, libcairo2, libfontconfig1, libev4, libjpeg62-turbo
+Conflicts: i3lock
 Maintainer: WhyAreAllTheseTaken
 
