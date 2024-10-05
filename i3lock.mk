@@ -15,3 +15,23 @@ $(I3LOCK_COLOR_PACKAGE).deb:
 	rm -rf i3lock-color
 	rm -rf $(I3LOCK_COLOR_PACKAGE)
 
+BETTER_LOCK_VERSION = 4.4.0
+BETTER_LOCK_REVISION = 1
+BETTER_LOCK_PACKAGE = betterlockscreen_$(BETTER_LOCK_VERSION)-$(BETTER_LOCK_REVISION)
+
+$(BETTER_LOCK_PACKAGE).deb:
+	rm -rf betterlockscreen
+	git clone --depth 1 --branch v$(BETTER_LOCK_VERSION) https://github.com/betterlockscreen/betterlockscreen.git
+	mkdir -p $(BETTER_LOCK_PACKAGE)/usr/bin/
+	cp -r betterlockscreen/betterlockscreen $(BETTER_LOCK_PACKAGE)/usr/bin/
+	chmod +x $(BETTER_LOCK_PACKAGE)/usr/bin/betterlockscreen
+	mkdir -p $(BETTER_LOCK_PACKAGE)/usr/lib/systemd/system
+	cp -r betterlockscreen/system/betterlockscreen@.service $(BETTER_LOCK_PACKAGE)/usr/bin/
+	mkdir -p $(BETTER_LOCK_PACKAGE)/DEBIAN
+	cp betterlock_control $(BETTER_LOCK_PACKAGE)/DEBIAN/control
+	cp betterlock_postinst.sh $(BETTER_LOCK_PACKAGE)/DEBIAN/postinst
+	chmod +x $(BETTER_LOCK_PACKAGE)/DEBIAN/postinst
+	dpkg-deb --build $(BETTER_LOCK_PACKAGE)
+	rm -rf betterlockscreen
+	rm -rf $(BETTER_LOCK_PACKAGE)
+
