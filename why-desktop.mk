@@ -1,5 +1,5 @@
-WHY_DESKTOP_VERSION = 0.0.0
-WHY_DESKTOP_REVISION = 2
+WHY_DESKTOP_VERSION = 0.1.0
+WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
 $(WHY_DESKTOP_PACKAGE).deb:
@@ -18,8 +18,9 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/home/.config/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
+	cp -r whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
-
