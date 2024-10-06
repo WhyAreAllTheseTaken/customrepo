@@ -60,7 +60,7 @@ WHY_CAVA_PACKAGE = why-cava_$(WHY_CAVA_VERSION)-$(WHY_CAVA_REVISION)
 $(WHY_CAVA_PACKAGE).deb:
 	rm -rfv $(WHY_CAVA_PACKAGE)
 	mkdir -p $(WHY_CAVA_PACKAGE)/etc/skel/.config/cava
-	cp -r whyconfig/home/.config/cava/config $(WHY_CAVA_PACKAGE)/etc/skel/.config/cave/
+	cp -r whyconfig/home/.config/cava/config $(WHY_CAVA_PACKAGE)/etc/skel/.config/cava/
 	mkdir -p $(WHY_CAVA_PACKAGE)/DEBIAN
 	cp why-cava_control $(WHY_CAVA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_CAVA_PACKAGE)
