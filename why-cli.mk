@@ -25,7 +25,7 @@ $(WHY_NVIM_PACKAGE).deb:
 	dpkg-deb --build $(WHY_NVIM_PACKAGE)
 	rm -rf $(WHY_NVIM_PACKAGE)
 
-WHY_ZSH_VERSION = 0.0.0
+WHY_ZSH_VERSION = 0.1.0
 WHY_ZSH_REVISION = 1
 WHY_ZSH_PACKAGE = why-shell_$(WHY_ZSH_VERSION)-$(WHY_ZSH_REVISION)
 
@@ -39,4 +39,18 @@ $(WHY_ZSH_PACKAGE).deb:
 	cp why-zsh_control $(WHY_ZSH_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_ZSH_PACKAGE)
 	rm -rf $(WHY_ZSH_PACKAGE)
+
+WHY_NEOFETCH_VERSION = 0.0.0
+WHY_NEOFETCH_REVISION = 1
+WHY_NEOFETCH_PACKAGE = why-neofetch_$(WHY_NEOFETCH_VERSION)-$(WHY_NEOFETCH_REVISION)
+
+$(WHY_NEOFETCH_PACKAGE).deb:
+	rm -rfv $(WHY_NEOFETCH_PACKAGE)
+	mkdir -p $(WHY_NEOFETCH_PACKAGE)/etc/skel/.config/neofetch
+	cp -r whyconfig/home/.config/neofetch/config.conf $(WHY_NEOFETCH_PACKAGE)/etc/skel/.config/neofetch/
+	mkdir -p $(WHY_NEOFETCH_PACKAGE)/DEBIAN
+	cp why-neofetch_control $(WHY_NEOFETCH_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_NEOFETCH_PACKAGE)
+	rm -rf $(WHY_NEOFETCH_PACKAGE)
+
 
