@@ -25,9 +25,9 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
-	cp why-desktop_preinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/control/preinst
+	cp why-desktop_preinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/preinst
 	chmod +x $(WHY_DESKTOP_PACKAGE)/preinst
-	cp why-desktop_postrm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/control/postrm
+	cp why-desktop_postrm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postrm
 	chmod +x $(WHY_DESKTOP_PACKAGE)/postrm
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
