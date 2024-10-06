@@ -53,4 +53,16 @@ $(WHY_NEOFETCH_PACKAGE).deb:
 	dpkg-deb --build $(WHY_NEOFETCH_PACKAGE)
 	rm -rf $(WHY_NEOFETCH_PACKAGE)
 
+WHY_CAVA_VERSION = 0.0.0
+WHY_CAVA_REVISION = 1
+WHY_CAVA_PACKAGE = why-cava_$(WHY_CAVA_VERSION)-$(WHY_CAVA_REVISION)
+
+$(WHY_CAVA_PACKAGE).deb:
+	rm -rfv $(WHY_CAVA_PACKAGE)
+	mkdir -p $(WHY_CAVA_PACKAGE)/etc/skel/.config/cava
+	cp -r whyconfig/home/.config/cava/config $(WHY_CAVA_PACKAGE)/etc/skel/.config/cave/
+	mkdir -p $(WHY_CAVA_PACKAGE)/DEBIAN
+	cp why-cava_control $(WHY_CAVA_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_CAVA_PACKAGE)
+	rm -rf $(WHY_CAVA_PACKAGE)
 
