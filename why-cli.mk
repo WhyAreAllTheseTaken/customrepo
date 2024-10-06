@@ -25,3 +25,18 @@ $(WHY_NVIM_PACKAGE).deb:
 	dpkg-deb --build $(WHY_NVIM_PACKAGE)
 	rm -rf $(WHY_NVIM_PACKAGE)
 
+WHY_ZSH_VERSION = 0.0.0
+WHY_ZSH_REVISION = 1
+WHY_ZSH_PACKAGE = why-shell_$(WHY_ZSH_VERSION)-$(WHY_ZSH_REVISION)
+
+$(WHY_ZSH_PACKAGE).deb:
+	rm -rfv $(WHY_ZSH_PACKAGE)
+	mkdir -p $(WHY_ZSH_PACKAGE)/etc/skel/
+	cp -r whyconfig/home/.zshenv $(WHY_ZSH_PACKAGE)/etc/skel/.zshenv
+	cp -r whyconfig/home/.zshrc $(WHY_ZSH_PACKAGE)/etc/skel/.zshrc
+	cp -r whyconfig/home/.zshrc.zni $(WHY_ZSH_PACKAGE)/etc/skel/.zshrc.zni
+	mkdir -p $(WHY_ZSH_PACKAGE)/DEBIAN
+	cp why-zsh_control $(WHY_ZSH_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_ZSH_PACKAGE)
+	rm -rf $(WHY_ZSH_PACKAGE)
+
