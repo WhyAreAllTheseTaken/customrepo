@@ -12,3 +12,15 @@ $(WHY_NNN_PACKAGE).deb:
 	dpkg-deb --build $(WHY_NNN_PACKAGE)
 	rm -rf $(WHY_NNN_PACKAGE)
 
+WHY_NVIM_VERSION = 0.0.0
+WHY_NVIM_REVISION = 1
+WHY_NVIM_PACKAGE = why-neovim_$(WHY_NVIM_VERSION)-$(WHY_NVIM_REVISION)
+
+$(WHY_NVIM_PACKAGE).deb:
+	rm -rfv $(WHY_NVIM_PACKAGE)
+	mkdir -p $(WHY_NVIM_PACKAGE)/DEBIAN
+	cp why-nvim_control $(WHY_NVIM_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_NVIM_PACKAGE)
+	rm -rf $(WHY_NVIM_PACKAGE)
+
+
