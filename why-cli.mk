@@ -9,5 +9,6 @@ $(WHY_NNN_PACKAGE).deb:
 	chmod +x $(WHY_NNN_PACKAGE)/usr/bin/start_nnn
 	mkdir -p $(WHY_NNN_PACKAGE)/DEBIAN
 	cp why-nnn_control $(WHY_NNN_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_NNN_PACKAGE)
 	rm -rf $(WHY_NNN_PACKAGE)
 
