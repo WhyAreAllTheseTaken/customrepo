@@ -35,7 +35,7 @@ $(WHY_TERM_PACKAGE).deb:
 	cp -r whyconfig/home/.config/kitty/kitty.conf $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/
 	cp -r whyconfig/home/.config/kitty/current-theme.conf $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/
 	mkdir -p $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/themes/
-	cp -r "whyconfig/home/.config/kitty/thtmes/Ice Tango Dark.conf" $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/themes/
+	cp -r "whyconfig/home/.config/kitty/themes/Ice Tango Dark.conf" $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/themes/
 	mkdir -p $(WHY_TERM_PACKAGE)/DEBIAN
 	cp why-terminal_control $(WHY_TERM_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_TERM_PACKAGE)
