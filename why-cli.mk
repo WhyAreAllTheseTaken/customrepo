@@ -25,7 +25,7 @@ $(WHY_NVIM_PACKAGE).deb:
 	dpkg-deb --build $(WHY_NVIM_PACKAGE)
 	rm -rf $(WHY_NVIM_PACKAGE)
 
-WHY_ZSH_VERSION = 0.2.0
+WHY_ZSH_VERSION = 0.3.0
 WHY_ZSH_REVISION = 1
 WHY_ZSH_PACKAGE = why-shell_$(WHY_ZSH_VERSION)-$(WHY_ZSH_REVISION)
 
@@ -65,4 +65,17 @@ $(WHY_CAVA_PACKAGE).deb:
 	cp why-cava_control $(WHY_CAVA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_CAVA_PACKAGE)
 	rm -rf $(WHY_CAVA_PACKAGE)
+
+WHY_HTOP_VERSION = 0.0.0
+WHY_HTOP_REVISION = 1
+WHY_HTOP_PACKAGE = why-htop_$(WHY_HTOP_VERSION)-$(WHY_HTOP_REVISION)
+
+$(WHY_HTOP_PACKAGE).deb:
+	rm -rfv $(WHY_HTOP_PACKAGE)
+	mkdir -p $(WHY_HTOP_PACKAGE)/etc/skel/.config/htop
+	cp -r whyconfig/home/.config/htop/htoprc $(WHY_HTOP_PACKAGE)/etc/skel/.config/htop/
+	mkdir -p $(WHY_HTOP_PACKAGE)/DEBIAN
+	cp why-htop_control $(WHY_HTOP_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_HTOP_PACKAGE)
+	rm -rf $(WHY_HTOP_PACKAGE)
 
