@@ -1,5 +1,5 @@
 WHY_DESKTOP_VERSION = 0.2.0
-WHY_DESKTOP_REVISION = 1
+WHY_DESKTOP_REVISION = 2
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
 $(WHY_DESKTOP_PACKAGE).deb:
@@ -25,6 +25,10 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
+	cp why-desktop_preinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/control/preinst
+	chmod +x $(WHY_DESKTOP_PACKAGE)/preinst
+	cp why-desktop_postrm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/control/postrm
+	chmod +x $(WHY_DESKTOP_PACKAGE)/postrm
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 
