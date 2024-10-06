@@ -18,9 +18,10 @@ WHY_NVIM_PACKAGE = why-neovim_$(WHY_NVIM_VERSION)-$(WHY_NVIM_REVISION)
 
 $(WHY_NVIM_PACKAGE).deb:
 	rm -rfv $(WHY_NVIM_PACKAGE)
+	mkdir -p $(WHY_NVIM_PACKAGE)/etc/skel/.config/nvim
+	cp -r whyconfig/home/.config/nvim/* $(WHY_NVIM_PACKAGE)/etc/skel/.config/nvim/
 	mkdir -p $(WHY_NVIM_PACKAGE)/DEBIAN
 	cp why-nvim_control $(WHY_NVIM_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_NVIM_PACKAGE)
 	rm -rf $(WHY_NVIM_PACKAGE)
-
 
