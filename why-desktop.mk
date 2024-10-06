@@ -1,5 +1,5 @@
 WHY_DESKTOP_VERSION = 0.2.0
-WHY_DESKTOP_REVISION = 5
+WHY_DESKTOP_REVISION = 6
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
 $(WHY_DESKTOP_PACKAGE).deb:
@@ -21,7 +21,6 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
 	cp -r whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
-	cp -r whyconfig/etc/lightdm/lightdm.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
