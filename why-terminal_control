@@ -1,0 +1,9 @@
+Package: why-terminal
+Version: 0.0.0-1
+Architecture: all
+Section: x11
+Priority: optional
+Description: My personal configuration for kitty.
+Depends: kitty, why-shell, why-htop, why-neofetch, why-cava
+Maintainer: WhyAreAllTheseTaken
+
