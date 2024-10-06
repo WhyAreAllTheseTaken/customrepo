@@ -1,5 +1,5 @@
 RUSTUP_VERSION = 1.27.1
-RUSTUP_REVISION = 2
+RUSTUP_REVISION = 3
 RUSTUP_PACKAGE = rustup_$(RUSTUP_VERSION)-$(RUSTUP_REVISION)
 
 $(RUSTUP_PACKAGE).deb:
@@ -9,6 +9,8 @@ $(RUSTUP_PACKAGE).deb:
 	chmod +x $(RUSTUP_PACKAGE)/usr/share/rustup_deb/rustup_setup.sh
 	cp rustup_postinst.sh $(RUSTUP_PACKAGE)/DEBIAN/postinst
 	chmod +x $(RUSTUP_PACKAGE)/DEBIAN/postinst
+	cp rustup_prerm.sh $(RUSTUP_PACKAGE)/DEBIAN/prerm
+	chmod +x $(RUSTUP_PACKAGE)/DEBIAN/prerm
 	cp rustup_control $(RUSTUP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(RUSTUP_PACKAGE)
 	rm -rf $(RUSTUP_PACKAGE)
