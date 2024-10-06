@@ -1,7 +1,7 @@
 Package: nnn-plugins
-Version: 4.7-1
+Version: 4.7-2
 Architecture: amd64
-Section: x11
+Section: misc
 Priority: optional
 Description: This package contains all default plugins for nnn.
 Depends: nnn (>=4.7)

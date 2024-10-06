@@ -1,0 +1,9 @@
+Package:why-cli
+Version: 0.0.0-1
+Architecture: all
+Section: why
+Priority: optional
+Description: My personal configuration of nnn.
+Depends: nnn, nnn-plugins, advcpmv, zsh
+Maintainer: WhyAreAllTheseTaken
+
