@@ -5,7 +5,7 @@ if [ $1 = "remove" ]; then
     do
         dir=${dir%*/}
         user=${dir##*/}
-        sudo -u $user -- rustup self uninstall -y
+        sudo -u $user -- $dir/.cargo/bin/rustup self uninstall -y
     done
 fi
 

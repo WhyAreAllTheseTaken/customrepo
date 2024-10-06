@@ -1,5 +1,5 @@
 Package: rustup
-Version: 1.27.1-4
+Version: 1.27.1-5
 Architecture: amd64
 Section: rust
 Priority: optional
