@@ -6,7 +6,7 @@ Priority: optional
 Description: My custom desktop.
 Depends: dunst, i3, i3blocks, i3blocks-contrib, betterlockscreen, picom, flameshot, feh, lightdm,
     materia-gtk-theme, xorg, rofi, lxappearance, pavucontrol, hicolor-icon-theme, fonts-noto,
-    pasystray, network-manager-gnome, lxpolkit, brightnessctl, lightdm-gtk-greeter
-Pre-Depends: bash
+    pasystray, network-manager-gnome, lxpolkit, brightnessctl
+Pre-Depends: bash, lightdm-gtk-greeter
 Maintainer: WhyAreAllTheseTaken
 
