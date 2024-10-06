@@ -26,9 +26,9 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	cp why-desktop_preinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/preinst
-	chmod +x $(WHY_DESKTOP_PACKAGE)/preinst
+	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/preinst
 	cp why-desktop_postrm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postrm
-	chmod +x $(WHY_DESKTOP_PACKAGE)/postrm
+	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/postrm
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 
