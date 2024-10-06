@@ -1,0 +1,9 @@
+Package: why-apps
+Version: 0.0.0-1
+Architecture: all
+Section: sound
+Priority: optional
+Description: Apps for why-desktop.
+Depends: why-terminal, why-shell, why-kitty, why-htop, why-neofetch, why-cava, thunar 
+Maintainer: WhyAreAllTheseTaken
+

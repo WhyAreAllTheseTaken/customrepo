@@ -1,4 +1,4 @@
-WHY_DESKTOP_VERSION = 0.1.0
+WHY_DESKTOP_VERSION = 0.2.0
 WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
@@ -20,12 +20,15 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
 	cp -r whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
+	cp -r whyconfig/etc/lightdm/lightdm.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
+	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 
-WHY_TERM_VERSION = 0.0.0
+WHY_TERM_VERSION = 0.1.0
 WHY_TERM_REVISION = 1
 WHY_TERM_PACKAGE = why-terminal_$(WHY_TERM_VERSION)-$(WHY_TERM_REVISION)
 
@@ -40,4 +43,15 @@ $(WHY_TERM_PACKAGE).deb:
 	cp why-terminal_control $(WHY_TERM_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_TERM_PACKAGE)
 	rm -rf $(WHY_TERM_PACKAGE)
+
+WHY_APPS_VERSION = 0.0.0
+WHY_APPS_REVISION = 1
+WHY_APPS_PACKAGE = why-apps_$(WHY_APPS_VERSION)-$(WHY_APPS_REVISION)
+
+$(WHY_APPS_PACKAGE).deb:
+	rm -rfv $(WHY_APPS_PACKAGE)
+	mkdir -p $(WHY_APPS_PACKAGE)/DEBIAN
+	cp why-apps_control $(WHY_APPS_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_APPS_PACKAGE)
+	rm -rf $(WHY_APPS_PACKAGE)
 
