@@ -1,0 +1,15 @@
+Package: ghcup
+Version: 0.1.20.0-1
+Architecture: amd64
+Section: haskell
+Priority: optional
+Description: GHCup makes it easy to install specific versions of GHC on
+    GNU/Linux, macOS (aka Darwin), FreeBSD and Windows and can also
+    bootstrap a fresh Haskell developer environment from scratch.
+    It follows the UNIX philosophy of do one thing and do it well.
+    Similar in scope to rustup, pyenv and jenv.
+Pre-Depends: bash, sudo, build-essential, curl, libffi-dev, libffi8,
+    libgmp-dev, libgmp10, libncurses-dev, libncurses5, libtinfo5
+Maintainer: WhyAreAllTheseTaken
+Provides: ghc, cabal, stack, hls
+
