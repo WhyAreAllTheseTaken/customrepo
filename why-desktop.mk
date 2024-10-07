@@ -47,8 +47,8 @@ $(WHY_TERM_PACKAGE).deb:
 	dpkg-deb --build $(WHY_TERM_PACKAGE)
 	rm -rf $(WHY_TERM_PACKAGE)
 
-WHY_APPS_VERSION = 0.1.0
-WHY_APPS_REVISION = 2
+WHY_APPS_VERSION = 0.2.0
+WHY_APPS_REVISION = 1
 WHY_APPS_PACKAGE = why-apps_$(WHY_APPS_VERSION)-$(WHY_APPS_REVISION)
 
 $(WHY_APPS_PACKAGE).deb:
@@ -58,8 +58,8 @@ $(WHY_APPS_PACKAGE).deb:
 	dpkg-deb --build $(WHY_APPS_PACKAGE)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-WHY_UNI_VERSION = 0.0.0
-WHY_UNI_REVISION = 2
+WHY_UNI_VERSION = 0.1.0
+WHY_UNI_REVISION = 1
 WHY_UNI_PACKAGE = why-uni_$(WHY_UNI_VERSION)-$(WHY_UNI_REVISION)
 
 $(WHY_UNI_PACKAGE).deb:
@@ -70,4 +70,18 @@ $(WHY_UNI_PACKAGE).deb:
 	chmod +x $(WHY_UNI_PACKAGE)/DEBIAN/postinst
 	dpkg-deb --build $(WHY_UNI_PACKAGE)
 	rm -rf $(WHY_UNI_PACKAGE)
+
+WHY_DEV_VERSION = 0.0.0
+WHY_DEV_REVISION = 1
+WHY_DEV_PACKAGE = why-dev_$(WHY_DEV_VERSION)-$(WHY_DEV_REVISION)
+
+$(WHY_DEV_PACKAGE).deb:
+	rm -rfv $(WHY_DEV_PACKAGE)
+	mkdir -p $(WHY_DEV_PACKAGE)/DEBIAN
+	cp why-dev_control $(WHY_DEV_PACKAGE)/DEBIAN/control
+	cp why-dev_postinst.sh $(WHY_DEV_PACKAGE)/DEBIAN/postinst
+	chmod +x $(WHY_DEV_PACKAGE)/DEBIAN/postinst
+	dpkg-deb --build $(WHY_DEV_PACKAGE)
+	rm -rf $(WHY_DEV_PACKAGE)
+
 

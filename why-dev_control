@@ -1,0 +1,10 @@
+Package: why-dev
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for development.
+Depends: maven, openjdk-latest-jdk, rustup, why-shell, why-neovim
+Pre-Depends: bash
+Maintainer: WhyAreAllTheseTaken
+

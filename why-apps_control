@@ -1,11 +1,10 @@
 Package: why-apps
-Version: 0.1.0-2
+Version: 0.2.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: Apps for why-desktop.
-Depends: why-terminal, why-shell, why-terminal, why-htop, why-neofetch, why-cava, thunar,
-    onlyoffice-desktopeditors, gimp, inkscape, chromium, vivaldi-stable, bluemail,
-    obsidian
+Depends: why-terminal, why-shell, why-htop, why-neofetch, why-cava, thunar,
+    onlyoffice-desktopeditors, gimp, inkscape, chromium, vivaldi-stable, bluemail
 Maintainer: WhyAreAllTheseTaken
 
