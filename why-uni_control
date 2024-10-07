@@ -5,6 +5,6 @@ Section: metapackages
 Priority: optional
 Description: My personal package for university.
 Depends: texlive-full, swi-prolog, ruby-full, php-cli, python3, maven,
-    openjdk-latest-jdk, ghcup, ltsa
+    openjdk-latest-jdk, ghcup, ltsa, onlyoffice-desktopeditors
 Maintainer: WhyAreAllTheseTaken
 
