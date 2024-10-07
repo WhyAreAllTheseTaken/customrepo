@@ -4,7 +4,7 @@ build: updater
 
 repo: packages
 	mkdir -p repo
-	cp -v *.deb repo
+	cp -v -u *.deb repo
 
 include *.mk
 
