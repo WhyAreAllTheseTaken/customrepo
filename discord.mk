@@ -1,5 +1,6 @@
-.PHONY: discord
+DISCORD_VERSION = 0.0.70
+DISCORD_PACKAGE = discord_$(DISCORD_VERSION)
 
-discord:
-	wget --show-progress -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+$(DISCORD_PACKAGE).deb:
+	wget --show-progress -O $(DISCORD_PACKAGE).deb https://stable.dl2.discordapp.net/apps/linux/$(DISCORD_VERSION)/discord-$(DISCORD_VERSION).deb
 
