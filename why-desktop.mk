@@ -58,3 +58,16 @@ $(WHY_APPS_PACKAGE).deb:
 	dpkg-deb --build $(WHY_APPS_PACKAGE)
 	rm -rf $(WHY_APPS_PACKAGE)
 
+WHY_UNI_VERSION = 0.0.0
+WHY_UNI_REVISION = 1
+WHY_UNI_PACKAGE = why-uni_$(WHY_UNI_VERSION)-$(WHY_UNI_REVISION)
+
+$(WHY_UNI_PACKAGE).deb:
+	rm -rfv $(WHY_UNI_PACKAGE)
+	mkdir -p $(WHY_UNI_PACKAGE)/DEBIAN
+	cp why-uni_control $(WHY_UNI_PACKAGE)/DEBIAN/control
+	cp why-uni_postinst.sh $(WHY_UNI_PACKAGE)/DEBIAN/postinst
+	chmod +x $(WHY_UNI_PACKAGE)/DEBIAN/postinst
+	dpkg-deb --build $(WHY_UNI_PACKAGE)
+	rm -rf $(WHY_UNI_PACKAGE)
+
