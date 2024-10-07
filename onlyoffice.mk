@@ -1,5 +1,5 @@
 .PHONY: onlyoffice
 
 onlyoffice:
-	wget --show-progress "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb"
+	wget --show-progress -O onltoffice-desktopeditors_amd64.deb "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb"
 
