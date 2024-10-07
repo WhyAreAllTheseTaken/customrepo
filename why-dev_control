@@ -1,10 +1,10 @@
 Package: why-dev
-Version: 0.0.0-2
+Version: 0.0.0-3
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for development.
 Depends: maven, openjdk-latest-jdk, rustup
-Pre-Depends: bash
+Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
