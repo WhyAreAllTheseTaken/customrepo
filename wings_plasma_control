@@ -1,5 +1,5 @@
 Package: wings-plasma-themes
-Version: 0.0.0-1
+Version: 1.0.0-1
 Architecture: amd64
 Section: x11
 Priority: optional

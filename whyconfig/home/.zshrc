@@ -41,3 +41,5 @@ alias v="nvim"
 
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
+path+=("$HOME/.config/composer/vendor/bin/")
+

@@ -1,10 +1,6 @@
-.PHONY: build packages repo install
+.PHONY: build packages install
 
 build: updater
-
-repo: packages
-	mkdir -p repo
-	cp -v -u *.deb repo
 
 include *.mk
 
@@ -18,6 +14,7 @@ packages: $(CPMV_PACKAGE).deb $(JDK_PACKAGE).deb $(LTSA_PACKAGE).deb nvim-linux6
 	$(I3LOCK_COLOR_PACKAGE).deb $(BETTER_LOCK_PACKAGE).deb $(DISCORD_PACKAGE).deb $(OBSIDIAN_PACKAGE).deb \
 	$(RUSTUP_PACKAGE).deb $(GHCUP_PACKAGE).deb $(WHY_NNN_PACKAGE).deb $(WHY_NVIM_PACKAGE).deb \
 	$(WHY_ZSH_PACKAGE).deb $(WHY_NEOFETCH_PACKAGE).deb $(WHY_CAVA_PACKAGE).deb $(WHY_HTOP_PACKAGE).deb \
-	$(WHY_DESKTOP_PACKAGE).deb $(WHY_TERM_PACKAGE).deb $(WHY_APPS_PACKAGE).deb onlyoffice vivaldi.deb \
-	bluemail.deb $(WHY_UNI_PACKAGE).deb $(WHY_DEV_PACKAGE).deb $(JABREF_PACKAGE).deb
+	$(WHY_DESKTOP_PACKAGE).deb $(WHY_TERM_PACKAGE).deb $(WHY_APPS_PACKAGE).deb $(ONLYOFFICE_PACKAGE).deb \
+	vivaldi.deb bluemail.deb $(WHY_UNI_PACKAGE).deb $(WHY_DEV_PACKAGE).deb $(JABREF_PACKAGE).deb \
+	$(LARAVEL_PACKAGE).deb
 
