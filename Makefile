@@ -1,10 +1,6 @@
-.PHONY: build packages repo install
+.PHONY: build packages install
 
 build: updater
-
-repo: packages
-	mkdir -p repo
-	cp -v -u *.deb repo
 
 include *.mk
 
