@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
-composer global remove laravel/installer
+for dir in /home/*/
+do
+    dir=${dir%*/}
+    user=${dir##*/}
+    sudo -u $user -- composer global remove laravel/installer
+done
+
 
 
