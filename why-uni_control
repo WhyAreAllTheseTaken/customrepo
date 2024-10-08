@@ -1,12 +1,12 @@
 Package: why-uni
-Version: 0.3.1-1
+Version: 0.3.2-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for university.
 Depends: texlive-full, swi-prolog, ruby-full, php-cli, python3, maven,
     openjdk-latest-jdk, ghcup, ltsa, onlyoffice-desktopeditors, obsidian,
-    jabref, composer, php-xml, php-curl
+    jabref, composer, php-xml, php-curl, php-mysql, php-sqlite3
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
