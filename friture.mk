@@ -6,7 +6,7 @@ $(FRITURE_PACKAGE).deb:
 	rm -rf friture
 	git clone --depth 1 --branch v0.51 https://github.com/tlecomte/friture.git
 	mkdir -p $(FRITURE_PACKAGE)/usr/share/friture
-	cp -rv ./friture/* $(FRITURE_PACKAGE)/usr/share/friture
+	cp -r ./friture/* $(FRITURE_PACKAGE)/usr/share/friture
 	cp friture_requirements.txt $(FRITURE_PACKAGE)/usr/share/friture/requirements.txt
 	mkdir -p $(FRITURE_PACKAGE)/usr/bin/
 	cp friture.sh $(FRITURE_PACKAGE)/usr/bin/friture
