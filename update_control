@@ -1,5 +1,5 @@
 Package: custom-repo
-Version: 0.5.0-1
+Version: 0.6.0-1
 Architecture: amd64
 Section: misc
 Priority: optional
