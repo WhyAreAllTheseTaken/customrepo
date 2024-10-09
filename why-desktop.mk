@@ -1,5 +1,5 @@
 WHY_DESKTOP_VERSION = 0.3.0
-WHY_DESKTOP_REVISION = 3
+WHY_DESKTOP_REVISION = 4
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
 $(WHY_DESKTOP_PACKAGE).deb:
@@ -20,14 +20,14 @@ $(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
 	cp -r whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
-	#mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
-	#cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
+	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
-	cp why-desktop_preinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/preinst
-	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/preinst
-	cp why-desktop_postrm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postrm
-	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/postrm
+	cp why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
+	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
+	cp why-desktop_prerm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/prerm
+	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 
