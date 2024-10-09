@@ -1,0 +1,9 @@
+Package: gnat-community
+Version: 2021-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Description: Contains GNAT community edition, the GNAT toolchain, and SPARK ada.
+Pre-Depends: bash
+Provides: gnat
+
