@@ -1,5 +1,5 @@
 GNAT_VERSION = 2021.20210519
-GNAT_REVISION = 4
+GNAT_REVISION = 5
 GNAT_PACKAGE = gnat-community_$(GNAT_VERSION)-$(GNAT_REVISION)
 
 $(GNAT_PACKAGE).deb:
@@ -9,6 +9,9 @@ $(GNAT_PACKAGE).deb:
 	chmod +x $(GNAT_PACKAGE)/usr/share/gnat-deb/installer
 	wget -O $(GNAT_PACKAGE)/usr/share/gnat-deb/install-script.qs "https://raw.githubusercontent.com/AdaCore/gnat_community_install_script/refs/heads/master/install_script.qs"
 	chmod +x $(GNAT_PACKAGE)/usr/share/gnat-deb/install-script.qs
+	mkdir -p $(GNAT_PACKAGE)/usr/bin/
+	cp gnatstudio.sh $(GNAT_PACKAGE)/usr/bin/gnatstudio
+	chmod +x $(GNAT_PACKAGE)/usr/bin/gnatstudio
 	mkdir -p $(GNAT_PACKAGE)/DEBIAN
 	cp gnat_control $(GNAT_PACKAGE)/DEBIAN/control
 	cp gnat_postinst.sh $(GNAT_PACKAGE)/DEBIAN/postinst
