@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-update-alternatives --remove "gnat" "/opt/gnat-community/bin/gnat"
+update-alternatives --remove "gnat" "/usr/share/gnat-deb/gnat"
 
 rm -rf /opt/gnat-community
 
