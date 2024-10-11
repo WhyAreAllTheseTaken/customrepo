@@ -23,7 +23,7 @@ $(UPDATER_PACKAGE).deb:
 	rm -rf $(UPDATER_PACKAGE)
 
 UPGRADE_VERSION = 0.0.0
-UPGRADE_REVISION = 1
+UPGRADE_REVISION = 2
 UPGRADE_PACKAGE = why-upgrade_$(UPGRADE_VERSION)-$(UPGRADE_REVISION)
 
 $(UPGRADE_PACKAGE).deb:
@@ -32,7 +32,7 @@ $(UPGRADE_PACKAGE).deb:
 	cp ./why_upgrade.sh $(UPGRADE_PACKAGE)/usr/sbin/why_upgrade
 	chmod +x $(UPGRADE_PACKAGE)/usr/sbin/why_upgrade
 	mkdir -p $(UPGRADE_PACKAGE)/DEBIAN
-	cp update_control $(UPGRADE_PACKAGE)/DEBIAN/control
+	cp why-upgrade_control $(UPGRADE_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(UPGRADE_PACKAGE)
 	rm -rf $(UPGRADE_PACKAGE)
 
