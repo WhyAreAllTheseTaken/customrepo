@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-/opt/gnat-community/bin/gnat $@
+/opt/GNAT/2021/bin/gnat $@
 
