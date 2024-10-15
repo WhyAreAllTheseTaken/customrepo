@@ -1,0 +1,9 @@
+Package: why-upgrade
+Version: 0.0.0-2
+Architecture: amd64
+Section: misc
+Priority: optional
+Description: A custom upgrade script.
+Depends: custom-repo, bash
+Maintainer: WhyAreAllTheseTaken
+
