@@ -1,10 +1,11 @@
 Package: rustup
-Version: 1.27.1-9
+Version: 1.27.1-10
 Architecture: amd64
 Section: rust
 Priority: optional
 Description: Rustup is an installer for the systems programming language Rust
 Pre-Depends: bash, sudo, coreutils
+Depends: skel-fixer
 Provides: rustc, cargo
 Maintainer: WhyAreAllTheseTaken
 
