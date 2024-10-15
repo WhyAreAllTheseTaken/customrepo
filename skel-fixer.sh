@@ -2,6 +2,6 @@
 
 shopt -s dotglob
 
-cp -rfv /etc/skel/* $HOME
+cp -rf /etc/skel/* $HOME
 chown -Rf $user:$user $HOME
 
