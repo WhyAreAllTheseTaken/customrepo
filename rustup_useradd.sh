@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-/usr/share/rustup_deb/rustup_setup.sh -y
+sudo -u $SUBJECT -- /usr/share/rustup_deb/rustup_setup.sh -y
 

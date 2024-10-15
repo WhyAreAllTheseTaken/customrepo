@@ -1,4 +1,4 @@
 #!/usr/bin/bash    
 
-composer global require laravel/installer
+sudo -u $SUBJECT -- composer global require laravel/installer
 
