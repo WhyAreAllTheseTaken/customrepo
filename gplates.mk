@@ -12,5 +12,5 @@ $(GPLATES_DIR)/bin/gplates: $(GPLATES_DIR)/BUILD.Linux
 	cd $(GPLATES_DIR) && make --debug=n
 
 $(GPLATES_PACKAGE).deb: $(GPLATES_DIR)/bin/gplates
-	cd $(GPLATES_DIR) && make --debug=n package
+	cd $(GPLATES_DIR) && GPLATES_PACKAGE_CONTACT="WhyAreAllTheseTaken" make --debug=n package
 
