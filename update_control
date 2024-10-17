@@ -9,7 +9,7 @@ Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ni
     libboost-dev (>= 1.66), libboost-python-dev (>=1.35), libboost-thread-dev (>=1.35), libboost-program-options-dev (>=1.35),
     libboost-test-dev (>= 1.35), libboost-system-dev (>=1.35), libqt5opengl5-dev, libqt5svg5-dev,
     libqt5xmlpatterns5-dev, libgdal-dev (>=2.0), libcgal-dev, libproj-dev, libqwt-qt5-dev,
-    zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev, graphviz, libgmp-dev
+    zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev, graphviz, libgmp-dev,
     libfontconfig1-dev
 Pre-Depends: coreutils, bash, passwd
 Maintainer: WhyAreAllTheseTaken
