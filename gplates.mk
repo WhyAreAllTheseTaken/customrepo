@@ -9,8 +9,8 @@ $(GPLATES_DIR)/BUILD.Linux:
 
 $(GPLATES_DIR)/bin/gplates: $(GPLATES_DIR)/BUILD.Linux
 	cd $(GPLATES_DIR) && cmake .
-	cd $(GPLATES_DIR) && make
+	cd $(GPLATES_DIR) && make --debug=n
 
 $(GPLATES_PACKAGE).deb: $(GPLATES_DIR)/bin/gplates
-	cd $(GPLATES_DIR) && make package
+	cd $(GPLATES_DIR) && make --debug=n package
 
