@@ -1,0 +1,10 @@
+Package: skel-fixer
+Version: 0.0.2-1
+Architecture: amd64
+Section: admin
+Priority: optional
+Description: A script that updates the home directory of a user from /etc/skel/.
+    This script will also ensure that files are copied from skel even if the home directory exists.
+Depends: coreutils, bash
+Maintainer: WhyAreAllTheseTaken
+
