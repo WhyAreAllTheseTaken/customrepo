@@ -4,7 +4,7 @@ GPLATES_DIR = gplates_$(GPLATES_VERSION)
 
 $(GPLATES_DIR)/BUILD.Linux:
 	rm -rf $(GPLATES_DIR)
-	git --depth 1 --branch GPlates-$(GPLATES_VERSION) "https://github.com/GPlates/GPlates.git" $(GPLATES_DIR)
+	git clone --depth 1 --branch GPlates-$(GPLATES_VERSION) "https://github.com/GPlates/GPlates.git" $(GPLATES_DIR)
 
 $(GPLATES_DIR)/bin/gplates: $(GPLATES_DIR)/BUILD.Linux
 	cd $(GPLATES_DIR) && cmake .
