@@ -6,10 +6,10 @@ REPO = repo
 
 include *.mk
 
-updater: $(UPDATER_PACKAGE).deb
+updater: $(REPO)/$(UPDATER_PACKAGE).deb
 
 install:
-	apt install ./$(UPDATER_PACKAGE).deb
+	apt install ./repo/$(UPDATER_PACKAGE).deb
 
 packages: $(REPO)/$(CPMV_PACKAGE).deb $(REPO)/$(JDK_PACKAGE).deb $(REPO)/$(LTSA_PACKAGE).deb $(REPO)/nvim-linux64.deb $(REPO)/$(PACKER_PACKAGE).deb \
 	$(REPO)/$(FRITURE_PACKAGE).deb $(REPO)/$(I3_BLOCKS_PACKAGE).deb $(REPO)/$(WINGS_PLASMA_PACKAGE).deb $(REPO)/$(NNN_PLUGS_PACKAGE).deb \
