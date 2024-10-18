@@ -1,8 +1,8 @@
-UPDATER_VERSION = 0.7.0
-UPDATER_REVISION = 3
+UPDATER_VERSION = 0.7.1
+UPDATER_REVISION = 1
 UPDATER_PACKAGE = custom-repo_$(UPDATER_VERSION)-$(UPDATER_REVISION)
 
-$(UPDATER_PACKAGE).deb:
+$(REPO)/$(UPDATER_PACKAGE).deb:
 	rm -rf $(UPDATER_PACKAGE)
 	mkdir -p $(UPDATER_PACKAGE)/usr/
 	mkdir -p $(UPDATER_PACKAGE)/usr/sbin/
@@ -20,13 +20,14 @@ $(UPDATER_PACKAGE).deb:
 	cp update_postrm.sh $(UPDATER_PACKAGE)/DEBIAN/postrm
 	chmod +x $(UPDATER_PACKAGE)/DEBIAN/postrm
 	dpkg-deb --build $(UPDATER_PACKAGE)
+	mv $(UPDATER_PACKAGE).deb $(REPO)
 	rm -rf $(UPDATER_PACKAGE)
 
 UPGRADE_VERSION = 0.0.0
 UPGRADE_REVISION = 2
 UPGRADE_PACKAGE = why-upgrade_$(UPGRADE_VERSION)-$(UPGRADE_REVISION)
 
-$(UPGRADE_PACKAGE).deb:
+$(REPO)/$(UPGRADE_PACKAGE).deb:
 	rm -rf $(UPGRADE_PACKAGE)
 	mkdir -p $(UPGRADE_PACKAGE)/usr/sbin/
 	cp ./why_upgrade.sh $(UPGRADE_PACKAGE)/usr/sbin/why_upgrade
@@ -34,5 +35,6 @@ $(UPGRADE_PACKAGE).deb:
 	mkdir -p $(UPGRADE_PACKAGE)/DEBIAN
 	cp why-upgrade_control $(UPGRADE_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(UPGRADE_PACKAGE)
+	mv $(UPGRADE_PACKAGE).deb $(REPO)
 	rm -rf $(UPGRADE_PACKAGE)
 

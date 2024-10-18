@@ -1,15 +1,15 @@
 Package: custom-repo
-Version: 0.7.0-3
+Version: 0.7.1-1
 Architecture: amd64
 Section: misc
 Priority: optional
 Description: A custom updater system.
 Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ninja-build,
-    gettext, cmake, libstdc++6, git, sudo, g++, libglew-dev, python3-dev, python3-numpy, python3,
-    libboost-dev, libboost-python-dev, libboost-thread-dev, libboost-program-options-dev,
-    libboost-test-dev, libboost-system-dev, libqt5opengl5-dev, libqt5svg5-dev,
-    libqt5xmlpatterns5-dev, libgdal-dev, libcgal-dev, libproj-dev, libqwt-qt5-dev,
-    zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev,
+    gettext, cmake, libstdc++6, git, sudo, g++, libglew-dev, python3, python3-dev, python3-numpy, python3,
+    libboost-dev (>= 1.66), libboost-python-dev (>=1.35), libboost-thread-dev (>=1.35), libboost-program-options-dev (>=1.35),
+    libboost-test-dev (>= 1.35), libboost-system-dev (>=1.35), libqt5opengl5-dev, libqt5svg5-dev,
+    libqt5xmlpatterns5-dev, libgdal-dev (>=2.0), libcgal-dev, libproj-dev, libqwt-qt5-dev,
+    zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev, graphviz, libgmp-dev,
     libfontconfig1-dev
 Pre-Depends: coreutils, bash, passwd
 Maintainer: WhyAreAllTheseTaken

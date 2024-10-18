@@ -2,7 +2,7 @@ GHCUP_VERSION = 0.1.20.0
 GHCUP_REVISION = 5
 GHCUP_PACKAGE = ghcup_$(GHCUP_VERSION)-$(GHCUP_REVISION)
 
-$(GHCUP_PACKAGE).deb:
+$(REPO)/$(GHCUP_PACKAGE).deb:
 	mkdir -p $(GHCUP_PACKAGE)/DEBIAN
 	mkdir -p $(GHCUP_PACKAGE)/usr/share/ghcup_deb
 	wget --show-progress -O $(GHCUP_PACKAGE)/usr/share/ghcup_deb/ghcup_setup.sh https://get-ghcup.haskell.org
@@ -16,5 +16,6 @@ $(GHCUP_PACKAGE).deb:
 	chmod +x $(GHCUP_PACKAGE)/DEBIAN/prerm
 	cp ghcup_control $(GHCUP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(GHCUP_PACKAGE)
+	mv $(GHCUP_PACKAGE).deb $(REPO)
 	rm -rf $(GHCUP_PACKAGE)
 

@@ -3,7 +3,7 @@ CPMV_REVISION = 3
 CPMV_PACKAGE = advcpmv_$(CPMV_VERSION)-$(CPMV_REVISION)
 CPMV_PATH = advcpmv/$(CPMV_PACKAGE)
 
-$(CPMV_PACKAGE).deb:
+$(REPO)/$(CPMV_PACKAGE).deb:
 	rm -rf $(CPMV_PATH)
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh
 	cd advcpmv && sh install.sh
@@ -13,7 +13,7 @@ $(CPMV_PACKAGE).deb:
 	mkdir -p $(CPMV_PATH)/DEBIAN
 	cp ./advcpmv_control $(CPMV_PATH)/DEBIAN/control
 	dpkg-deb --build $(CPMV_PATH)
-	cp advcpmv/$(CPMV_PACKAGE).deb .
+	mv $(CPMV_PACKAGE).deb $(REPO)
 	rm -rf advcpmv
 	rm -rf $(CPMV_PATH)
 
