@@ -2,7 +2,7 @@ RUSTUP_VERSION = 1.27.1
 RUSTUP_REVISION = 11
 RUSTUP_PACKAGE = rustup_$(RUSTUP_VERSION)-$(RUSTUP_REVISION)
 
-$(RUSTUP_PACKAGE).deb:
+$(REPO)/$(RUSTUP_PACKAGE).deb:
 	mkdir -p $(RUSTUP_PACKAGE)/DEBIAN
 	mkdir -p $(RUSTUP_PACKAGE)/usr/share/rustup_deb
 	mkdir -p $(RUSTUP_PACKAGE)/etc/shadow-maint/useradd-post.d/
@@ -16,5 +16,6 @@ $(RUSTUP_PACKAGE).deb:
 	chmod +x $(RUSTUP_PACKAGE)/DEBIAN/prerm
 	cp rustup_control $(RUSTUP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(RUSTUP_PACKAGE)
+	mv $(RUSTUP_PACKAGE) $(REPO)
 	rm -rf $(RUSTUP_PACKAGE)
 

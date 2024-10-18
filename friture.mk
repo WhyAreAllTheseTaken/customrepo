@@ -2,7 +2,7 @@ FRITURE_VERSION = 0.51
 FRITURE_REVISION = 6
 FRITURE_PACKAGE = friture_$(FRITURE_VERSION)-$(FRITURE_REVISION)
 
-$(FRITURE_PACKAGE).deb:
+$(REPO)/$(FRITURE_PACKAGE).deb:
 	rm -rf friture
 	git clone --depth 1 --branch v0.51 https://github.com/tlecomte/friture.git
 	mkdir -p $(FRITURE_PACKAGE)/usr/share/friture
@@ -16,7 +16,7 @@ $(FRITURE_PACKAGE).deb:
 	cp friture_postinst.sh $(FRITURE_PACKAGE)/DEBIAN/postinst
 	chmod +x $(FRITURE_PACKAGE)/DEBIAN/postinst
 	dpkg-deb --build $(FRITURE_PACKAGE)
+	mv $(FRITURE_PACKAGE).deb $(REPO)
 	rm -rf friture
 	rm -rf $(FRITURE_PACKAGE)
-
 

@@ -2,7 +2,7 @@ LTSA_VERSION = 3.0
 LTSA_REVISION = 4
 LTSA_PACKAGE = ltsa_$(LTSA_VERSION)-$(LTSA_REVISION)
 
-$(LTSA_PACKAGE).deb:
+$(REPO)/$(LTSA_PACKAGE).deb:
 	wget --show-progress -O ltsatool.zip https://www.doc.ic.ac.uk/~jnm/book/ltsa/ltsatool.zip
 	rm -rf ltsatool
 	unzip ltsatool.zip
@@ -14,6 +14,7 @@ $(LTSA_PACKAGE).deb:
 	mkdir -p $(LTSA_PACKAGE)/DEBIAN
 	cp ltsa_control $(LTSA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(LTSA_PACKAGE)
+	mv $(LTSA_PACKAGE).deb $(REPO)
 	rm -rf ltsatool
 	rm -rf $(LTSA_PACKAGE)
 

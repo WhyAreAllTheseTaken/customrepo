@@ -2,7 +2,7 @@ LARAVEL_VERSION = 5.9.0
 LARAVEL_REVISION = 7
 LARAVEL_PACKAGE = laravel-installer_$(LARAVEL_VERSION)-$(LARAVEL_REVISION)
 
-$(LARAVEL_PACKAGE).deb:
+$(REPO)/$(LARAVEL_PACKAGE).deb:
 	mkdir -p $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/
 	cp laravel_useradd.sh $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh
 	chmod +x $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh
@@ -13,6 +13,7 @@ $(LARAVEL_PACKAGE).deb:
 	chmod +x $(LARAVEL_PACKAGE)/DEBIAN/prerm
 	cp laravel_control $(LARAVEL_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(LARAVEL_PACKAGE)
+	mv $(LARAVEL_PACKAGE).deb $(REPO)
 	rm -rf $(LARAVEL_PACKAGE)
 
 

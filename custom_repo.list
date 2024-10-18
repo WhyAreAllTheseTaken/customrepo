@@ -1,2 +1,2 @@
-deb [trusted=yes] file:/usr/customrepo ./
+deb [trusted=yes] file:/usr/customrepo/repo ./
 
