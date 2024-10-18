@@ -16,6 +16,6 @@ $(REPO)/$(RUSTUP_PACKAGE).deb:
 	chmod +x $(RUSTUP_PACKAGE)/DEBIAN/prerm
 	cp rustup_control $(RUSTUP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(RUSTUP_PACKAGE)
-	mv $(RUSTUP_PACKAGE) $(REPO)
+	mv $(RUSTUP_PACKAGE).deb $(REPO)
 	rm -rf $(RUSTUP_PACKAGE)
 
