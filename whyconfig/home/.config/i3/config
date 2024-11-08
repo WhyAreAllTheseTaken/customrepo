@@ -307,10 +307,10 @@ exec chromium --new-window --app=https://todoist.com
 exec chromium --new-window --app=https://github.com
 # exec steam
 # exec kitty --name top sudo htop
-exec kitty --name edit --directory=~/dev /usr/bin/start_nnn.sh
-exec kitty --name build --directory=~/dev /usr/bin/start_nnn.sh
-# exec kitty --name server --directory=~/server /usr/bin/start_nnn.sh
-# exec kitty --name sfiles --directory=~/server /usr/bin/start_nnn.sh
+exec kitty --name edit --directory=~/dev /usr/bin/start_nnn
+exec kitty --name build --directory=~/dev /usr/bin/start_nnn
+# exec kitty --name server --directory=~/server /usr/bin/start_nnn
+# exec kitty --name sfiles --directory=~/server /usr/bin/start_nnn
 # exec kitty --name display --hold neofetch
 # exec kitty --name display --hold cava
 exec obsidian
@@ -346,7 +346,7 @@ for_window [class="feh"] floating enable
 bindsym $mod+shift+a exec pavucontrol
 bindsym $mod+c exec kitty cava
 bindsym $mod+w exec vivaldi --new-window
-bindsym $mod+e exec kitty /usr/bin/start_nnn.sh
+bindsym $mod+e exec kitty /usr/bin/start_nnn
 bindsym $mod+t exec kitty htop
 bindsym $mod+j exec eclipse
 bindsym $mod+b exec /opt/BlueMail/bluemail --disable-gpu-sandbox
