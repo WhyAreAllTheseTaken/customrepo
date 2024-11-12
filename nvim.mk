@@ -14,6 +14,6 @@ $(REPO)/$(PACKER_PACKAGE).deb:
 	mkdir -p $(PACKER_PACKAGE)/DEBIAN
 	cp packer_control $(PACKER_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(PACKER_PACKAGE)
-	mv $(PACKAGE_PACKAGE).deb $(REPO)
+	mv $(PACKER_PACKAGE).deb $(REPO)
 	rm -rf $(PACKER_PACKAGE) 
 
