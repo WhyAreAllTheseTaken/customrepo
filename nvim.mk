@@ -6,7 +6,7 @@ $(REPO)/nvim-linux64.deb:
 	rm -rf neovim
 
 PACKER_VERSION = 1.0
-PACKER_REVISION = 2
+PACKER_REVISION = 3
 PACKER_PACKAGE = packer-nvim_$(PACKER_VERSION)-$(PACKER_REVISION)
 
 $(REPO)/$(PACKER_PACKAGE).deb:
