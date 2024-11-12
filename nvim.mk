@@ -10,6 +10,7 @@ PACKER_REVISION = 3
 PACKER_PACKAGE = packer-nvim_$(PACKER_VERSION)-$(PACKER_REVISION)
 
 $(REPO)/$(PACKER_PACKAGE).deb:
+	rm -rf $(PACKER_PACKAGE)
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(PACKER_PACKAGE)/etc/skel/.local/share/nvim/site/pack/packer/start/packer.nvim
 	mkdir -p $(PACKER_PACKAGE)/DEBIAN
 	cp packer_control $(PACKER_PACKAGE)/DEBIAN/control
