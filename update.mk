@@ -13,7 +13,7 @@ $(REPO)/$(UPDATER_PACKAGE).deb:
 	cp ./custom_repo.list $(UPDATER_PACKAGE)/etc/apt/sources.list.d/
 	cp ./unity_repo.list $(UPDATER_PACKAGE)/etc/apt/sources.list.d/
 	git clone --depth 1 "https://github.com/WhyAreAllTheseTaken/customrepo.git" $(UPDATER_PACKAGE)/usr/customrepo
-	wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | sudo tee $(UPDATER_PACKAGE)/usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
+	wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | tee $(UPDATER_PACKAGE)/usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
 	mkdir -p $(UPDATER_PACKAGE)/DEBIAN
 	cp update_control $(UPDATER_PACKAGE)/DEBIAN/control
 	cp update_postinst.sh $(UPDATER_PACKAGE)/DEBIAN/postinst
