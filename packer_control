@@ -4,7 +4,7 @@ Architecture: amd64
 Section: devel
 Priority: optional
 Description: A plugin for neovim that provides plugin management.
-Depends: neovim (>=0.5.0), npm, python3, nodejs, luarocks, dotnet-8.0-sdk
+Depends: neovim (>=0.5.0), npm, python3, nodejs, luarocks, dotnet-sdk-8.0
 Homepage: https://github.com/wbthomason/packer.nvim
 Maintainer: WhyAreAllTheseTaken
 
