@@ -1,5 +1,5 @@
 Package: custom-repo
-Version: 0.7.1-1
+Version: 0.8.0-1
 Architecture: amd64
 Section: misc
 Priority: optional
@@ -10,7 +10,7 @@ Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ni
     libboost-test-dev (>= 1.35), libboost-system-dev (>=1.35), libqt5opengl5-dev, libqt5svg5-dev,
     libqt5xmlpatterns5-dev, libgdal-dev (>=2.0), libcgal-dev, libproj-dev, libqwt-qt5-dev,
     zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev, graphviz, libgmp-dev,
-    libfontconfig1-dev
+    libfontconfig1-dev, gpg
 Pre-Depends: coreutils, bash, passwd
 Maintainer: WhyAreAllTheseTaken
 
