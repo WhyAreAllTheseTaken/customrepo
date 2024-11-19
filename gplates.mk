@@ -12,6 +12,7 @@ $(GPLATES_DIR)/bin/gplates: $(GPLATES_DIR)/BUILD.Linux
 	cd $(GPLATES_DIR) && make --debug=n
 
 $(REPO)/$(GPLATES_PACKAGE).deb: $(GPLATES_DIR)/bin/gplates
+	echo "Building $(GPLATES_PACKAGE)..."
 	cd $(GPLATES_DIR) && make --debug=n package
 	mv $(GPLATES_DIR)/$(GPLATES_PACKAGE).deb $(REPO)
 

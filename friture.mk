@@ -3,6 +3,7 @@ FRITURE_REVISION = 6
 FRITURE_PACKAGE = friture_$(FRITURE_VERSION)-$(FRITURE_REVISION)
 
 $(REPO)/$(FRITURE_PACKAGE).deb:
+	echo "Packaging $(FRITURE_PACKAGE)..."
 	rm -rf friture
 	git clone --depth 1 --branch v0.51 https://github.com/tlecomte/friture.git
 	mkdir -p $(FRITURE_PACKAGE)/usr/share/friture

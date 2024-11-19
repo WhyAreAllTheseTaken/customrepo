@@ -3,6 +3,7 @@ RUSTUP_REVISION = 11
 RUSTUP_PACKAGE = rustup_$(RUSTUP_VERSION)-$(RUSTUP_REVISION)
 
 $(REPO)/$(RUSTUP_PACKAGE).deb:
+	echo "Packaging $(RUSTUP_PACKAGE)..."
 	mkdir -p $(RUSTUP_PACKAGE)/DEBIAN
 	mkdir -p $(RUSTUP_PACKAGE)/usr/share/rustup_deb
 	mkdir -p $(RUSTUP_PACKAGE)/etc/shadow-maint/useradd-post.d/

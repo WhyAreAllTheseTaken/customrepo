@@ -3,6 +3,7 @@ I3LOCK_COLOR_REVISION = 7
 I3LOCK_COLOR_PACKAGE = i3lock-color_$(I3LOCK_COLOR_VERSION)-$(I3LOCK_COLOR_REVISION)
 
 $(REPO)/$(I3LOCK_COLOR_PACKAGE).deb:
+	echo "Packaging $(I3LOCK_COLOR_PACKAGE)..."
 	rm -rf i3lock-color
 	git clone --depth 1 --branch $(I3LOCK_COLOR_VERSION) https://github.com/Raymo111/i3lock-color.git
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
@@ -21,6 +22,7 @@ BETTER_LOCK_REVISION = 2
 BETTER_LOCK_PACKAGE = betterlockscreen_$(BETTER_LOCK_VERSION)-$(BETTER_LOCK_REVISION)
 
 $(REPO)/$(BETTER_LOCK_PACKAGE).deb:
+	echo "Packaging $(BETTER_LOCK_PACKAGE)..."
 	rm -rf betterlockscreen
 	git clone --depth 1 --branch v$(BETTER_LOCK_VERSION) https://github.com/betterlockscreen/betterlockscreen.git
 	mkdir -p $(BETTER_LOCK_PACKAGE)/usr/bin/

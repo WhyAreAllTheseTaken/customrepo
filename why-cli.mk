@@ -3,6 +3,7 @@ WHY_NNN_REVISION = 1
 WHY_NNN_PACKAGE = why-nnn_$(WHY_NNN_VERSION)-$(WHY_NNN_REVISION)
 
 $(REPO)/$(WHY_NNN_PACKAGE).deb:
+	echo "Packaging $(WHY_NNN_PACKAGE)..."
 	rm -rf $(WHY_NNN_PACKAGE)
 	mkdir -p $(WHY_NNN_PACKAGE)/usr/bin/
 	cp ./start_nnn.sh $(WHY_NNN_PACKAGE)/usr/bin/start_nnn
@@ -18,6 +19,7 @@ WHY_NVIM_REVISION = 1
 WHY_NVIM_PACKAGE = why-neovim_$(WHY_NVIM_VERSION)-$(WHY_NVIM_REVISION)
 
 $(REPO)/$(WHY_NVIM_PACKAGE).deb:
+	echo "Packaging $(WHY_NVIM_PACKAGE)..."
 	rm -rf $(WHY_NVIM_PACKAGE)
 	mkdir -p $(WHY_NVIM_PACKAGE)/etc/skel/.config/nvim
 	cp -r whyconfig/home/.config/nvim/* $(WHY_NVIM_PACKAGE)/etc/skel/.config/nvim/
@@ -32,6 +34,7 @@ WHY_ZSH_REVISION = 3
 WHY_ZSH_PACKAGE = why-shell_$(WHY_ZSH_VERSION)-$(WHY_ZSH_REVISION)
 
 $(REPO)/$(WHY_ZSH_PACKAGE).deb:
+	echo "Packaging $(WHY_ZSH_PACKAGE)..."
 	rm -rf $(WHY_ZSH_PACKAGE)
 	mkdir -p $(WHY_ZSH_PACKAGE)/etc/skel/
 	cp -r whyconfig/home/.zshenv $(WHY_ZSH_PACKAGE)/etc/skel/.zshenv
@@ -48,6 +51,7 @@ WHY_NEOFETCH_REVISION = 1
 WHY_NEOFETCH_PACKAGE = why-neofetch_$(WHY_NEOFETCH_VERSION)-$(WHY_NEOFETCH_REVISION)
 
 $(REPO)/$(WHY_NEOFETCH_PACKAGE).deb:
+	echo "Packaging $(WHY_NEOFETCH_PACKAGE)..."
 	rm -rf $(WHY_NEOFETCH_PACKAGE)
 	mkdir -p $(WHY_NEOFETCH_PACKAGE)/etc/skel/.config/neofetch
 	cp -r whyconfig/home/.config/neofetch/config.conf $(WHY_NEOFETCH_PACKAGE)/etc/skel/.config/neofetch/
@@ -62,6 +66,7 @@ WHY_CAVA_REVISION = 1
 WHY_CAVA_PACKAGE = why-cava_$(WHY_CAVA_VERSION)-$(WHY_CAVA_REVISION)
 
 $(REPO)/$(WHY_CAVA_PACKAGE).deb:
+	echo "Packaging $(WHY_CAVA_PACKAGE)..."
 	rm -rf $(WHY_CAVA_PACKAGE)
 	mkdir -p $(WHY_CAVA_PACKAGE)/etc/skel/.config/cava
 	cp -r whyconfig/home/.config/cava/config $(WHY_CAVA_PACKAGE)/etc/skel/.config/cava/
@@ -76,6 +81,7 @@ WHY_HTOP_REVISION = 1
 WHY_HTOP_PACKAGE = why-htop_$(WHY_HTOP_VERSION)-$(WHY_HTOP_REVISION)
 
 $(REPO)/$(WHY_HTOP_PACKAGE).deb:
+	echo "Packaging $(WHY_HTOP_PACKAGE)..."
 	rm -rf $(WHY_HTOP_PACKAGE)
 	mkdir -p $(WHY_HTOP_PACKAGE)/etc/skel/.config/htop
 	cp -r whyconfig/home/.config/htop/htoprc $(WHY_HTOP_PACKAGE)/etc/skel/.config/htop/

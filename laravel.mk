@@ -3,6 +3,7 @@ LARAVEL_REVISION = 8
 LARAVEL_PACKAGE = laravel-installer_$(LARAVEL_VERSION)-$(LARAVEL_REVISION)
 
 $(REPO)/$(LARAVEL_PACKAGE).deb:
+	echo "Packaging $(LARAVEL_PACKAGE)..."
 	mkdir -p $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/
 	cp laravel_useradd.sh $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh
 	chmod +x $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh

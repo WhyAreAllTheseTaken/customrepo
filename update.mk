@@ -3,6 +3,7 @@ UPDATER_REVISION = 2
 UPDATER_PACKAGE = custom-repo_$(UPDATER_VERSION)-$(UPDATER_REVISION)
 
 $(REPO)/$(UPDATER_PACKAGE).deb:
+	echo "Packaging $(UPDATER_PACKAGE)..."
 	rm -rf $(UPDATER_PACKAGE)
 	mkdir -p $(UPDATER_PACKAGE)/usr/
 	mkdir -p $(UPDATER_PACKAGE)/usr/sbin/
@@ -31,6 +32,7 @@ UPGRADE_REVISION = 2
 UPGRADE_PACKAGE = why-upgrade_$(UPGRADE_VERSION)-$(UPGRADE_REVISION)
 
 $(REPO)/$(UPGRADE_PACKAGE).deb:
+	echo "Packaging $(UPGRADE_PACKAGE)..."
 	rm -rf $(UPGRADE_PACKAGE)
 	mkdir -p $(UPGRADE_PACKAGE)/usr/sbin/
 	cp ./why_upgrade.sh $(UPGRADE_PACKAGE)/usr/sbin/why_upgrade

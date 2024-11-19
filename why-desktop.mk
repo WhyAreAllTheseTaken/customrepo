@@ -3,6 +3,7 @@ WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 
 $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
+	echo "Packaging $(WHY_DESKTOP_PACKAGE)..."
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst
 	cp -r whyconfig/home/.config/dunst/dunstrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst/
@@ -37,6 +38,7 @@ WHY_TERM_REVISION = 1
 WHY_TERM_PACKAGE = why-terminal_$(WHY_TERM_VERSION)-$(WHY_TERM_REVISION)
 
 $(REPO)/$(WHY_TERM_PACKAGE).deb:
+	echo "Packaging $(WHY_TERM_PACKAGE)..."
 	rm -rf $(WHY_TERM_PACKAGE)
 	mkdir -p $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/
 	cp -r whyconfig/home/.config/kitty/kitty.conf $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/
@@ -54,6 +56,7 @@ WHY_APPS_REVISION = 3
 WHY_APPS_PACKAGE = why-apps_$(WHY_APPS_VERSION)-$(WHY_APPS_REVISION)
 
 $(REPO)/$(WHY_APPS_PACKAGE).deb:
+	echo "Packaging $(WHY_APPS_PACKAGE)..."
 	rm -rf $(WHY_APPS_PACKAGE)
 	mkdir -p $(WHY_APPS_PACKAGE)/DEBIAN
 	cp why-apps_control $(WHY_APPS_PACKAGE)/DEBIAN/control
@@ -66,6 +69,7 @@ WHY_UNI_REVISION = 1
 WHY_UNI_PACKAGE = why-uni_$(WHY_UNI_VERSION)-$(WHY_UNI_REVISION)
 
 $(REPO)/$(WHY_UNI_PACKAGE).deb:
+	echo "Packaging $(WHY_UNI_PACKAGE)..."
 	rm -rf $(WHY_UNI_PACKAGE)
 	mkdir -p $(WHY_UNI_PACKAGE)/DEBIAN
 	cp why-uni_control $(WHY_UNI_PACKAGE)/DEBIAN/control
@@ -80,6 +84,7 @@ WHY_DEV_REVISION = 4
 WHY_DEV_PACKAGE = why-dev_$(WHY_DEV_VERSION)-$(WHY_DEV_REVISION)
 
 $(REPO)/$(WHY_DEV_PACKAGE).deb:
+	echo "Packaging $(WHY_DEV_PACKAGE)..."
 	rm -rf $(WHY_DEV_PACKAGE)
 	mkdir -p $(WHY_DEV_PACKAGE)/DEBIAN
 	cp why-dev_control $(WHY_DEV_PACKAGE)/DEBIAN/control

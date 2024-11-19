@@ -1,8 +1,12 @@
-$(REPO)/nvim-linux64.deb:
-	git clone --depth 1 --branch stable https://github.com/neovim/neovim
+NVIM_VERSION = 0.10.2
+NVIM_PACKAGE = nvim_$(NVIM_VERSION)_linux64
+
+$(REPO)/$(NVIM_PACKAGE).deb:
+	echo "Building $(NVIM_PACKAGE)..."
+	git clone --depth 1 --branch v$(NVIM_VERSION) https://github.com/neovim/neovim
 	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 	cd neovim && cd build && cpack -G DEB
-	cp neovim/build/nvim-linux64.deb $(REPO)
+	cp neovim/build/nvim-linux64.deb $(REPO)/$(NVIM_PACKAGE).deb
 	rm -rf neovim
 
 PACKER_VERSION = 1.0
@@ -10,6 +14,7 @@ PACKER_REVISION = 4
 PACKER_PACKAGE = packer-nvim_$(PACKER_VERSION)-$(PACKER_REVISION)
 
 $(REPO)/$(PACKER_PACKAGE).deb:
+	echo "Packaging $(PACKER_PACKAGE)..."
 	rm -rf $(PACKER_PACKAGE)
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(PACKER_PACKAGE)/etc/skel/.local/share/nvim/site/pack/packer/start/packer.nvim
 	mkdir -p $(PACKER_PACKAGE)/DEBIAN

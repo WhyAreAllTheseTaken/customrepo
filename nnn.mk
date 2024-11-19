@@ -3,6 +3,7 @@ NNN_PLUGS_REVISION = 2
 NNN_PLUGS_PACKAGE = nnn-plugins_$(NNN_VERSION)-$(NNN_PLUGS_REVISION)
 
 $(REPO)/$(NNN_PLUGS_PACKAGE).deb:
+	echo "Packaging $(NNN_PLUGS_PACKAGE)..."
 	rm -rf nnn
 	git clone --depth 1 --branch v$(NNN_VERSION) https://github.com/jarun/nnn.git
 	mkdir -p $(NNN_PLUGS_PACKAGE)/etc/skel/.config/nnn/plugins

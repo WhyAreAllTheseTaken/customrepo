@@ -3,6 +3,7 @@ WINGS_PLASMA_REVISION = 1
 WINGS_PLASMA_PACKAGE = wings-plasma-themes_$(WINGS_PLASMA_VERSION)-$(WINGS_PLASMA_REVISION)
 
 $(REPO)/$(WINGS_PLASMA_PACKAGE).deb:
+	echo "Packaging $(WINGS_PLASMA_PACKAGE)..."
 	rm -rf ./Wings-Plasma-Themes
 	git clone --depth 1 https://github.com/L4ki/Wings-Plasma-Themes.git
 	mkdir -p $(WINGS_PLASMA_PACKAGE)/usr/share/icons/
