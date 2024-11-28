@@ -1,0 +1,10 @@
+Package: rust-toolchain
+Version: 1.83.0-1
+Architecture: amd64
+Section: rust
+Priority: optional
+Description: A complete rust toolchain.
+Pre-Depends: bash, sudo, coreutils, rustup
+Provides: rustc (=1.83.0-1), cargo (=1.83.0-1)
+Maintainer: WhyAreAllTheseTaken
+
