@@ -25,6 +25,7 @@ RUST_CHAIN_REVISION = 1
 RUST_CHAIN_PACKAGE = rust-toolchain_$(RUSTUP_VERSION)-$(RUSTUP_REVISION)
 
 $(REPO)/$(RUST_CHAIN_PACKAGE).deb:
+	echo "Packaging $(RUST_CHAIN_PACKAGE)..."
 	mkdir -p $(RUST_CHAIN_PACKAGE)/DEBIAN
 	mkdir -p $(RUST_CHAIN_PACKAGE)/etc/shadow-maint/useradd-post.d/
 	cp rust-toolchain_useradd.sh $(RUST_CHAIN_PACKAGE)/etc/shadow-maint/useradd-post.d/rust-toolchain.sh
