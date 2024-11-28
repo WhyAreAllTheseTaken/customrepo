@@ -2,6 +2,6 @@
 
 mkdir /home/$SUBJECT
 chown $SUBJECT:$SUBJECT /home/$SUBJECT
-sudo -u $SUBJECT -- rustup install 1.83.0
+sudo -u $SUBJECT -- /home/$SUBJECT/.cargo/bin/rustup install 1.83.0
 
 
