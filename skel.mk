@@ -3,6 +3,7 @@ SKEL_REVISION = 1
 SKEL_PACKAGE = skel-fixer_$(SKEL_VERSION)-$(SKEL_REVISION)
 
 $(REPO)/$(SKEL_PACKAGE).deb:
+	echo "Packaging $(SKEL_PACKAGE)..."
 	mkdir -p $(SKEL_PACKAGE)/DEBIAN
 	mkdir -p $(SKEL_PACKAGE)/usr/bin/
 	cp skel-fixer.sh $(SKEL_PACKAGE)/usr/bin/skel-fixer

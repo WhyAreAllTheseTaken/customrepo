@@ -3,6 +3,7 @@ LTSA_REVISION = 4
 LTSA_PACKAGE = ltsa_$(LTSA_VERSION)-$(LTSA_REVISION)
 
 $(REPO)/$(LTSA_PACKAGE).deb:
+	echo "Packaging $(LTSA_PACKAGE)..."
 	wget --show-progress -O ltsatool.zip https://www.doc.ic.ac.uk/~jnm/book/ltsa/ltsatool.zip
 	rm -rf ltsatool
 	unzip ltsatool.zip

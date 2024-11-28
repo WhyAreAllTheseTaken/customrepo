@@ -6,6 +6,7 @@ gnat-community-installer_$(GNAT_VERSION):
 	wget -O gnat-community-installer_$(GNAT_VERSION) "https://community.download.adacore.com/v1/f3a99d283f7b3d07293b2e1d07de00e31e332325?filename=gnat-2021-20210519-x86_64-linux-bin&rand=1826"
 
 $(REPO)/$(GNAT_PACKAGE).deb: gnat-community-installer_$(GNAT_VERSION)
+	echo "Packaging $(GNAT_PACKAGE)..."
 	rm -rf $(GNAT_PACKAGE)
 	mkdir -p $(GNAT_PACKAGE)/usr/share/gnat-deb/
 	cp gnat-community-installer_$(GNAT_VERSION) $(GNAT_PACKAGE)/usr/share/gnat-deb/installer

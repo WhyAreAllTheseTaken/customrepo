@@ -4,6 +4,7 @@ CPMV_PACKAGE = advcpmv_$(CPMV_VERSION)-$(CPMV_REVISION)
 CPMV_PATH = advcpmv/$(CPMV_PACKAGE)
 
 $(REPO)/$(CPMV_PACKAGE).deb:
+	echo "Building $(CPMV_PACKAGE)..."
 	rm -rf $(CPMV_PATH)
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh
 	cd advcpmv && sh install.sh
