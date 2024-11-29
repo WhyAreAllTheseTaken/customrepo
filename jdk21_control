@@ -1,9 +1,9 @@
 Package: openjdk-21-jdk
-Version: 21.0.2+13-7
+Version: 21.0.2+13-8
 Architecture: amd64
 Section: java
 Priority: optional
-Description: JDK 21.
+Description: OpenJDK Development Kit (JDK)
 Pre-Depends: bash, dpkg
 Provides: java-compiler, java-sdk (=21), java2-sdk, java5-sdk, java6-sdk,
     java7-sdk, java8-sdk, java9-sdk, java10-sdk, java11-sdk, java12-sdk,

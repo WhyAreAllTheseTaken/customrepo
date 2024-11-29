@@ -1,9 +1,9 @@
 Package: openjdk-23-jdk
-Version: 23+37-7
+Version: 23+37-8
 Architecture: amd64
 Section: java
 Priority: optional
-Description: JDK 23.
+Description: OpenJDK Development Kit (JDK)
 Pre-Depends: bash, dpkg
 Provides: java-compiler, java-sdk (=23), java2-sdk, java5-sdk, java6-sdk,
     java7-sdk, java8-sdk, java9-sdk, java10-sdk, java11-sdk, java12-sdk,
