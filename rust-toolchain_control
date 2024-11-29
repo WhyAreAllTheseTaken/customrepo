@@ -1,6 +1,6 @@
 Package: rust-toolchain
-Version: 1.83.0-6
-Architecture: any
+Version: 1.83.0-7
+Architecture: all
 Section: rust
 Priority: optional
 Description: A complete rust toolchain.
