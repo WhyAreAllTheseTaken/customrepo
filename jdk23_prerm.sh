@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 update-alternatives --remove "java" "/usr/lib/jvm/jdk-23/bin/java"
 update-alternatives --remove "javac" "/usr/lib/jvm/jdk-23/bin/javac"
@@ -15,4 +15,5 @@ update-alternatives --remove "keytool" "/usr/lib/jvm/jdk-23/bin/keytool"
 update-alternatives --remove "jconsole" "/usr/lib/jvm/jdk-23/bin/jconsole"
 update-alternatives --remove "jdb" "/usr/lib/jvm/jdk-23/bin/jdb"
 update-alternatives --remove "jcmd" "/usr/lib/jvm/jdk-23/bin/jcmd"
+
 

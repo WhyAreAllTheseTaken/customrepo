@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-23/bin/java" 0
 update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-23/bin/javac" 0
@@ -30,3 +30,4 @@ update-alternatives --set keytool /usr/lib/jvm/jdk-23/bin/keytool
 update-alternatives --set jconsole /usr/lib/jvm/jdk-23/bin/jconsole
 update-alternatives --set jdb /usr/lib/jvm/jdk-23/bin/jdb
 update-alternatives --set jcmd /usr/lib/jvm/jdk-23/bin/jcmd
+
