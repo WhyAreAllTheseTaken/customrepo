@@ -1,6 +1,6 @@
 JDK_VERSION = 23
 JDK_REVISION = 8
-JDK_PACKAGE = openjdk-latest-jdk_$(JDK_VERSION)-$(JDK_REVISION)_amd64
+JDK_PACKAGE = openjdk-latest-jdk_$(JDK_VERSION)-$(JDK_REVISION)
 
 $(REPO)/$(JDK_PACKAGE).deb:
 	echo "Packaging $(JDK_PACKAGE)..."
