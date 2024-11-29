@@ -1,6 +1,6 @@
 Package: cargo-miri
-Version: 0.1.0+git202411276b6a867ae-1
-Architecture: amd64
+Version: 0.1.0+git202411276b6a867ae-2
+Architecture: any
 Section: rust
 Priority: optional
 Description: Miri is an Undefined Behavior detection tool for Rust.

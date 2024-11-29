@@ -1,6 +1,6 @@
 Package: wings-plasma-themes
-Version: 1.0.0-1
-Architecture: amd64
+Version: 1.0.0-2
+Architecture: all
 Section: x11
 Priority: optional
 Description: Wings Themes For Plasma Desktop

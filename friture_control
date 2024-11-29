@@ -1,6 +1,6 @@
 Package: friture
-Version: 0.51-6
-Architecture: amd64
+Version: 0.51-7
+Architecture: all
 Section: sound
 Priority: optional
 Description: Friture is an application to visualize and analyze live audio data in real-time.

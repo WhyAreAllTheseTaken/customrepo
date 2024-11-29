@@ -1,5 +1,7 @@
 .PHONY: build packages install
 
+ARCH=$(shell dpkg --print-architecture)
+
 build: updater
 
 REPO = repo

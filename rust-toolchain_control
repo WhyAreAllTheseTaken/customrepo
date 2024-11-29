@@ -1,6 +1,6 @@
 Package: rust-toolchain
-Version: 1.83.0-4
-Architecture: amd64
+Version: 1.83.0-5
+Architecture: any
 Section: rust
 Priority: optional
 Description: A complete rust toolchain.

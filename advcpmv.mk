@@ -1,5 +1,5 @@
 CPMV_VERSION = 0.9
-CPMV_REVISION = 3
+CPMV_REVISION = 4
 CPMV_PACKAGE = advcpmv_$(CPMV_VERSION)-$(CPMV_REVISION)
 CPMV_PATH = advcpmv/$(CPMV_PACKAGE)
 
@@ -13,6 +13,7 @@ $(REPO)/$(CPMV_PACKAGE).deb:
 	cp ./advcpmv/advmv $(CPMV_PATH)/usr/bin/mvg
 	mkdir -p $(CPMV_PATH)/DEBIAN
 	cp ./advcpmv_control $(CPMV_PATH)/DEBIAN/control
+	sed -i "s/%arch%/$(ARCH)/g" $(CPMV_PATH)/DEBIAN/control
 	dpkg-deb --build $(CPMV_PATH)
 	mv $(CPMV_PACKAGE).deb $(REPO)
 	rm -rf advcpmv

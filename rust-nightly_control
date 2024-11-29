@@ -1,6 +1,6 @@
 Package: rust-toolchain-nightly
-Version: 1.85.0+git202411276b6a867ae-1
-Architecture: amd64
+Version: 1.85.0+git202411276b6a867ae-2
+Architecture: any
 Section: rust
 Priority: optional
 Description: The nightly build of the rust toolchain.

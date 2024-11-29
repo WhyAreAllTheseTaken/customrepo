@@ -1,7 +1,7 @@
 Package: laravel-installer
-Version: 5.9.0-8
+Version: 5.9.0-9
 Architecture: all
-Section: metapackages
+Section: php
 Priority: optional
 Description: Installs the laravel installer..
 Pre-Depends: coreutils, composer, bash
