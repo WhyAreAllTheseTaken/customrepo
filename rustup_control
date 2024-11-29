@@ -1,6 +1,6 @@
 Package: rustup
-Version: 1.27.1-13
-Architecture: any
+Version: 1.27.1-14
+Architecture: all
 Section: rust
 Priority: optional
 Description: Rustup is an installer for the systems programming language Rust
