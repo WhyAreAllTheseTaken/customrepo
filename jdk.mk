@@ -42,10 +42,10 @@ $(REPO)/$(JDK21_PACKAGE).deb:
 	mkdir -p $(JDK21_PACKAGE)/usr/lib/jvm
 	tar -xzf openjdk-$(JDK21_VERSION).tar.gz --directory $(JDK21_PACKAGE)/usr/lib/jvm
 	mkdir -p $(JDK21_PACKAGE)/DEBIAN
-	cp jdk23_control $(JDK21_PACKAGE)/DEBIAN/control
-	cp jdk23_postinst.sh $(JDK21_PACKAGE)/DEBIAN/postinst
+	cp jdk21_control $(JDK21_PACKAGE)/DEBIAN/control
+	cp jdk21_postinst.sh $(JDK21_PACKAGE)/DEBIAN/postinst
 	chmod +x $(JDK21_PACKAGE)/DEBIAN/postinst
-	cp jdk23_prerm.sh $(JDK21_PACKAGE)/DEBIAN/prerm
+	cp jdk21_prerm.sh $(JDK21_PACKAGE)/DEBIAN/prerm
 	chmod +x $(JDK21_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(JDK21_PACKAGE)
 	mv $(JDK21_PACKAGE).deb $(REPO)
