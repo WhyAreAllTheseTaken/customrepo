@@ -15,7 +15,7 @@ $(REPO)/$(CPMV_PACKAGE).deb:
 	cp ./advcpmv_control $(CPMV_PATH)/DEBIAN/control
 	sed -i "s/%arch%/$(ARCH)/g" $(CPMV_PATH)/DEBIAN/control
 	dpkg-deb --build $(CPMV_PATH)
-	mv $(CPMV_PACKAGE).deb $(REPO)
+	mv advcpmv/$(CPMV_PACKAGE).deb $(REPO)/$(CPMV_PACKAGE).deb
 	rm -rf advcpmv
 	rm -rf $(CPMV_PATH)
 
