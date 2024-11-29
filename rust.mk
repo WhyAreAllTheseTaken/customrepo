@@ -42,7 +42,7 @@ $(REPO)/$(RUST_CHAIN_PACKAGE).deb:
 RUST_NIGHTLY_VERSION = 1.85.0
 RUST_NIGHTLY_REVISION = 1
 RUST_NIGHTLY_DATE = 20241127
-RUST_NIGTHLY_HASH = 6b6a867ae
+RUST_NIGHTLY_HASH = 6b6a867ae
 RUST_NIGHTLY_PACKAGE = rust-toolchain-nightly_$(RUST_NIGHTLY_VERSION)+git$(RUST_NIGHTLY_DATE)$(RUST_NIGHTLY_HASH)-$(RUST_NIGHTLY_REVISION)
 
 $(REPO)/$(RUST_NIGHTLY_PACKAGE).deb:
@@ -59,5 +59,27 @@ $(REPO)/$(RUST_NIGHTLY_PACKAGE).deb:
 	dpkg-deb --build $(RUST_NIGHTLY_PACKAGE)
 	mv $(RUST_NIGHTLY_PACKAGE).deb $(REPO)
 	rm -rf $(RUST_NIGHTLY_PACKAGE)
+
+MIRI_VERSION = 1.85.0
+MIRI_REVISION = 1
+MIRI_DATE = 20241127
+MIRI_HASH = 6b6a867ae
+MIRI_PACKAGE = rust-toolchain-nightly_$(MIRI_VERSION)+git$(MIRI_DATE)$(MIRI_HASH)-$(MIRI_REVISION)
+
+$(REPO)/$(MIRI_PACKAGE).deb:
+	echo "Packaging $(MIRI_PACKAGE)..."
+	mkdir -p $(MIRI_PACKAGE)/DEBIAN
+	mkdir -p $(MIRI_PACKAGE)/etc/shadow-maint/useradd-post.d/
+	cp miri_useradd.sh $(MIRI_PACKAGE)/etc/shadow-maint/useradd-post.d/miri.sh
+	chmod +x $(MIRI_PACKAGE)/etc/shadow-maint/useradd-post.d/miri.sh
+	cp miri_postinst.sh $(MIRI_PACKAGE)/DEBIAN/postinst
+	chmod +x $(MIRI_PACKAGE)/DEBIAN/postinst
+	cp miri_prerm.sh $(MIRI_PACKAGE)/DEBIAN/prerm
+	chmod +x $(MIRI_PACKAGE)/DEBIAN/prerm
+	cp miri_control $(MIRI_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(MIRI_PACKAGE)
+	mv $(MIRI_PACKAGE).deb $(REPO)
+	rm -rf $(MIRI_PACKAGE)
+
 
 
