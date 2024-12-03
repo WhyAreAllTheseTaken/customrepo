@@ -1,6 +1,6 @@
 Package: packer-nvim
-Version: 1.0-4
-Architecture: amd64
+Version: 1.0-5
+Architecture: all
 Section: devel
 Priority: optional
 Description: A plugin for neovim that provides plugin management.

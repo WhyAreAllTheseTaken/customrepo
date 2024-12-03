@@ -1,5 +1,7 @@
 .PHONY: build packages install
 
+ARCH=$(shell dpkg --print-architecture)
+
 build: updater
 
 REPO = repo
@@ -19,5 +21,6 @@ packages: $(REPO)/$(CPMV_PACKAGE).deb $(REPO)/$(JDK_PACKAGE).deb $(REPO)/$(LTSA_
 	$(REPO)/$(WHY_DESKTOP_PACKAGE).deb $(REPO)/$(WHY_TERM_PACKAGE).deb $(REPO)/$(WHY_APPS_PACKAGE).deb $(REPO)/$(ONLYOFFICE_PACKAGE).deb \
 	$(REPO)/$(VIVALDI_PACKAGE).deb $(REPO)/bluemail.deb $(REPO)/$(WHY_UNI_PACKAGE).deb $(REPO)/$(WHY_DEV_PACKAGE).deb $(REPO)/$(JABREF_PACKAGE).deb \
 	$(REPO)/$(LARAVEL_PACKAGE).deb $(REPO)/$(GNAT_PACKAGE).deb $(REPO)/$(UPGRADE_PACKAGE).deb $(REPO)/$(SKEL_PACKAGE).deb \
-	$(REPO)/$(GPLATES_PACKAGE).deb
+	$(REPO)/$(GPLATES_PACKAGE).deb $(REPO)/$(RUST_CHAIN_PACKAGE).deb $(REPO)/$(RUST_NIGHTLY_PACKAGE).deb $(REPO)/$(MIRI_PACKAGE).deb \
+	$(REPO)/$(JDK21_PACKAGE).deb $(REPO)/$(JDK23_PACKAGE).deb $(REPO)/$(JDK21_PACKAGE_ARM64).deb $(REPO)/$(JDK23_PACKAGE_ARM64).deb
 

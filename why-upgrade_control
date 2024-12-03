@@ -1,6 +1,6 @@
 Package: why-upgrade
-Version: 0.0.0-2
-Architecture: amd64
+Version: 0.0.0-3
+Architecture: all
 Section: misc
 Priority: optional
 Description: A custom upgrade script.
