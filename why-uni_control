@@ -1,12 +1,15 @@
 Package: why-uni
-Version: 0.7.0-1
+Version: 0.8.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for university.
 Depends: texlive-full, swi-prolog, ruby-full, php-cli, python3, maven,
     openjdk-latest-jdk, ghcup, ltsa, onlyoffice-desktopeditors, obsidian,
-    jabref, composer, laravel-installer, alire, unityhub, jupyter
+    jabref, composer, laravel-installer, alire, unityhub, jupyter,
+    python3-sklearn, python3-sklearn-pandas, python3-seaborn,
+    python3-matplotlib, python3-pandas, python3-pandas-doc,
+    python3-sklearn-doc
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
