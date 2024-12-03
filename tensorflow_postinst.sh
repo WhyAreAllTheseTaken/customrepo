@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-pip install tensorflow
+pip install --system tensorflow
