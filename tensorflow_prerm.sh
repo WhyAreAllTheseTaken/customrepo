@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-pip uninstall --system tensorflow
+pip uninstall --break-system-packages tensorflow
 
