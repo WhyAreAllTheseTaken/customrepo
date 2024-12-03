@@ -1,5 +1,5 @@
 Package: why-uni
-Version: 0.8.0-1
+Version: 0.8.0-2
 Architecture: all
 Section: metapackages
 Priority: optional
@@ -9,7 +9,7 @@ Depends: texlive-full, swi-prolog, ruby-full, php-cli, python3, maven,
     jabref, composer, laravel-installer, alire, unityhub, jupyter,
     python3-sklearn, python3-sklearn-pandas, python3-seaborn,
     python3-matplotlib, python3-pandas, python3-pandas-doc,
-    python3-sklearn-doc
+    python3-sklearn-doc, python3-tensorflow
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
