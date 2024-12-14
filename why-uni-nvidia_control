@@ -1,0 +1,9 @@
+Package: why-uni-nvidia
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for university with specified additions for running on nvidia systems.
+Depends: why-uni, nvidia-cuda-dev, nvidia-cuda-toolkit 
+Maintainer: WhyAreAllTheseTaken
+
