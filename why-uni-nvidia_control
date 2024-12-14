@@ -4,6 +4,6 @@ Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for university with specified additions for running on nvidia systems.
-Depends: why-uni, nvidia-cuda-dev, nvidia-cuda-toolkit 
+Depends: why-uni, nvidia-cuda-dev, nvidia-cuda-toolkit, nvidia-cudnn 
 Maintainer: WhyAreAllTheseTaken
 
