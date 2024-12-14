@@ -88,8 +88,6 @@ $(REPO)/$(WHY_UNI_NVIDIA_PACKAGE).deb:
 	rm -rf $(WHY_UNI_NVIDIA_PACKAGE)
 	mkdir -p $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN
 	cp why-uni-nvidia_control $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN/control
-	cp why-uni-nvidia_postinst.sh $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN/postinst
-	chmod +x $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN/postinst
 	dpkg-deb --build $(WHY_UNI_NVIDIA_PACKAGE)
 	mv $(WHY_UNI_NVIDIA_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_UNI_NVIDIA_PACKAGE)
