@@ -1,5 +1,5 @@
 Package: cargo-miri
-Version: 0.1.0+git202411276b6a867ae-3
+Version: 0.1.0+git202411276b6a867ae-4
 Architecture: all
 Section: rust
 Priority: optional

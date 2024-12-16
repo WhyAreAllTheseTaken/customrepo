@@ -1,5 +1,5 @@
 Package: rust-toolchain
-Version: 1.83.0-7
+Version: 1.83.0-8
 Architecture: all
 Section: rust
 Priority: optional

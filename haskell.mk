@@ -1,5 +1,5 @@
 GHCUP_VERSION = 0.1.20.0
-GHCUP_REVISION = 5
+GHCUP_REVISION =6
 GHCUP_PACKAGE = ghcup_$(GHCUP_VERSION)-$(GHCUP_REVISION)
 
 $(REPO)/$(GHCUP_PACKAGE).deb:
@@ -8,9 +8,9 @@ $(REPO)/$(GHCUP_PACKAGE).deb:
 	mkdir -p $(GHCUP_PACKAGE)/usr/share/ghcup_deb
 	wget --show-progress -O $(GHCUP_PACKAGE)/usr/share/ghcup_deb/ghcup_setup.sh https://get-ghcup.haskell.org
 	chmod +x $(GHCUP_PACKAGE)/usr/share/ghcup_deb/ghcup_setup.sh
-	mkdir -p $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/
-	cp ghcup_useradd.sh $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
-	chmod +x $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
+	#mkdir -p $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/
+	#cp ghcup_useradd.sh $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
+	#chmod +x $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
 	cp ghcup_postinst.sh $(GHCUP_PACKAGE)/DEBIAN/postinst
 	chmod +x $(GHCUP_PACKAGE)/DEBIAN/postinst
 	cp ghcup_prerm.sh $(GHCUP_PACKAGE)/DEBIAN/prerm
