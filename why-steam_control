@@ -1,0 +1,9 @@
+Package: why-steam
+Version: 0.0.0-1
+Architecture: all
+Section: games
+Priority: optional
+Description: Configures steam.
+Depends: steam
+Maintainer: WhyAreAllTheseTaken
+
