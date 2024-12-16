@@ -1,9 +1,9 @@
 Package: why-steam
-Version: 0.0.0-1
+Version: 0.0.0-2
 Architecture: all
 Section: games
 Priority: optional
 Description: Configures steam.
-Depends: steam
+Depends: steam-launcher
 Maintainer: WhyAreAllTheseTaken
 
