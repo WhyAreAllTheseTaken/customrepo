@@ -1,10 +1,12 @@
 Package: why-steam
-Version: 0.0.0-4
+Version: 0.0.0-5
 Architecture: amd64
 Section: games
 Priority: optional
 Description: Configures steam.
-Depends: steam-launcher, libc6, libc6-i386, libegl1, libegl1-i386, libgbm1, libgbm1-i385, libgl-mesa-dri, libgl-mesa-dri-i386, libgl1, libgl1-i386,
-    nvidia-driver-libs-i386, steam-libs-amd64
+Depends: steam-launcher, libc6, libc6:i386, libegl1, libegl1:i386,
+    libgbm1, libgbm1:i386, libgl1-mesa-dri, libgl1-mesa-dri:i386,
+    libgl1, libgl1:i386,
+    nvidia-driver-libs:i386, steam-libs-amd64
 Maintainer: WhyAreAllTheseTaken
 
