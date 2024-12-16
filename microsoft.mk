@@ -1,6 +1,6 @@
 MS_VERSION = 1.1
 MS_REVISION = debian12
-MS_PACKAGE = packages-microsoft-prod_$(MS_VERSION)-$(MS_REVISION)
+MS_PACKAGE = packages-microsoft-prod_$(MS_VERSION)-$(MS_REVISION)_all
 
 $(REPO)/$(MS_PACKAGE).deb:
 	echo "Downloading $(MS_PACKAGE)..."
