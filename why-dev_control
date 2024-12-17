@@ -1,10 +1,10 @@
 Package: why-dev
-Version: 0.2.0-1
+Version: 0.3.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for development.
-Depends: why-dev-minecraft, why-dev-rust
+Depends: why-dev-minecraft, why-dev-rust, why-dev-repo
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 

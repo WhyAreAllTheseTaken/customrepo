@@ -1,0 +1,9 @@
+Package: why-dev-repo
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal packages for developing custom-repo.
+Depends: why-dev-base, make, aptitude
+Maintainer: WhyAreAllTheseTaken
+
