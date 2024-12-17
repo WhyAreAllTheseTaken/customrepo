@@ -1,10 +1,10 @@
 Package: why-dev-ml-nvidia
-Version: 0.0.0-2
+Version: 0.0.0-3
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for machine learning development with support for nvidia cards.
-Depends: why-dev-ml, cuda-toolkit (>= 12.5), cudnn (>= 9.3)
+Depends: why-dev-ml (=0.0.0-1), cuda-toolkit (>= 12.5), cudnn (>= 9.3)
 Maintainer: WhyAreAllTheseTaken
 
 
