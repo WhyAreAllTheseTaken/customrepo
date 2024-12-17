@@ -1,0 +1,10 @@
+Package: why-dev-rust
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for rust development.
+Depends: rust-toolchain, cargo-miri, why-dev-base
+Maintainer: WhyAreAllTheseTaken
+
+

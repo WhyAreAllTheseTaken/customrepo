@@ -1,0 +1,15 @@
+Package: why-dev-ml
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for machine learning development.
+Depends: python-is-python3, jupyter, python3-sklearn,
+    python3-sklearn-pandas, python3-seaborn,
+    python3-matplotlib, python3-pandas, python-pandas-doc,
+    python-sklearn-doc, virtualenv, python3-pip
+Maintainer: WhyAreAllTheseTaken
+
+
+
+

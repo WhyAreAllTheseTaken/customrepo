@@ -1,9 +1,9 @@
 Package: why-uni-nvidia
-Version: 0.0.0-4
+Version: 0.10.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for university with specified additions for running on nvidia systems.
-Depends: why-uni (>= 0.9.0), cuda-toolkit (>= 12.5), cudnn (>= 9.3)
+Depends: why-uni (= 0.10.0), why-dev-ml-nvidia
 Maintainer: WhyAreAllTheseTaken
 

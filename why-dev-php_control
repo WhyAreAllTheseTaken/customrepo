@@ -1,0 +1,11 @@
+Package: why-dev-php
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for PHP development.
+Depends: php-cli, composer, ruby-full, laravel-installer, why-dev-base, npm, inkscape, gimp
+Maintainer: WhyAreAllTheseTaken
+
+
+

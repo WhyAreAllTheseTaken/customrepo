@@ -1,11 +1,11 @@
 Package: why-apps
-Version: 0.3.0-3
+Version: 0.4.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: Apps for why-desktop.
 Depends: why-terminal, why-shell, why-htop, why-neofetch, why-cava, thunar,
     onlyoffice-desktopeditors, gimp, inkscape, chromium, vivaldi-stable, bluemail,
-    discord, baobab, friture, vlc, virt-manager, gparted
+    discord, baobab, friture, vlc, virt-manager, gparted, shotcut
 Maintainer: WhyAreAllTheseTaken
 

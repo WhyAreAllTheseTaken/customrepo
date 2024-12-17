@@ -51,8 +51,8 @@ $(REPO)/$(WHY_TERM_PACKAGE).deb:
 	mv $(WHY_TERM_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_TERM_PACKAGE)
 
-WHY_APPS_VERSION = 0.3.0
-WHY_APPS_REVISION = 3
+WHY_APPS_VERSION = 0.4.0
+WHY_APPS_REVISION = 1
 WHY_APPS_PACKAGE = why-apps_$(WHY_APPS_VERSION)-$(WHY_APPS_REVISION)_all
 
 $(REPO)/$(WHY_APPS_PACKAGE).deb:
@@ -63,48 +63,4 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	dpkg-deb --build $(WHY_APPS_PACKAGE)
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
-
-WHY_UNI_VERSION = 0.9.0
-WHY_UNI_REVISION = 1
-WHY_UNI_PACKAGE = why-uni_$(WHY_UNI_VERSION)-$(WHY_UNI_REVISION)_all
-
-$(REPO)/$(WHY_UNI_PACKAGE).deb:
-	echo "Packaging $(WHY_UNI_PACKAGE)..."
-	rm -rf $(WHY_UNI_PACKAGE)
-	mkdir -p $(WHY_UNI_PACKAGE)/DEBIAN
-	cp why-uni_control $(WHY_UNI_PACKAGE)/DEBIAN/control
-	cp why-uni_postinst.sh $(WHY_UNI_PACKAGE)/DEBIAN/postinst
-	chmod +x $(WHY_UNI_PACKAGE)/DEBIAN/postinst
-	dpkg-deb --build $(WHY_UNI_PACKAGE)
-	mv $(WHY_UNI_PACKAGE).deb $(REPO)
-	rm -rf $(WHY_UNI_PACKAGE)
-
-WHY_UNI_NVIDIA_VERSION = 0.0.0
-WHY_UNI_NVIDIA_REVISION = 4
-WHY_UNI_NVIDIA_PACKAGE = why-uni-nvidia_$(WHY_UNI_NVIDIA_VERSION)-$(WHY_UNI_NVIDIA_REVISION)_all
-
-$(REPO)/$(WHY_UNI_NVIDIA_PACKAGE).deb:
-	echo "Packaging $(WHY_UNI_NVIDIA_PACKAGE)..."
-	rm -rf $(WHY_UNI_NVIDIA_PACKAGE)
-	mkdir -p $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN
-	cp why-uni-nvidia_control $(WHY_UNI_NVIDIA_PACKAGE)/DEBIAN/control
-	dpkg-deb --build $(WHY_UNI_NVIDIA_PACKAGE)
-	mv $(WHY_UNI_NVIDIA_PACKAGE).deb $(REPO)
-	rm -rf $(WHY_UNI_NVIDIA_PACKAGE)
-
-WHY_DEV_VERSION = 0.1.0
-WHY_DEV_REVISION = 1
-WHY_DEV_PACKAGE = why-dev_$(WHY_DEV_VERSION)-$(WHY_DEV_REVISION)_all
-
-$(REPO)/$(WHY_DEV_PACKAGE).deb:
-	echo "Packaging $(WHY_DEV_PACKAGE)..."
-	rm -rf $(WHY_DEV_PACKAGE)
-	mkdir -p $(WHY_DEV_PACKAGE)/DEBIAN
-	cp why-dev_control $(WHY_DEV_PACKAGE)/DEBIAN/control
-	cp why-dev_postinst.sh $(WHY_DEV_PACKAGE)/DEBIAN/postinst
-	chmod +x $(WHY_DEV_PACKAGE)/DEBIAN/postinst
-	dpkg-deb --build $(WHY_DEV_PACKAGE)
-	mv $(WHY_DEV_PACKAGE).deb $(REPO)
-	rm -rf $(WHY_DEV_PACKAGE)
-
 

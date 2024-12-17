@@ -1,0 +1,11 @@
+Package: why-dev-base
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: Base package for my development setup.
+Depends: why-neovim
+Breaks: why-dev (<= 0.1.0)
+Pre-Depends: bash, sudo
+Maintainer: WhyAreAllTheseTaken
+

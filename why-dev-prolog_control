@@ -1,0 +1,11 @@
+Package: why-dev-prolog
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for prolog development.
+Depends: swi-prolog, why-dev-base
+Maintainer: WhyAreAllTheseTaken
+
+
+
