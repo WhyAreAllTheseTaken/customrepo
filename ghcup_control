@@ -1,5 +1,5 @@
 Package: ghcup
-Version: 0.1.20.0-6
+Version: 0.1.30.0-1
 Architecture: amd64
 Section: haskell
 Priority: optional
@@ -12,5 +12,5 @@ Depends: skel-fixer
 Pre-Depends: coreutils, bash, sudo, build-essential, curl, libffi-dev, libffi8,
     libgmp-dev, libgmp10, libncurses-dev, libncurses5, libtinfo5
 Maintainer: WhyAreAllTheseTaken
-Provides: ghc, cabal, stack, hls
+Provides: ghc (=9.10.1), cabal (=3.12.1.0), stack (=3.12.1.0), hls (=2.9.0.1)
 
