@@ -15,7 +15,7 @@ do
     cp /etc/skel/.config/i3/config /home/$user/.config/i3/config
     mkdir -p /home/$user/.config/i3blocks/
     cp /etc/skel/.config/i3blocks/i3blocks.conf /home/$user/.config/i3blocks/i3blocks.conf
-    mkdir -p /home/$user/rofi/themes/
+    mkdir -p /home/$user/.config/rofi/themes/
     cp /etc/skel/.config/rofi/config.rasi /home/$user/.config/rofi/config.rasi
     cp /etc/skel/.config/rofi/themes/Ice.rasi /home/$user/.config/rofi/themes/Ice.rasi
     cp /etc/skel/.config/betterlockscreenrc /home/$user/.config/betterlockscreenrc
