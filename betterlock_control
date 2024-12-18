@@ -1,5 +1,5 @@
 Package: betterlockscreen
-Version: 4.4.0-2
+Version: 4.4.0-3
 Architecture: amd64
 Section: x11
 Priority: optional
@@ -10,7 +10,7 @@ Description: Most of i3lock wrapper-scripts out there take an image, add some
     So Betterlockscreen was my attempt to solve this problem, as we dont need
     to change lockscreen background frequently this script caches images with
     effect so overall experience is simple and as fast as native i3lock.
-Depends: i3lock-color (>= 2.13.c.3) | i3lock, bc, imagemagick, x11-utils
+Depends: i3lock-color (>= 2.13.3), bc, imagemagick, x11-utils
 Pre-Depends: bash, systemd | systemctl
 Recommends: feh
 Maintainer: WhyAreAllTheseTaken
