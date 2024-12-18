@@ -5,7 +5,7 @@ I3LOCK_COLOR_PACKAGE = i3lock-color_$(I3LOCK_COLOR_VERSION)-$(I3LOCK_COLOR_REVIS
 $(REPO)/$(I3LOCK_COLOR_PACKAGE).deb:
 	echo "Packaging $(I3LOCK_COLOR_PACKAGE)..."
 	rm -rf i3lock-color
-	git clone --depth 1 --branch $(I3LOCK_COLOR_VERSION) https://github.com/Raymo111/i3lock-color.git
+	git clone --depth 1 --branch 2.13.c.5 https://github.com/Raymo111/i3lock-color.git
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
 	cp -r i3lock-color/* $(I3LOCK_COLOR_PACKAGE)/usr/share/i3lock-color-build
 	mkdir -p $(I3LOCK_COLOR_PACKAGE)/DEBIAN
