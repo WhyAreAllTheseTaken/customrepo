@@ -10,6 +10,6 @@ while getopts "r" option; do
    esac
 done
 
-betterlockscreen -u $0
+betterlockscreen -u $1
 betterlockscreen -w
 
