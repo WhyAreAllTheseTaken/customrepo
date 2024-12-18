@@ -1,4 +1,4 @@
-WHY_DESKTOP_VERSION = 0.5.2
+WHY_DESKTOP_VERSION = 0.5.3
 WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
 
@@ -15,8 +15,8 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	cp whyconfig/home/.config/rofi/config.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
 	cp whyconfig/home/.config/rofi/themes/Ice.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
-	cp whyconfig/home/.config/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/betterlockscreen
+	cp whyconfig/home/.config/betterlockscreen/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/betterlockscreen
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot

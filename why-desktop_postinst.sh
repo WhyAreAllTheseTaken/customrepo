@@ -23,8 +23,9 @@ do
     chown $user:$user /home/$user/.config/rofi/config.rasi
     cp /etc/skel/.config/rofi/themes/Ice.rasi /home/$user/.config/rofi/themes/Ice.rasi
     chown $user:$user /home/$user/.config/rofi/themes/Ice.rasi
-    cp /etc/skel/.config/betterlockscreenrc /home/$user/.config/betterlockscreenrc
-    chown $user:$user /home/$user/.config/betterlockscreenrc
+    mkdir -p /home/$user/.config/betterlockscreen
+    cp /etc/skel/.config/betterlockscreen/betterlockscreenrc /home/$user/.config/betterlockscreen/betterlockscreenrc
+    chown $user:$user /home/$user/.config/betterlockscreen/betterlockscreenrc
     cp /etc/skel/.config/picom.conf /home/$user/.config/picom.conf
     chown $user:$user /home/$user/.config/picom.conf
     mkdir -p /home/$user/.config/flameshot
