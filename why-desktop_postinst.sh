@@ -30,10 +30,12 @@ do
     mkdir -p /home/$user/.config/flameshot
     cp /etc/skel/.config/flameshot/flameshot.ini /home/$user/.config/flameshot/flameshot.ini
     chown $user:$user /home/$user/.config/flameshot/flameshot.ini
-    if [[ ! -f "/home/$user/.local/share/backgrounds/bg.png" ]]; then
-        mkdir -p /home/$user/.local/share/backgrounds
-        cp /etc/skel/.local/share/backgrounds/bg.png /home/$user/.local/share/backgrounds/bg.png
+    if [[ ! -f "/home/$user/.local/why-bg" ]]; then
+        sudo -u $user -- betterlockscreen -u /usr/share/backgrounds/bg1440.png
+
+        mkdir -p /home/$user/.local
+        touch /home/$user/.local/why-bg
+        chown $user:$user /home/$user/.local/why-bg
     fi
-    chown $user:$user /home/$user/.local/share/backgrounds/bg.png
 done
 

@@ -1,5 +1,5 @@
 Package: why-desktop
-Version: 0.4.1-2
+Version: 0.5.0-1
 Architecture: all
 Section: why
 Priority: optional
@@ -7,6 +7,6 @@ Description: My custom desktop.
 Depends: dunst, i3, i3blocks, i3blocks-contrib, betterlockscreen, picom, flameshot, feh, lightdm,
     materia-gtk-theme, xorg, rofi, lxappearance, pavucontrol, hicolor-icon-theme, fonts-noto,
     pasystray, network-manager-gnome, lxpolkit, brightnessctl, wings-plasma-themes
-Pre-Depends: bash, coreutils, lightdm-gtk-greeter
+Pre-Depends: bash, coreutils, lightdm-gtk-greeter, sudo
 Maintainer: WhyAreAllTheseTaken
 

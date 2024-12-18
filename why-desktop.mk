@@ -1,5 +1,5 @@
-WHY_DESKTOP_VERSION = 0.4.1
-WHY_DESKTOP_REVISION = 2
+WHY_DESKTOP_VERSION = 0.5.0
+WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
 
 $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
@@ -21,10 +21,12 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
 	cp whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/share/backgrounds
-	cp whyconfig/home/.local/share/backgrounds/bg.png $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/share/backgrounds
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/share/backgrounds
+	cp whyconfig/usr/share/backgrounds/bg1440.png $(WHY_DESKTOP_PACKAGE)/usr/share/backgrounds
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
+	cp ./why-bg.sh $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	cp why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
