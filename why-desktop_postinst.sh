@@ -30,7 +30,7 @@ do
     mkdir -p /home/$user/.config/flameshot
     cp /etc/skel/.config/flameshot/flameshot.ini /home/$user/.config/flameshot/flameshot.ini
     chown $user:$user /home/$user/.config/flameshot/flameshot.ini
-    if [[ -f "/home/$user/.local/share/backgrounds/bg.png" ]]; then
+    if [[ ! -f "/home/$user/.local/share/backgrounds/bg.png" ]]; then
         mkdir -p /home/$user/.local/share/backgrounds
         cp /etc/skel/.local/share/backgrounds/bg.png /home/$user/.local/share/backgrounds/bg.png
     fi
