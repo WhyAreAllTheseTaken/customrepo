@@ -1,28 +1,30 @@
-WHY_DESKTOP_VERSION = 0.3.3
-WHY_DESKTOP_REVISION = 3
+WHY_DESKTOP_VERSION = 0.4.0
+WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
 
 $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	echo "Packaging $(WHY_DESKTOP_PACKAGE)..."
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst
-	cp -r whyconfig/home/.config/dunst/dunstrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst/
+	cp whyconfig/home/.config/dunst/dunstrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
-	cp -r whyconfig/home/.config/i3/config $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
+	cp whyconfig/home/.config/i3/config $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3blocks
-	cp -r whyconfig/home/.config/i3blocks/i3blocks.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3blocks
+	cp whyconfig/home/.config/i3blocks/i3blocks.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3blocks
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi
-	cp -r whyconfig/home/.config/rofi/config.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/
+	cp whyconfig/home/.config/rofi/config.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
-	cp -r whyconfig/home/.config/rofi/themes/Ice.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
+	cp whyconfig/home/.config/rofi/themes/Ice.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
-	cp -r whyconfig/home/.config/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
+	cp whyconfig/home/.config/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
-	cp -r whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
+	cp whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/share/backgrounds
+	cp whyconfig/home/.local/share/backgrounds/bg.png $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/share/backgrounds
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
-	cp -r whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
+	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	cp why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst

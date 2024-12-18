@@ -290,7 +290,7 @@ hide_edge_borders both
 #exec --no-startup-id feh -xF --zoom fill /usr/share/backgrounds/bg1440.png & sleep 7; pkill feh
 
 # Startup
-exec_always --no-startup-id betterlockscreen -u /usr/share/backgrounds/
+exec_always --no-startup-id betterlockscreen -u ~/.local/share/backgrounds
 exec_always --no-startup-id sleep 1;betterlockscreen -w
 exec_always --no-startup-id pkill picom; sleep 1; picom -b --config ~/.config/picom.conf
 exec --no-startup-id start-pulseaudio-x11
