@@ -34,5 +34,6 @@ do
         mkdir -p /home/$user/.local/share/backgrounds
         cp /etc/skel/.local/share/backgrounds/bg.png /home/$user/.local/share/backgrounds/bg.png
     fi
+    chown $user:$user /home/$user/.local/share/backgrounds/bg.png
 done
 
