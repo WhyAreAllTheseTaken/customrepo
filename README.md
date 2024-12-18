@@ -7,7 +7,12 @@ customrepo is a debian package that provides a debian repository featuring packa
 2. The packages starting with `why-` are my own personal configurations of packages and metapackages. They may be changed at any time as I update my configuration. Installing them will break your existing configurations.
 
 ## Installation
-To install download the git repository and run:
+To install, first download the git repository.
+Then make sure the following dependencies are installed:
+```bash
+sudo apt install make wget gpg
+```
+Finally, build and install the custom repo.
 ```bash
 make && sudo make install
 ```
