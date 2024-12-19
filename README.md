@@ -4,7 +4,8 @@ customrepo is a debian package that provides a debian repository featuring packa
 
 ## Warnings
 1. This is primarily intended for my own personal use to manage my configurations and packages. As such, breaking changes may be made at any time.
-2. The packages starting with `why-` are my own personal configurations of packages and metapackages. They may be changed at any time as I update my configuration. Installing them will break your existing configurations.
+2. Installing this will also install several other repositories these may run ahead of the debian bookworm packages.
+3. The packages starting with `why-` are my own personal configurations of packages and metapackages. They may be changed at any time as I update my configuration. Installing them will break your existing configurations.
 
 ## Installation
 To install, first download the git repository.
