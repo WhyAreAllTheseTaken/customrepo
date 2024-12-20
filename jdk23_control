@@ -1,5 +1,5 @@
 Package: openjdk-23-jdk
-Version: 23+37-9
+Version: 23+37-10
 Architecture: amd64
 Section: java
 Priority: optional

@@ -1,5 +1,5 @@
 Package: openjdk-latest-jdk
-Version: 23-8
+Version: 23-9
 Architecture: all
 Section: java
 Priority: optional
