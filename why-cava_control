@@ -1,9 +1,0 @@
-Package:why-cava
-Version: 0.0.0-1
-Architecture: all
-Section: sound
-Priority: optional
-Description: My personal configuration for cava.
-Depends: cava
-Maintainer: WhyAreAllTheseTaken
-

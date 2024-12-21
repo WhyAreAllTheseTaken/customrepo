@@ -5,22 +5,14 @@ WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)
 $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	echo "Packaging $(WHY_DESKTOP_PACKAGE)..."
 	rm -rf $(WHY_DESKTOP_PACKAGE)
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst
-	cp whyconfig/home/.config/dunst/dunstrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/dunst/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
 	cp whyconfig/home/.config/i3/config $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3blocks
 	cp whyconfig/home/.config/i3blocks/i3blocks.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3blocks
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi
-	cp whyconfig/home/.config/rofi/config.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
-	cp whyconfig/home/.config/rofi/themes/Ice.rasi $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/rofi/themes
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/betterlockscreen
 	cp whyconfig/home/.config/betterlockscreen/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/betterlockscreen
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
-	cp whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
@@ -56,7 +48,7 @@ $(REPO)/$(WHY_TERM_PACKAGE).deb:
 	mv $(WHY_TERM_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_TERM_PACKAGE)
 
-WHY_APPS_VERSION = 0.4.0
+WHY_APPS_VERSION = 0.5.0
 WHY_APPS_REVISION = 1
 WHY_APPS_PACKAGE = why-apps_$(WHY_APPS_VERSION)-$(WHY_APPS_REVISION)_all
 
@@ -69,7 +61,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_VERSION = 0.1.2
+THEME_VERSION = 0.2.0
 THEME_REVISION = 1
 THEME_PACKAGE_P = why-desktop-theme-
 THEME_PACKAGE_S = _$(THEME_VERSION)-$(THEME_REVISION)_all

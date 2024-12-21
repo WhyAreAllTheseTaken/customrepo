@@ -1,9 +1,0 @@
-Package: why-htop
-Version: 0.0.0-1
-Architecture: all
-Section: utils
-Priority: optional
-Description: My personal configuration for htop.
-Depends: htop (>= 3.2.2)
-Maintainer: WhyAreAllTheseTaken
-
