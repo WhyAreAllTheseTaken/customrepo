@@ -78,12 +78,12 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/home/
-	cp -r $</home/* $@/usr/share/why-desktop/theme/$(<F)/home/
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/config/
-	cp -r $</config/* $@/usr/share/why-desktop/theme/$(<F)/config/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
-	cp -r $</share/* $@/usr/share/why-desktop/theme/$(<F)/
+	cp -r $</home $@/usr/share/why-desktop/theme/$(<F)/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
+	cp -r $</config $@/usr/share/why-desktop/theme/$(<F)/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
+	cp -r $</share $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/backgrounds
 	cp -r $</bg/* $@/usr/share/backgrounds
 
