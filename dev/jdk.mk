@@ -1,18 +1,18 @@
 JDK_VERSION = 23
-JDK_REVISION = 9
+JDK_REVISION = 10
 JDK_PACKAGE = openjdk-latest-jdk_$(JDK_VERSION)-$(JDK_REVISION)
 
 $(REPO)/$(JDK_PACKAGE).deb:
 	echo "Packaging $(JDK_PACKAGE)..."
 	mkdir -p $(JDK_PACKAGE)/DEBIAN
-	cp jdk_control $(JDK_PACKAGE)/DEBIAN/control
+	cp dev/jdk_control $(JDK_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(JDK_PACKAGE)
 	mv $(JDK_PACKAGE).deb $(REPO)
 	rm -rf $(JDK_PACKAGE)
 
 JDK23_VERSION = 23
 JDK23_BUILD = 37
-JDK23_REVISION = 10
+JDK23_REVISION = 11
 JDK23_PACKAGE = openjdk-23-jdk_$(JDK23_VERSION)+$(JDK23_BUILD)-$(JDK23_REVISION)_amd64
 
 $(REPO)/$(JDK23_PACKAGE).deb:
@@ -21,11 +21,11 @@ $(REPO)/$(JDK23_PACKAGE).deb:
 	mkdir -p $(JDK23_PACKAGE)/usr/lib/jvm
 	tar -xzf openjdk-$(JDK23_VERSION).tar.gz --directory $(JDK23_PACKAGE)/usr/lib/jvm
 	mkdir -p $(JDK23_PACKAGE)/DEBIAN
-	cp jdk23_control $(JDK23_PACKAGE)/DEBIAN/control
+	cp dev/jdk23_control $(JDK23_PACKAGE)/DEBIAN/control
 	sed -i "s/%arch%/amd64/g" $(JDK23_PACKAGE)/DEBIAN/control
-	cp jdk23_postinst.sh $(JDK23_PACKAGE)/DEBIAN/postinst
+	cp dev/jdk23_postinst.sh $(JDK23_PACKAGE)/DEBIAN/postinst
 	chmod +x $(JDK23_PACKAGE)/DEBIAN/postinst
-	cp jdk23_prerm.sh $(JDK23_PACKAGE)/DEBIAN/prerm
+	cp dev/jdk23_prerm.sh $(JDK23_PACKAGE)/DEBIAN/prerm
 	chmod +x $(JDK23_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(JDK23_PACKAGE)
 	mv $(JDK23_PACKAGE).deb $(REPO)
@@ -34,7 +34,7 @@ $(REPO)/$(JDK23_PACKAGE).deb:
 
 JDK21_VERSION = 21.0.2
 JDK21_BUILD = 13
-JDK21_REVISION = 10
+JDK21_REVISION = 11
 JDK21_PACKAGE = openjdk-21-jdk_$(JDK21_VERSION)+$(JDK21_BUILD)-$(JDK21_REVISION)_amd64
 
 $(REPO)/$(JDK21_PACKAGE).deb:
@@ -43,11 +43,11 @@ $(REPO)/$(JDK21_PACKAGE).deb:
 	mkdir -p $(JDK21_PACKAGE)/usr/lib/jvm
 	tar -xzf openjdk-$(JDK21_VERSION).tar.gz --directory $(JDK21_PACKAGE)/usr/lib/jvm
 	mkdir -p $(JDK21_PACKAGE)/DEBIAN
-	cp jdk21_control $(JDK21_PACKAGE)/DEBIAN/control
+	cp dev/jdk21_control $(JDK21_PACKAGE)/DEBIAN/control
 	sed -i "s/%arch%/amd64/g" $(JDK21_PACKAGE)/DEBIAN/control
-	cp jdk21_postinst.sh $(JDK21_PACKAGE)/DEBIAN/postinst
+	cp dev/jdk21_postinst.sh $(JDK21_PACKAGE)/DEBIAN/postinst
 	chmod +x $(JDK21_PACKAGE)/DEBIAN/postinst
-	cp jdk21_prerm.sh $(JDK21_PACKAGE)/DEBIAN/prerm
+	cp dev/jdk21_prerm.sh $(JDK21_PACKAGE)/DEBIAN/prerm
 	chmod +x $(JDK21_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(JDK21_PACKAGE)
 	mv $(JDK21_PACKAGE).deb $(REPO)
@@ -62,11 +62,11 @@ $(REPO)/$(JDK23_PACKAGE_ARM64).deb:
 	mkdir -p $(JDK23_PACKAGE_ARM64)/usr/lib/jvm
 	tar -xzf openjdk-$(JDK23_VERSION)_arm64.tar.gz --directory $(JDK23_PACKAGE_ARM64)/usr/lib/jvm
 	mkdir -p $(JDK23_PACKAGE_ARM64)/DEBIAN
-	cp jdk23_control $(JDK23_PACKAGE_ARM64)/DEBIAN/control
+	cp dev/jdk23_control $(JDK23_PACKAGE_ARM64)/DEBIAN/control
 	sed -i "s/%arch%/arm64/g" $(JDK23_PACKAGE_ARM64)/DEBIAN/control
-	cp jdk23_postinst.sh $(JDK23_PACKAGE_ARM64)/DEBIAN/postinst
+	cp dev/jdk23_postinst.sh $(JDK23_PACKAGE_ARM64)/DEBIAN/postinst
 	chmod +x $(JDK23_PACKAGE_ARM64)/DEBIAN/postinst
-	cp jdk23_prerm.sh $(JDK23_PACKAGE_ARM64)/DEBIAN/prerm
+	cp dev/jdk23_prerm.sh $(JDK23_PACKAGE_ARM64)/DEBIAN/prerm
 	chmod +x $(JDK23_PACKAGE_ARM64)/DEBIAN/prerm
 	dpkg-deb --build $(JDK23_PACKAGE_ARM64)
 	mv $(JDK23_PACKAGE_ARM64).deb $(REPO)
@@ -81,11 +81,11 @@ $(REPO)/$(JDK21_PACKAGE_ARM64).deb:
 	mkdir -p $(JDK21_PACKAGE_ARM64)/usr/lib/jvm
 	tar -xzf openjdk-$(JDK21_VERSION)_arm64.tar.gz --directory $(JDK21_PACKAGE_ARM64)/usr/lib/jvm
 	mkdir -p $(JDK21_PACKAGE_ARM64)/DEBIAN
-	cp jdk21_control $(JDK21_PACKAGE_ARM64)/DEBIAN/control
+	cp dev/jdk21_control $(JDK21_PACKAGE_ARM64)/DEBIAN/control
 	sed -i "s/%arch%/arm64/g" $(JDK21_PACKAGE_ARM64)/DEBIAN/control
-	cp jdk21_postinst.sh $(JDK21_PACKAGE_ARM64)/DEBIAN/postinst
+	cp dev/jdk21_postinst.sh $(JDK21_PACKAGE_ARM64)/DEBIAN/postinst
 	chmod +x $(JDK21_PACKAGE_ARM64)/DEBIAN/postinst
-	cp jdk21_prerm.sh $(JDK21_PACKAGE_ARM64)/DEBIAN/prerm
+	cp dev/jdk21_prerm.sh $(JDK21_PACKAGE_ARM64)/DEBIAN/prerm
 	chmod +x $(JDK21_PACKAGE_ARM64)/DEBIAN/prerm
 	dpkg-deb --build $(JDK21_PACKAGE_ARM64)
 	mv $(JDK21_PACKAGE_ARM64).deb $(REPO)

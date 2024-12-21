@@ -1,5 +1,5 @@
 Package: laravel-installer
-Version: 5.9.0-10
+Version: 5.9.0-11
 Architecture: all
 Section: php
 Priority: optional

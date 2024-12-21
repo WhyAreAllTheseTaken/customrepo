@@ -26,13 +26,13 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
-	cp ./why-bg.sh $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
+	cp desktop/why-bg.sh $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
 	chmod +x $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
-	cp why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
-	cp why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
+	cp desktop/why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
+	cp desktop/why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
 	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
-	cp why-desktop_prerm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/prerm
+	cp desktop/why-desktop_prerm.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/prerm
 	chmod +x $(WHY_DESKTOP_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(WHY_DESKTOP_PACKAGE)
 	mv $(WHY_DESKTOP_PACKAGE).deb $(REPO)
@@ -51,7 +51,7 @@ $(REPO)/$(WHY_TERM_PACKAGE).deb:
 	mkdir -p $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/themes/
 	cp -r "whyconfig/home/.config/kitty/themes/Ice Tango Dark.conf" $(WHY_TERM_PACKAGE)/etc/skel/.config/kitty/themes/
 	mkdir -p $(WHY_TERM_PACKAGE)/DEBIAN
-	cp why-terminal_control $(WHY_TERM_PACKAGE)/DEBIAN/control
+	cp desktop/why-terminal_control $(WHY_TERM_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_TERM_PACKAGE)
 	mv $(WHY_TERM_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_TERM_PACKAGE)
@@ -64,7 +64,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	echo "Packaging $(WHY_APPS_PACKAGE)..."
 	rm -rf $(WHY_APPS_PACKAGE)
 	mkdir -p $(WHY_APPS_PACKAGE)/DEBIAN
-	cp why-apps_control $(WHY_APPS_PACKAGE)/DEBIAN/control
+	cp desktop/why-apps_control $(WHY_APPS_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_APPS_PACKAGE)
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)

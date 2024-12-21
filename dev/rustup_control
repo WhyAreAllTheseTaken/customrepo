@@ -1,5 +1,5 @@
 Package: rustup
-Version: 1.27.1-15
+Version: 1.27.1-16
 Architecture: all
 Section: rust
 Priority: optional

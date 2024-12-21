@@ -1,185 +1,185 @@
 WHY_DEV_VERSION = 0.3.0
-WHY_DEV_REVISION = 1
+WHY_DEV_REVISION = 2
 WHY_DEV_PACKAGE = why-dev_$(WHY_DEV_VERSION)-$(WHY_DEV_REVISION)_all
 
 $(REPO)/$(WHY_DEV_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_PACKAGE)..."
 	rm -rf $(WHY_DEV_PACKAGE)
 	mkdir -p $(WHY_DEV_PACKAGE)/DEBIAN
-	cp why-dev_control $(WHY_DEV_PACKAGE)/DEBIAN/control
+	cp dev/why-dev_control $(WHY_DEV_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_PACKAGE)
 	mv $(WHY_DEV_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_PACKAGE)
 
 WHY_DEV_BASE_VERSION = 0.0.0
-WHY_DEV_BASE_REVISION = 1
+WHY_DEV_BASE_REVISION = 2
 WHY_DEV_BASE_PACKAGE = why-dev-base_$(WHY_DEV_BASE_VERSION)-$(WHY_DEV_BASE_REVISION)_all
 
 $(REPO)/$(WHY_DEV_BASE_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_BASE_PACKAGE)..."
 	rm -rf $(WHY_DEV_BASE_PACKAGE)
 	mkdir -p $(WHY_DEV_BASE_PACKAGE)/DEBIAN
-	cp why-dev-base_control $(WHY_DEV_BASE_PACKAGE)/DEBIAN/control
-	cp why-dev-base_postinst.sh $(WHY_DEV_BASE_PACKAGE)/DEBIAN/postinst
+	cp dev/why-dev-base_control $(WHY_DEV_BASE_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-base_postinst.sh $(WHY_DEV_BASE_PACKAGE)/DEBIAN/postinst
 	chmod +x $(WHY_DEV_BASE_PACKAGE)/DEBIAN/postinst
-	cp why-dev-base_prerm.sh $(WHY_DEV_BASE_PACKAGE)/DEBIAN/prerm
+	cp dev/why-dev-base_prerm.sh $(WHY_DEV_BASE_PACKAGE)/DEBIAN/prerm
 	chmod +x $(WHY_DEV_BASE_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(WHY_DEV_BASE_PACKAGE)
 	mv $(WHY_DEV_BASE_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_BASE_PACKAGE)
 
 WHY_DEV_ADA_VERSION = 0.0.0
-WHY_DEV_ADA_REVISION = 1
+WHY_DEV_ADA_REVISION = 2
 WHY_DEV_ADA_PACKAGE = why-dev-ada_$(WHY_DEV_ADA_VERSION)-$(WHY_DEV_ADA_REVISION)_all
 
 $(REPO)/$(WHY_DEV_ADA_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_ADA_PACKAGE)..."
 	rm -rf $(WHY_DEV_ADA_PACKAGE)
 	mkdir -p $(WHY_DEV_ADA_PACKAGE)/DEBIAN
-	cp why-dev-ada_control $(WHY_DEV_ADA_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-ada_control $(WHY_DEV_ADA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_ADA_PACKAGE)
 	mv $(WHY_DEV_ADA_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_ADA_PACKAGE)
 
 WHY_DEV_HASKELL_VERSION = 0.0.0
-WHY_DEV_HASKELL_REVISION = 1
+WHY_DEV_HASKELL_REVISION = 2
 WHY_DEV_HASKELL_PACKAGE = why-dev-haskell_$(WHY_DEV_HASKELL_VERSION)-$(WHY_DEV_HASKELL_REVISION)_all
 
 $(REPO)/$(WHY_DEV_HASKELL_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_HASKELL_PACKAGE)..."
 	rm -rf $(WHY_DEV_HASKELL_PACKAGE)
 	mkdir -p $(WHY_DEV_HASKELL_PACKAGE)/DEBIAN
-	cp why-dev-haskell_control $(WHY_DEV_HASKELL_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-haskell_control $(WHY_DEV_HASKELL_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_HASKELL_PACKAGE)
 	mv $(WHY_DEV_HASKELL_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_HASKELL_PACKAGE)
 
 WHY_DEV_JAVA_VERSION = 0.0.0
-WHY_DEV_JAVA_REVISION = 1
+WHY_DEV_JAVA_REVISION = 2
 WHY_DEV_JAVA_PACKAGE = why-dev-java_$(WHY_DEV_JAVA_VERSION)-$(WHY_DEV_JAVA_REVISION)_all
 
 $(REPO)/$(WHY_DEV_JAVA_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_JAVA_PACKAGE)..."
 	rm -rf $(WHY_DEV_JAVA_PACKAGE)
 	mkdir -p $(WHY_DEV_JAVA_PACKAGE)/DEBIAN
-	cp why-dev-java_control $(WHY_DEV_JAVA_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-java_control $(WHY_DEV_JAVA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_JAVA_PACKAGE)
 	mv $(WHY_DEV_JAVA_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_JAVA_PACKAGE)
 
 WHY_DEV_MINECRAFT_VERSION = 0.0.0
-WHY_DEV_MINECRAFT_REVISION = 1
+WHY_DEV_MINECRAFT_REVISION = 2
 WHY_DEV_MINECRAFT_PACKAGE = why-dev-minecraft_$(WHY_DEV_MINECRAFT_VERSION)-$(WHY_DEV_MINECRAFT_REVISION)_all
 
 $(REPO)/$(WHY_DEV_MINECRAFT_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_MINECRAFT_PACKAGE)..."
 	rm -rf $(WHY_DEV_MINECRAFT_PACKAGE)
 	mkdir -p $(WHY_DEV_MINECRAFT_PACKAGE)/DEBIAN
-	cp why-dev-minecraft_control $(WHY_DEV_MINECRAFT_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-minecraft_control $(WHY_DEV_MINECRAFT_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_MINECRAFT_PACKAGE)
 	mv $(WHY_DEV_MINECRAFT_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_MINECRAFT_PACKAGE)
 
 WHY_DEV_ML_VERSION = 0.0.0
-WHY_DEV_ML_REVISION = 2
+WHY_DEV_ML_REVISION = 3
 WHY_DEV_ML_PACKAGE = why-dev-ml_$(WHY_DEV_ML_VERSION)-$(WHY_DEV_ML_REVISION)_all
 
 $(REPO)/$(WHY_DEV_ML_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_ML_PACKAGE)..."
 	rm -rf $(WHY_DEV_ML_PACKAGE)
 	mkdir -p $(WHY_DEV_ML_PACKAGE)/DEBIAN
-	cp why-dev-ml_control $(WHY_DEV_ML_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-ml_control $(WHY_DEV_ML_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_ML_PACKAGE)
 	mv $(WHY_DEV_ML_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_ML_PACKAGE)
 
 WHY_DEV_ML_NVIDIA_VERSION = 0.0.0
-WHY_DEV_ML_NVIDIA_REVISION = 4
+WHY_DEV_ML_NVIDIA_REVISION = 5
 WHY_DEV_ML_NVIDIA_PACKAGE = why-dev-ml-nvidia_$(WHY_DEV_ML_NVIDIA_VERSION)-$(WHY_DEV_ML_NVIDIA_REVISION)_all
 
 $(REPO)/$(WHY_DEV_ML_NVIDIA_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_ML_NVIDIA_PACKAGE)..."
 	rm -rf $(WHY_DEV_ML_NVIDIA_PACKAGE)
 	mkdir -p $(WHY_DEV_ML_NVIDIA_PACKAGE)/DEBIAN
-	cp why-dev-ml-nvidia_control $(WHY_DEV_ML_NVIDIA_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-ml-nvidia_control $(WHY_DEV_ML_NVIDIA_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_ML_NVIDIA_PACKAGE)
 	mv $(WHY_DEV_ML_NVIDIA_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_ML_NVIDIA_PACKAGE)
 
 WHY_DEV_NET_VERSION = 0.0.0
-WHY_DEV_NET_REVISION = 1
+WHY_DEV_NET_REVISION = 2
 WHY_DEV_NET_PACKAGE = why-dev-net_$(WHY_DEV_NET_VERSION)-$(WHY_DEV_NET_REVISION)_all
 
 $(REPO)/$(WHY_DEV_NET_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_NET_PACKAGE)..."
 	rm -rf $(WHY_DEV_NET_PACKAGE)
 	mkdir -p $(WHY_DEV_NET_PACKAGE)/DEBIAN
-	cp why-dev-net_control $(WHY_DEV_NET_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-net_control $(WHY_DEV_NET_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_NET_PACKAGE)
 	mv $(WHY_DEV_NET_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_NET_PACKAGE)
 
 WHY_DEV_PHP_VERSION = 0.0.0
-WHY_DEV_PHP_REVISION = 1
+WHY_DEV_PHP_REVISION = 2
 WHY_DEV_PHP_PACKAGE = why-dev-php_$(WHY_DEV_PHP_VERSION)-$(WHY_DEV_PHP_REVISION)_all
 
 $(REPO)/$(WHY_DEV_PHP_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_PHP_PACKAGE)..."
 	rm -rf $(WHY_DEV_PHP_PACKAGE)
 	mkdir -p $(WHY_DEV_PHP_PACKAGE)/DEBIAN
-	cp why-dev-php_control $(WHY_DEV_PHP_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-php_control $(WHY_DEV_PHP_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_PHP_PACKAGE)
 	mv $(WHY_DEV_PHP_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_PHP_PACKAGE)
 
 WHY_DEV_PROLOG_VERSION = 0.0.0
-WHY_DEV_PROLOG_REVISION = 1
+WHY_DEV_PROLOG_REVISION = 2
 WHY_DEV_PROLOG_PACKAGE = why-dev-prolog_$(WHY_DEV_PROLOG_VERSION)-$(WHY_DEV_PROLOG_REVISION)_all
 
 $(REPO)/$(WHY_DEV_PROLOG_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_PROLOG_PACKAGE)..."
 	rm -rf $(WHY_DEV_PROLOG_PACKAGE)
 	mkdir -p $(WHY_DEV_PROLOG_PACKAGE)/DEBIAN
-	cp why-dev-prolog_control $(WHY_DEV_PROLOG_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-prolog_control $(WHY_DEV_PROLOG_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_PROLOG_PACKAGE)
 	mv $(WHY_DEV_PROLOG_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_PROLOG_PACKAGE)
 
 WHY_DEV_RUST_VERSION = 0.0.0
-WHY_DEV_RUST_REVISION = 1
+WHY_DEV_RUST_REVISION = 2
 WHY_DEV_RUST_PACKAGE = why-dev-rust_$(WHY_DEV_RUST_VERSION)-$(WHY_DEV_RUST_REVISION)_all
 
 $(REPO)/$(WHY_DEV_RUST_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_RUST_PACKAGE)..."
 	rm -rf $(WHY_DEV_RUST_PACKAGE)
 	mkdir -p $(WHY_DEV_RUST_PACKAGE)/DEBIAN
-	cp why-dev-rust_control $(WHY_DEV_RUST_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-rust_control $(WHY_DEV_RUST_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_RUST_PACKAGE)
 	mv $(WHY_DEV_RUST_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_RUST_PACKAGE)
 
 WHY_DEV_UNITY_VERSION = 0.0.0
-WHY_DEV_UNITY_REVISION = 1
+WHY_DEV_UNITY_REVISION = 2
 WHY_DEV_UNITY_PACKAGE = why-dev-unity_$(WHY_DEV_UNITY_VERSION)-$(WHY_DEV_UNITY_REVISION)_all
 
 $(REPO)/$(WHY_DEV_UNITY_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_UNITY_PACKAGE)..."
 	rm -rf $(WHY_DEV_UNITY_PACKAGE)
 	mkdir -p $(WHY_DEV_UNITY_PACKAGE)/DEBIAN
-	cp why-dev-unity_control $(WHY_DEV_UNITY_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-unity_control $(WHY_DEV_UNITY_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_UNITY_PACKAGE)
 	mv $(WHY_DEV_UNITY_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_UNITY_PACKAGE)
 
 WHY_DEV_REPO_VERSION = 0.0.0
-WHY_DEV_REPO_REVISION = 1
+WHY_DEV_REPO_REVISION = 2
 WHY_DEV_REPO_PACKAGE = why-dev-repo_$(WHY_DEV_REPO_VERSION)-$(WHY_DEV_REPO_REVISION)_all
 
 $(REPO)/$(WHY_DEV_REPO_PACKAGE).deb:
 	echo "Packaging $(WHY_DEV_REPO_PACKAGE)..."
 	rm -rf $(WHY_DEV_REPO_PACKAGE)
 	mkdir -p $(WHY_DEV_REPO_PACKAGE)/DEBIAN
-	cp why-dev-repo_control $(WHY_DEV_REPO_PACKAGE)/DEBIAN/control
+	cp dev/why-dev-repo_control $(WHY_DEV_REPO_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WHY_DEV_REPO_PACKAGE)
 	mv $(WHY_DEV_REPO_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_DEV_REPO_PACKAGE)

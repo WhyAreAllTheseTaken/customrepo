@@ -1,5 +1,5 @@
 Package: rust-toolchain-nightly
-Version: 1.85.0+git202411276b6a867ae-4
+Version: 1.85.0+git202411276b6a867ae-5
 Architecture: all
 Section: rust
 Priority: optional

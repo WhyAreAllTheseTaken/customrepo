@@ -1,5 +1,5 @@
 Package: ghcup
-Version: 0.1.30.0-1
+Version: 0.1.30.0-2
 Architecture: amd64
 Section: haskell
 Priority: optional
