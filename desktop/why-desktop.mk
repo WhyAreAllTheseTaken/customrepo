@@ -89,5 +89,5 @@ $(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PA
 	dpkg-deb --build $<
 	mv $(@F) $(REPO)
 
-themes: $(REPO)/$(THEME_PACKAGE_P)ice$(WHY_PACKAGE_S).deb
+themes: $(REPO)/$(THEME_PACKAGE_P)ice$(THEME_PACKAGE_S).deb
 
