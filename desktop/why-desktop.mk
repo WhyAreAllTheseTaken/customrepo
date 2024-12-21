@@ -21,8 +21,6 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot
 	cp whyconfig/home/.config/flameshot/flameshot.ini $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/flameshot/
-	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/share/backgrounds
-	cp whyconfig/usr/share/backgrounds/bg1440.png $(WHY_DESKTOP_PACKAGE)/usr/share/backgrounds
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
