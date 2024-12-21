@@ -7,7 +7,7 @@ while getopts "li" option; do
             exit;;
         i)
             echo "Importing background..."
-            betterlockscreen -u $1
+            betterlockscreen -u $2
             betterlockscreen -w
             exit;;
     esac
