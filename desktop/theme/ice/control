@@ -1,10 +1,10 @@
 Package: why-desktop-theme-ice
-Version: 0.0.0-2
+Version: 0.1.0-1
 Architecture: all
 Section: why
 Priority: optional
 Description: The ice theme for my custom desktop.
-Depends: why-desktop
+Depends: why-desktop, wings-plasma-themes, materia-gtk-theme, fonts-noto 
 Provides: why-desktop-theme
 Maintainer: WhyAreAllTheseTaken
 
