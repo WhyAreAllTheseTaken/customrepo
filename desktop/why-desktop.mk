@@ -69,8 +69,8 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_VERSION = 0.1.0
-THEME_REVISION = 2
+THEME_VERSION = 0.1.2
+THEME_REVISION = 1
 THEME_PACKAGE_P = why-desktop-theme-
 THEME_PACKAGE_S = _$(THEME_VERSION)-$(THEME_REVISION)_all
 
@@ -83,7 +83,7 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
 	cp -r $</config $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
-	cp -r $</share $@/usr/share/why-desktop/theme/$(<F)/
+	cp -rT $</share $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/backgrounds
 	cp -r $</bg/* $@/usr/share/backgrounds
 
