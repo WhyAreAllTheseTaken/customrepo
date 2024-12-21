@@ -6,7 +6,7 @@ build: updater
 
 REPO = repo
 
-include *.mk
+include *.mk desktop/*.mk dev/*.mk uni/*.mk
 
 updater: $(REPO)/$(CUDA_KEYRING_PACKAGE).deb $(REPO)/$(UPDATER_PACKAGE).deb $(REPO)/$(MS_PACKAGE).deb
 
