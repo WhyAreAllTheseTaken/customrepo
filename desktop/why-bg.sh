@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-while getopts "l" option; do
+while getopts "li" option; do
     case $option in
         l)
             ls /usr/share/backgrounds/
