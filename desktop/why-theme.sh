@@ -10,6 +10,6 @@ while getopts "l" option; do
 done
 
 echo "Using theme $1..."
-cp -rf /usr/share/why-desktop/theme/$1/config/* ~/.config
-cp -rf /usr/share/why-desktop/theme/$1/home/* ~
+cp -rTf /usr/share/why-desktop/theme/$1/config/* ~/.config
+cp -rTf /usr/share/why-desktop/theme/$1/home/* ~
 
