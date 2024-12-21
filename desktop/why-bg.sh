@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-while getopts "r" option; do
+while getopts "rl" option; do
     case $option in
         r)
             echo "Resetting to the default background..."
