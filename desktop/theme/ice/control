@@ -1,0 +1,10 @@
+Package: why-desktop-theme-ice
+Version: 0.0.0-1
+Architecture: all
+Section: why
+Priority: optional
+Description: The ice theme for my custom desktop.
+Depends: why-desktop
+Provides: why-desktop-theme
+Maintainer: WhyAreAllTheseTaken
+

@@ -1,4 +1,4 @@
-WHY_DESKTOP_VERSION = 0.5.5
+WHY_DESKTOP_VERSION = 0.6.0
 WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
 
@@ -28,6 +28,8 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
 	cp desktop/why-bg.sh $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
 	chmod +x $(WHY_DESKTOP_PACKAGE)/usr/bin/why-bg
+	cp desktop/why-theme.sh $(WHY_DESKTOP_PACKAGE)/usr/bin/why-theme
+	chmod +x $(WHY_DESKTOP_PACKAGE)/usr/bin/why-theme
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/DEBIAN
 	cp desktop/why-desktop_control $(WHY_DESKTOP_PACKAGE)/DEBIAN/control
 	cp desktop/why-desktop_postinst.sh $(WHY_DESKTOP_PACKAGE)/DEBIAN/postinst
@@ -68,4 +70,24 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	dpkg-deb --build $(WHY_APPS_PACKAGE)
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
+
+THEME_VERSION = 0.0.0
+THEME_REVISION = 1
+THEME_PACKAGE_P = why-desktop-theme-
+THEME_PACKAGE_S = _$(THEME_VERSION)-$(THEME_REVISION)_all
+
+$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
+	rm -rf $@
+	mkdir -p $@/DEBIAN
+	cp $</control $@/DEBIAN/control
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)
+	mkdir -p $@/usr/share/backgrounds
+	cp -r $</bg $@/usr/share/backgrounds
+
+$(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S)
+	echo "Packaging $(@F)"
+	dpkg-deb --build $<
+	mv $(@F) $(REPO)
+
+themes: $(REPO)/$(THEME_PACKAGE_P)ice$(WHY_PACKAGE_S).deb
 
