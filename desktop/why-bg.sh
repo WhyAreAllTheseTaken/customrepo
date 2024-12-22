@@ -8,8 +8,9 @@ while getopts "lir" option; do
         i)
             echo "Importing background..."
             mkdir -p ~/.local/share/backgrounds/
-            cp $2 "~/.local/share/backgrounds/${basename $2}"
-            echo "~/.local/share/backgrounds/${basename $2}" > ~/.local/why-bg-path
+            name=$(basename $2)
+            cp -vf $2 "~/.local/share/backgrounds/$name"
+            echo "~/.local/share/backgrounds/$name" > ~/.local/why-bg-path
             why-bg -r
             exit;;
         r)
