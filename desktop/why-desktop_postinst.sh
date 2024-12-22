@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -e
+
 if test -f /etc/lightdm/lightdm-gtk-greeter.conf; then
     mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.old
 fi
