@@ -13,3 +13,6 @@ echo "Using theme $1..."
 cp -rTf /usr/share/why-desktop/theme/$1/config/ ~/.config
 cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 
+i3-msg reload
+
+
