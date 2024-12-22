@@ -21,5 +21,5 @@ cp -rTf /usr/share/why-desktop/theme/$1/config/ ~/.config
 cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 
 i3-msg reload || true
-pkill -USR1 -f /usr/bin/kitty || true
+pkill -USR1 kitty || true
 
