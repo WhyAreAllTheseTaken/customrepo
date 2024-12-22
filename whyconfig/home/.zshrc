@@ -18,6 +18,12 @@ setopt autocd beep nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+TRAPUSR1() {
+  if [[ -o INTERACTIVE ]]; then
+     source ~/.zshrc
+  fi
+}
+
 autoload -Uz promptinit
 promptinit
 
