@@ -34,7 +34,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-
+source .zshtheme
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
 path+=("$HOME/.config/composer/vendor/bin/")

@@ -3,7 +3,7 @@ export NNN_PLUG='v:!nvim .*;c:!convert "$nnn" png:- | xclip -sel clipboard -t im
 export NNN_USE_EDITOR=1
 export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
-export NNN_COLORS='6325'
+source .zshtheme
 export PATH
 unset NNN_OPS_PROG
 . "$HOME/.cargo/env"
