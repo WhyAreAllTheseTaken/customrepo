@@ -10,7 +10,8 @@ while getopts "lir" option; do
             mkdir -p ~/.local/share/backgrounds/
             name=$(basename $2)
             cp -vf $2 "~/.local/share/backgrounds/$name"
-            echo "~/.local/share/backgrounds/$name" > ~/.local/why-bg-path
+            path=$(realpath ~/local/share/backgrounds/$name)
+            echo "$path" > ~/.local/why-bg-path
             why-bg -r
             exit;;
         r)
