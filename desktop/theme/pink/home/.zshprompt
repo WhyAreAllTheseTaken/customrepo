@@ -1,5 +1,5 @@
 prompt_custom_prompt_setup() {
-    PS1="%F{magenta}%n%f:%F{default}%~%f%(!.%F{red}#%f.%%) "
+    PS1="%F{bright-magenta}%n%f:%F{default}%~%f%(!.%F{bright-red}#%f.%%) "
 }
 
 prompt_themes+=custom_prompt
