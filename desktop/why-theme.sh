@@ -20,7 +20,6 @@ echo $1 > ~/.local/why-theme
 cp -rTf /usr/share/why-desktop/theme/$1/config/ ~/.config
 cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 
-set -e
-i3-msg reload
-pkill -USR1 -f /usr/bin/kitty
+i3-msg reload || true
+pkill -USR1 -f /usr/bin/kitty || true
 
