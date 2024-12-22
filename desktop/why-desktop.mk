@@ -64,7 +64,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_REVISION = 3
+THEME_REVISION = 4
 THEME_PACKAGE_P = why-theme-
 THEME_PACKAGE_S = _$(THEME_REVISION)_all
 
@@ -73,7 +73,7 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
 	cp desktop/theme/postinst.sh $@/DEBIAN/postinst
-	chmod +x $@/DEBAIN/postinst
+	chmod +x $@/DEBIAN/postinst
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
 	cp -r $</home $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
