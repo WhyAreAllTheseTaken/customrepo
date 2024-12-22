@@ -246,13 +246,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Colors
-set $bg_color #121212
-set $bg_color_light #636363
-set $text_color #e0e0e0
-set $accent_color #8ab4f8
-set $accent_color_dark #4a7bc9
-set $urgent_color #ce7276
+include theme.conf
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
