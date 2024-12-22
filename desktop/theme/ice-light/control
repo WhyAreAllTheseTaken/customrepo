@@ -1,0 +1,10 @@
+Package: why-desktop-theme-ice-light
+Version: 0.3.1-1
+Architecture: all
+Section: why
+Priority: optional
+Description: The ice theme for my custom desktop: light-mode.
+Depends: why-desktop, wings-plasma-themes, materia-gtk-theme, fonts-noto 
+Provides: why-desktop-theme
+Maintainer: WhyAreAllTheseTaken
+

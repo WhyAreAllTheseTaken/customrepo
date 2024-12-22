@@ -70,19 +70,20 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
-	cp -r $</home $@/usr/share/why-desktop/theme/$(<F)/
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
-	cp -r $</config $@/usr/share/why-desktop/theme/$(<F)/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/home/
+	cp -rT $</home $@/usr/share/why-desktop/theme/$(<F)/home/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/config/
+	cp -rT $</config $@/usr/share/why-desktop/theme/$(<F)/config/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
 	cp -rT $</share $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/backgrounds
-	cp -r $</bg/* $@/usr/share/backgrounds
+	cp -rT $</bg/ $@/usr/share/backgrounds
 
 $(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S)
 	echo "Packaging $(@F)"
 	dpkg-deb --build $<
 	mv $(@F) $(REPO)
 
-themes: $(REPO)/$(THEME_PACKAGE_P)ice$(THEME_PACKAGE_S).deb
+themes: $(REPO)/$(THEME_PACKAGE_P)ice$(THEME_PACKAGE_S).deb \
+	$(REPO)/$(THEME_PACKAGE_P)ice-light$(THEME_PACKAGE_S).deb
 
