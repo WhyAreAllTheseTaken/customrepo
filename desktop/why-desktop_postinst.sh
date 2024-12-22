@@ -20,5 +20,13 @@ do
     chown $user:$user /home/$user/.config/betterlockscreen/betterlockscreenrc
     cp /etc/skel/.config/picom.conf /home/$user/.config/picom.conf
     chown $user:$user /home/$user/.config/picom.conf
+    if [[ ! -f /home/$user/.local/why-theme]]; then
+        echo "ice" > "/home/$user/.local/why-theme"
+    fi
+    if [[ ! -f /home/$user/.local/why-bg-path]]; then
+        echo "/usr/share/backgrounds/why-ice.png" > "/home/$user/.local/why-bg-path"
+    fi
+    sudo -u $user -- why-bg -r
+    sudo -u $user -- why-theme -r
 done
 

@@ -1,4 +1,4 @@
-WHY_DESKTOP_VERSION = 0.10.0
+WHY_DESKTOP_VERSION = 0.11.0
 WHY_DESKTOP_REVISION = 1
 WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
 
@@ -13,6 +13,9 @@ $(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
 	cp whyconfig/home/.config/betterlockscreen/betterlockscreenrc $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/betterlockscreen
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/
+	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/
+	echo "ice" > $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/why-theme 
+	echo "/usr/share/backgrounds/why-ice.png" > $(WHY_DESKTOP_PACKAGE)/etc/skel/.local/why-bg-path 
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/lightdm/
 	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $(WHY_DESKTOP_PACKAGE)/etc/lightdm/lightdm-gtk-greeter.conf.why
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/usr/bin/
@@ -61,7 +64,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_REVISION = 2
+THEME_REVISION = 3
 THEME_PACKAGE_P = why-theme-
 THEME_PACKAGE_S = _$(THEME_REVISION)_all
 
@@ -69,6 +72,8 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
+	cp desktop/theme/postinst.sh $@/DEBIAN/postinst
+	chmod +x $@/DEBAIN/postinst
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
 	cp -r $</home $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/

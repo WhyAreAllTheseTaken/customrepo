@@ -1,19 +1,29 @@
 #!/usr/bin/bash
 
-while getopts "li" option; do
+while getopts "lir" option; do
     case $option in
         l)
             ls /usr/share/backgrounds/
             exit;;
         i)
             echo "Importing background..."
-            betterlockscreen -u $2
+            mkdir -p ~/.local/share/backgrounds/
+            cp $2 ~/.local/share/backgrounds/user
+            echo "~/.local/share/backgrounds/user" > ~/.local/why-bg-path
+            betterlockscreen -u "~/.local/share/backgrounds/user"
             betterlockscreen -w
+            exit;;
+        r)
+            echo "Reloading background..."
+            why-theme "$(<~/.local/why-bg-path)"
             exit;;
     esac
 done
 
 echo "Selecting background..."
+
+echo "/usr/share/backgrounds/$1" > ~/.local/why-bg-path
+
 betterlockscreen -u /usr/share/backgrounds/$1
 betterlockscreen -w
 

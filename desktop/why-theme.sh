@@ -1,16 +1,16 @@
 #!/usr/bin/bash
 
-while getopts "lr" option; do
-   case $option in
-      l)
-         echo "Available themes:"
-         ls /usr/share/why-desktop/theme/
-         exit;;
-      r)
-         echo "Resetting theme."
-         why-theme "$(<~/.local/why-theme)"
-         exit;;
-   esac
+while getopts "lrd" option; do
+    case $option in
+        l)
+            echo "Available themes:"
+            ls /usr/share/why-desktop/theme/
+            exit;;
+        r)
+            echo "Reloading theme..."
+            why-theme "$(<~/.local/why-theme)"
+            exit;;
+    esac
 done
 
 echo "Using theme $1..."
