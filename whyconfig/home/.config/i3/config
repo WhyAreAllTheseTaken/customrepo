@@ -11,10 +11,6 @@
 
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:Noto Sans Display Medium 14
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -250,19 +246,6 @@ include theme.conf
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-	colors {
-		background $bg_color
-		statusline $text_color
-		separator $bg_color_light
-		separator $bg_color_light
-		focused_workspace $accent_color_dark $accent_color_dark $text_color
-		active_workspace $bg_color_light $bg_color $bg_color
-		inactive_workspace $bg_color $bg_color $text_color
-		urgent_workspace $urgent_color $urgent_color $text_color
-	}
-}
 
 bindsym $mod+d exec rofi -show run -lines 15 -terminal kitty
 bindsym $mod+z exec rofi -show ssh -lines 15 -terminal kitty
