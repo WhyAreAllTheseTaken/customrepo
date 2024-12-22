@@ -20,17 +20,14 @@ bindkey -e
 
 TRAPUSR1() {
     if [[ -o INTERACTIVE ]]; then
-        resume=$PWD
-        cd ~
-        source .zshrc
-        cd $resume
+        source ~/.zshrc
     fi
 }
 
 autoload -Uz promptinit
 promptinit
 
-source .zshprompt
+source ~/.zshprompt
 
 prompt custom_prompt
 
@@ -43,7 +40,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-source .zshtheme
+source ~/.zshtheme
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
 path+=("$HOME/.config/composer/vendor/bin/")
