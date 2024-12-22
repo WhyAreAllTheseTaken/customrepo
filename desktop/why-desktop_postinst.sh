@@ -9,27 +9,16 @@ for dir in /home/*/
 do
     dir=${dir%*/}
     user=${dir##*/}
-    mkdir -p /home/$user/.config/dunst/
-    cp /etc/skel/.config/dunst/dunstrc /home/$user/.config/dunst/dunstrc
-    chown $user:$user /home/$user/.config/dunst/dunstrc
     mkdir -p /home/$user/.config/i3/
     cp /etc/skel/.config/i3/config /home/$user/.config/i3/config
     chown $user:$user /home/$user/.config/i3/config
     mkdir -p /home/$user/.config/i3blocks/
     cp /etc/skel/.config/i3blocks/i3blocks.conf /home/$user/.config/i3blocks/i3blocks.conf
     chown $user:$user /home/$user/.config/i3blocks/i3blocks.conf
-    mkdir -p /home/$user/.config/rofi/themes/
-    cp /etc/skel/.config/rofi/config.rasi /home/$user/.config/rofi/config.rasi
-    chown $user:$user /home/$user/.config/rofi/config.rasi
-    cp /etc/skel/.config/rofi/themes/Ice.rasi /home/$user/.config/rofi/themes/Ice.rasi
-    chown $user:$user /home/$user/.config/rofi/themes/Ice.rasi
     mkdir -p /home/$user/.config/betterlockscreen
     cp /etc/skel/.config/betterlockscreen/betterlockscreenrc /home/$user/.config/betterlockscreen/betterlockscreenrc
     chown $user:$user /home/$user/.config/betterlockscreen/betterlockscreenrc
     cp /etc/skel/.config/picom.conf /home/$user/.config/picom.conf
     chown $user:$user /home/$user/.config/picom.conf
-    mkdir -p /home/$user/.config/flameshot
-    cp /etc/skel/.config/flameshot/flameshot.ini /home/$user/.config/flameshot/flameshot.ini
-    chown $user:$user /home/$user/.config/flameshot/flameshot.ini
 done
 
