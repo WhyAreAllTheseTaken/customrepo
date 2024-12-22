@@ -15,7 +15,8 @@ while getopts "lir" option; do
             exit;;
         r)
             echo "Reloading background..."
-            why-theme "$(<~/.local/why-bg-path)"
+            betterlockscreen -u "$(<~/.local/why-bg-path)"
+            betterlockscreen -w
             exit;;
     esac
 done
