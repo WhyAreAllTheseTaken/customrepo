@@ -89,5 +89,6 @@ $(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PA
 	mv $(@F) $(REPO)
 
 themes: $(REPO)/$(THEME_PACKAGE_P)ice$(THEME_PACKAGE_S).deb \
-	$(REPO)/$(THEME_PACKAGE_P)ice-light$(THEME_PACKAGE_S).deb
+	$(REPO)/$(THEME_PACKAGE_P)ice-light$(THEME_PACKAGE_S).deb \
+	$(REPO)/$(THEME_PACKAGE_P)pink$(THEME_PACKAGE_S).deb
 
