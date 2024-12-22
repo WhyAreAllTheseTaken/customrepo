@@ -2,13 +2,13 @@
  * Author: Primetoxinz
  */
 * {
-    text-color:                  #ffffff;
-    background-color:            #00003290;
-    foreground:                  #ffffff;
-    lightbg:                     #4C457350;
-    red:                         #E0007B;
-    orange:                      #FF98D0; 
-    blue:                        #004EA0;
+    text-color:                  #FFD6FF;
+    background-color:            #1F142F90;
+    foreground:                  #FFD6FF;
+    lightbg:                     #523D6650;
+    red:                         #E0005D;
+    orange:                      #FFAEFF; 
+    blue:                        #E000E0;
     alpha:                       #00000000;
 
     selected-normal-foreground:  @foreground;
