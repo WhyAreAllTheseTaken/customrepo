@@ -1,0 +1,7 @@
+prompt_custom_prompt_setup() {
+    PS1="%F{yellow}%n%f:%F{default}%~%f%(!.%F{red}#%f.%%) "
+}
+
+prompt_themes+=custom_prompt
+
+
