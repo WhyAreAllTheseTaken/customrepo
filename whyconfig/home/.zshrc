@@ -21,11 +21,7 @@ bindkey -e
 autoload -Uz promptinit
 promptinit
 
-prompt_custom_prompt_setup() {
-    PS1="%F{cyan}%n%f:%F{default}%~%f%(!.%F{red}#%f.%%) "
-}
-
-prompt_themes+=custom_prompt
+source .zshprompt
 
 prompt custom_prompt
 

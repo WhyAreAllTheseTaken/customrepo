@@ -29,8 +29,8 @@ $(REPO)/$(WHY_NVIM_PACKAGE).deb:
 	mv $(WHY_NVIM_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_NVIM_PACKAGE)
 
-WHY_ZSH_VERSION = 0.3.0
-WHY_ZSH_REVISION = 3
+WHY_ZSH_VERSION = 0.4.0
+WHY_ZSH_REVISION = 1
 WHY_ZSH_PACKAGE = why-shell_$(WHY_ZSH_VERSION)-$(WHY_ZSH_REVISION)_all
 
 $(REPO)/$(WHY_ZSH_PACKAGE).deb:
@@ -42,6 +42,8 @@ $(REPO)/$(WHY_ZSH_PACKAGE).deb:
 	cp -r whyconfig/home/.zshrc.zni $(WHY_ZSH_PACKAGE)/etc/skel/.zshrc.zni
 	mkdir -p $(WHY_ZSH_PACKAGE)/DEBIAN
 	cp why-zsh_control $(WHY_ZSH_PACKAGE)/DEBIAN/control
+	cp why-zsh_postinst.sh $(WHY_ZSH_PACKAGE)/DEBIAN/postinst
+	chmod +x $(WHY_ZSH_PACKAGE)/DEBIAN/postinst
 	dpkg-deb --build $(WHY_ZSH_PACKAGE)
 	mv $(WHY_ZSH_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_ZSH_PACKAGE)
