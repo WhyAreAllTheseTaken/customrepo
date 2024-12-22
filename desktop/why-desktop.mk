@@ -61,7 +61,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_VERSION = 0.3.1
+THEME_VERSION = 0.3.2
 THEME_REVISION = 1
 THEME_PACKAGE_P = why-desktop-theme-
 THEME_PACKAGE_S = _$(THEME_VERSION)-$(THEME_REVISION)_all
@@ -70,14 +70,14 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/home/
-	cp -rT $</home $@/usr/share/why-desktop/theme/$(<F)/home/
-	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/config/
-	cp -rT $</config $@/usr/share/why-desktop/theme/$(<F)/config/
 	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
-	cp -rT $</share $@/usr/share/why-desktop/theme/$(<F)/
+	cp -r $</home $@/usr/share/why-desktop/theme/$(<F)/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
+	cp -r $</config $@/usr/share/why-desktop/theme/$(<F)/
+	mkdir -p $@/usr/share/why-desktop/theme/$(<F)/
+	-cp -rT $</share $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/backgrounds
-	cp -rT $</bg/ $@/usr/share/backgrounds
+	-cp -r $</bg/* $@/usr/share/backgrounds
 
 $(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S)
 	echo "Packaging $(@F)"
