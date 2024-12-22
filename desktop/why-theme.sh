@@ -20,7 +20,7 @@ echo $1 > ~/.local/why-theme
 cp -rTf /usr/share/why-desktop/theme/$1/config/ ~/.config
 cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 
-i3-msg reload || true
+i3-msg reload > /dev/null || true
 pkill -USR1 kitty || true
 pkill -USR1 zsh || true
 
