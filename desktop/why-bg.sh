@@ -8,10 +8,9 @@ while getopts "lir" option; do
         i)
             echo "Importing background..."
             mkdir -p ~/.local/share/backgrounds/
-            cp $2 ~/.local/share/backgrounds/user
-            echo "~/.local/share/backgrounds/user" > ~/.local/why-bg-path
-            betterlockscreen -u "~/.local/share/backgrounds/user"
-            betterlockscreen -w
+            cp $2 "~/.local/share/backgrounds/${basename $2}"
+            echo "~/.local/share/backgrounds/${basename $2}" > ~/.local/why-bg-path
+            why-bg -r
             exit;;
         r)
             echo "Reloading background..."
@@ -25,6 +24,5 @@ echo "Selecting background..."
 
 echo "/usr/share/backgrounds/$1" > ~/.local/why-bg-path
 
-betterlockscreen -u /usr/share/backgrounds/$1
-betterlockscreen -w
+why-bg -r
 
