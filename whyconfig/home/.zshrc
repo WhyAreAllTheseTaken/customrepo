@@ -19,9 +19,12 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 TRAPUSR1() {
-  if [[ -o INTERACTIVE ]]; then
-     source ~/.zshrc
-  fi
+    if [[ -o INTERACTIVE ]]; then
+        resume=$PWD
+        cd ~
+        source .zshrc
+        cd $resume
+    fi
 }
 
 autoload -Uz promptinit
