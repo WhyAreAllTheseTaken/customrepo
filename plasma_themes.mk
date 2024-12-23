@@ -66,7 +66,12 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 %-plasma-theme: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/plasma/desktoptheme/
-	cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/
+	if [[ -f $<-Plasma-Themes/$<\ Plasma\ Themes ]]; then \
+		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/ \
+	fi
+	if [[ -f $<-Plasma-Themes/$<-Plasma-Themes ]]; then \
+		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/ \
+	fi
 	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
 	mkdir -p $@/usr/share/plasma/look-and-feel/
 	cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/
