@@ -87,7 +87,7 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 	cp plasma-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
-	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
+	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-plasma-theme.deb: %-plasma-theme
 	dpkg-deb --build $<
@@ -106,7 +106,7 @@ $(REPO)/%-plasma-theme.deb: %-plasma-theme
 	cp gtk-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
-	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
+	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-gtk-theme.deb: %-gtk-theme
 	dpkg-deb --build $<
@@ -125,7 +125,7 @@ $(REPO)/%-gtk-theme.deb: %-gtk-theme
 	cp icon-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
-	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
+	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-icon-theme.deb: %-icon-theme
 	dpkg-deb --build $<
@@ -135,16 +135,16 @@ $(REPO)/%-icon-theme.deb: %-icon-theme
 	rm -rf $@
 	mkdir -p $@/usr/share/backgrounds/
 	if [[ -f $<-Plasma-Themes/$<\ Wallpapers ]]; then\
-		cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/icons/;\
+		cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/backgrounds/;\
 	fi
 	if [[ -f $<-Plasma-Themes/$<-Wallpapers ]]; then\
-		cp -r ./$<-Plasma-Themes/$<-Wallpapers/* $@/usr/share/icons/;\
+		cp -r ./$<-Plasma-Themes/$<-Wallpapers/* $@/usr/share/backgrounds/;\
 	fi
 	mkdir -p $@/DEBIAN
 	cp wallpaper_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
-	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
+	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-wallpapers.deb: %-icon-theme
 	dpkg-deb --build $<
