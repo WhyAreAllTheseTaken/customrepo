@@ -101,7 +101,7 @@ $(REPO)/%-wallpapers_all.deb: %-wallpapers_all
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-THEME_TARGETS=Infinity_themes Wings_themes
+THEME_TARGETS=Infinity_themes Wings_themes Colorful_themes Relax_themes Cool_themes Gradient_themes Flight_themes Vivid_themes 
 
 $(THEME_TARGETS):: %_themes: $(REPO)/%-plasma-theme_all.deb $(REPO)/%-icon-theme_all.deb \
 	$(REPO)/%-wallpapers_all.deb $(REPO)/%-gtk-theme_all.deb
