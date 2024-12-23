@@ -6,26 +6,26 @@
 %-plasma-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/plasma/desktoptheme/
-	if [[ -f $<-Plasma-Themes/$<\ Plasma\ Themes ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Plasma\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<-Plasma-Themes ]]; then\
+	if [[ -d $<-Plasma-Themes/$<-Plasma-Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/;\
 	fi
 	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
 	mkdir -p $@/usr/share/plasma/look-and-feel/
-	if [[ -f $<-Plasma-Themes/$<\ Splshscreens ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Splshscreens ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<\ SDDM\ Themes ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ SDDM\ Themes ]]; then\
 		mkdir -p $@/usr/share/sddm/themes/;\
 		cp -r ./$<-Plasma-Themes/$<\ SDDM\ Themes/* $@/usr/share/sddm/themes/;\
 	fi
 	mkdir -p $@/usr/share/aurorae/themes/
-	if [[ -f $<-Plasma-Themes/$<\ Window\ Decorations ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Window\ Decorations ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Window\ Decorations/* $@/usr/share/aurorae/themes/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<\ Windows\ Decorations ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Windows\ Decorations ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Windows\ Decorations/* $@/usr/share/aurorae/themes/;\
 	fi
 	mkdir -p $@/usr/share/color-schemes/
@@ -43,10 +43,10 @@ $(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 %-gtk-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/themes/
-	if [[ -f $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ GTK\ Themes/* $@/usr/share/themes/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<-GTK ]]; then\
+	if [[ -d $<-Plasma-Themes/$<-GTK ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-GTK/* $@/usr/share/themes/;\
 	fi
 	mkdir -p $@/DEBIAN
@@ -62,10 +62,10 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 %-icon-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/icons/
-	if [[ -f $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<-Icons ]]; then\
+	if [[ -d $<-Plasma-Themes/$<-Icons ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-Icons/* $@/usr/share/icons/;\
 	fi
 	mkdir -p $@/DEBIAN
@@ -81,10 +81,10 @@ $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 %-wallpapers_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/backgrounds/
-	if [[ -f $<-Plasma-Themes/$<\ Wallpapers ]]; then\
+	if [[ -d $<-Plasma-Themes/$<\ Wallpapers ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/backgrounds/;\
 	fi
-	if [[ -f $<-Plasma-Themes/$<-Wallpapers ]]; then\
+	if [[ -d $<-Plasma-Themes/$<-Wallpapers ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-Wallpapers/* $@/usr/share/backgrounds/;\
 	fi
 	mkdir -p $@/DEBIAN
