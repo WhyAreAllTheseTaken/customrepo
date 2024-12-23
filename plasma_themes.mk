@@ -135,6 +135,8 @@ $(REPO)/%-wallpapers.deb: %-icon-theme
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%_themes: $(REPO)/%-plasma-theme.deb $(REPO)/%-icon-theme.deb $(REPO)/%-wallpapers.deb $(REPO)/%-gtk-theme.deb
+THEME_TARGETS=Infinity_themes
 
-plasma_theme_set: Infinity_themes
+$(THEME_TARGETS):: %_themes: $(REPO)/%-plasma-theme.deb $(REPO)/%-icon-theme.deb $(REPO)/%-wallpapers.deb $(REPO)/%-gtk-theme.deb
+
+plasma_theme_set: $(THEME_TARGETS)
