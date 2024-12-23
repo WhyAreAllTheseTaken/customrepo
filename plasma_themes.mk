@@ -10,7 +10,7 @@
 		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/;\
 	fi
 	if [[ -d $<-Plasma-Themes/$<-Plasma-Themes ]]; then\
-		cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/;\
+		cp -r ./$<-Plasma-Themes/$<-Plasma-Themes/* $@/usr/share/plasma/desktoptheme/;\
 	fi
 	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
 	mkdir -p $@/usr/share/plasma/look-and-feel/
