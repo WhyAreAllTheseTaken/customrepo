@@ -3,7 +3,7 @@
 	git clone --depth 1 https://github.com/L4ki/$@.git
 	ls $@
 
-%-plasma-theme: % %-Plasma-Themes
+%-plasma-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/plasma/desktoptheme/
 	if [[ -f $<-Plasma-Themes/$<\ Plasma\ Themes ]]; then\
@@ -36,11 +36,11 @@
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-plasma-theme.deb: %-plasma-theme
+$(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-gtk-theme: % %-Plasma-Themes
+%-gtk-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/themes/
 	if [[ -f $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
@@ -55,11 +55,11 @@ $(REPO)/%-plasma-theme.deb: %-plasma-theme
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-gtk-theme.deb: %-gtk-theme
+$(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-icon-theme: % %-Plasma-Themes
+%-icon-theme_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/icons/
 	if [[ -f $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
@@ -74,11 +74,11 @@ $(REPO)/%-gtk-theme.deb: %-gtk-theme
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-icon-theme.deb: %-icon-theme
+$(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-wallpapers: % %-Plasma-Themes
+%-wallpapers_all: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/backgrounds/
 	if [[ -f $<-Plasma-Themes/$<\ Wallpapers ]]; then\
@@ -93,12 +93,13 @@ $(REPO)/%-icon-theme.deb: %-icon-theme
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-wallpapers.deb: %-wallpapers
+$(REPO)/%-wallpapers_all.deb: %-wallpapers_all
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
 THEME_TARGETS=Infinity_themes Wings_themes
 
-$(THEME_TARGETS):: %_themes: $(REPO)/%-plasma-theme.deb $(REPO)/%-icon-theme.deb $(REPO)/%-wallpapers.deb $(REPO)/%-gtk-theme.deb
+$(THEME_TARGETS):: %_themes: $(REPO)/%-plasma-theme_all.deb $(REPO)/%-icon-theme_all.deb \
+	$(REPO)/%-wallpapers_all.deb $(REPO)/%-gtk-theme_all.deb
 
 plasma_theme_set: $(THEME_TARGETS)
