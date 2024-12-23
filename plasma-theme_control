@@ -1,0 +1,10 @@
+Package: %package%-plasma-theme
+Version: %version%
+Architecture: all
+Section: x11
+Priority: optional
+Description: %name% Themes For Plasma Desktop
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://github.com/L4ki/%name%-Plasma-Themes
+Depends: %package%-icon-theme, %package%-wallpapers, %package%-gtk-theme
+

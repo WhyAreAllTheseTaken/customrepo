@@ -1,0 +1,12 @@
+Package: %package%-wallpapers
+Version: %version%
+Architecture: all
+Section: x11
+Priority: optional
+Description: %name% Wallpapers For Plasma Desktop
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://github.com/L4ki/%name%-Plasma-Themes
+Suggests: %package%-plasma-theme
+
+
+
