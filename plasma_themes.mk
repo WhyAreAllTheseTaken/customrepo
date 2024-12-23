@@ -77,8 +77,10 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 	if [[ -f $<-Plasma-Themes/$<\ Splshscreens ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/;\
 	fi
-	mkdir -p $@/usr/share/sddm/themes/
-	cp -r ./$<-Plasma-Themes/$<\ SDDM\ Themes/* $@/usr/share/sddm/themes/
+	if [[ -f $<-Plasma-Themes/$<\ SDDM\ Themes ]]; then\
+		mkdir -p $@/usr/share/sddm/themes/;\
+		cp -r ./$<-Plasma-Themes/$<\ SDDM\ Themes/* $@/usr/share/sddm/themes/;\
+	fi
 	mkdir -p $@/usr/share/aurorae/themes/
 	cp -r ./$<-Plasma-Themes/$<\ Window\ Decorations/* $@/usr/share/aurorae/themes/
 	mkdir -p $@/usr/share/color-schemes/
@@ -146,7 +148,7 @@ $(REPO)/%-icon-theme.deb: %-icon-theme
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-wallpapers.deb: %-icon-theme
+$(REPO)/%-wallpapers.deb: %-wallpapers
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
