@@ -4,6 +4,7 @@
 	ls $@
 
 %-plasma-theme_all: % %-Plasma-Themes
+	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/plasma/desktoptheme/
 	if [[ -d $<-Plasma-Themes/$<\ Plasma\ Themes ]]; then\
@@ -41,6 +42,7 @@ $(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 	mv $<.deb $(REPO)
 
 %-gtk-theme_all: % %-Plasma-Themes
+	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/themes/
 	if [[ -d $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
@@ -60,6 +62,7 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	mv $<.deb $(REPO)
 
 %-icon-theme_all: % %-Plasma-Themes
+	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/icons/
 	if [[ -d $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
@@ -79,6 +82,7 @@ $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 	mv $<.deb $(REPO)
 
 %-wallpapers_all: % %-Plasma-Themes
+	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/backgrounds/
 	if [[ -d $<-Plasma-Themes/$<\ Wallpapers ]]; then\
