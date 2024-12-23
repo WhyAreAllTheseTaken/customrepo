@@ -74,7 +74,9 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 	fi
 	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
 	mkdir -p $@/usr/share/plasma/look-and-feel/
-	cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/
+	if [[ -f $<-Plasma-Themes/$<\ Splshscreens ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/;\
+	fi
 	mkdir -p $@/usr/share/sddm/themes/
 	cp -r ./$<-Plasma-Themes/$<\ SDDM\ Themes/* $@/usr/share/sddm/themes/
 	mkdir -p $@/usr/share/aurorae/themes/
@@ -94,7 +96,12 @@ $(REPO)/%-plasma-theme.deb: %-plasma-theme
 %-gtk-theme: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/themes/
-	cp -r ./$<-Plasma-Themes/$<\ GTK\ Themes/* $@/usr/share/themes/
+	if [[ -f $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ GTK\ Themes/* $@/usr/share/themes/;\
+	fi
+	if [[ -f $<-Plasma-Themes/$<-GTK ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-GTK/* $@/usr/share/themes/;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp gtk-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
@@ -108,7 +115,12 @@ $(REPO)/%-gtk-theme.deb: %-gtk-theme
 %-icon-theme: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/icons/
-	cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/
+	if [[ -f $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/;\
+	fi
+	if [[ -f $<-Plasma-Themes/$<-Icons ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-Icons/* $@/usr/share/icons/;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp icon-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
@@ -122,7 +134,12 @@ $(REPO)/%-icon-theme.deb: %-icon-theme
 %-wallpapers: % %-Plasma-Themes
 	rm -rf $@
 	mkdir -p $@/usr/share/backgrounds/
-	cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/icons/
+	if [[ -f $<-Plasma-Themes/$<\ Wallpapers ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/icons/;\
+	fi
+	if [[ -f $<-Plasma-Themes/$<-Wallpapers ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-Wallpapers/* $@/usr/share/icons/;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp wallpaper_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
