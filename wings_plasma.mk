@@ -52,7 +52,7 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb: $(REPO)/$(WINGS_ICON_PACKAGE).deb
 	mkdir -p $(WINGS_WALLPAPER_PACKAGE)/usr/share/backgrounds/
 	cp -r ./Wings-Plasma-Themes/Wings\ Wallpapers/* $(WINGS_WALLPAPER_PACKAGE)/usr/share/backgrounds/
 	mkdir -p $(WINGS_WALLPAPER_PACKAGE)/DEBIAN
-	cp wings-plasma-wallpapers-control $(WINGS_WALLPAPER_PACKAGE)/DEBIAN/control
+	cp wings-plasma-wallpapers_control $(WINGS_WALLPAPER_PACKAGE)/DEBIAN/control
 	dpkg-deb --build $(WINGS_WALLPAPER_PACKAGE)
 	mv $(WINGS_WALLPAPER_PACKAGE).deb $(REPO)
 	rm -rf Wings-Plasma-Themes
