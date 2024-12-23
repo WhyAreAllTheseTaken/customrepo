@@ -58,10 +58,13 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 	rm -rf Wings-Plasma-Themes
 	rm -rf $(WINGS_WALLPAPER_PACKAGE)
 
-%-plasma-theme: %
+%-Plasma-Themes: %
+	rm -rf ./$@
+	git clone --depth 1 https://github.com/L4ki/$@.git
+	ls $@
+
+%-plasma-theme: % %-Plasma-Themes
 	rm -rf $@
-	rm -rf ./$<-Plasma-Themes
-	git clone --depth 1 https://github.com/L4ki/$<-Plasma-Themes.git
 	mkdir -p $@/usr/share/plasma/desktoptheme/
 	cp -r ./$<-Plasma-Themes/$<\ Plasma\ Themes/* $@/usr/share/plasma/desktoptheme/
 	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
@@ -78,16 +81,13 @@ $(REPO)/$(WINGS_WALLPAPER_PACKAGE).deb:
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
-	rm -rf $<-Plasma-Themes
 
 $(REPO)/%-plasma-theme.deb: %-plasma-theme
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-gtk-theme: %
+%-gtk-theme: % %-Plasma-Themes
 	rm -rf $@
-	rm -rf ./$<-Plasma-Themes
-	git clone --depth 1 https://github.com/L4ki/$<-Plasma-Themes.git
 	mkdir -p $@/usr/share/themes/
 	cp -r ./$<-Plasma-Themes/$<\ GTK\ Themes/* $@/usr/share/themes/
 	mkdir -p $@/DEBIAN
@@ -95,16 +95,13 @@ $(REPO)/%-plasma-theme.deb: %-plasma-theme
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
-	rm -rf $<-Plasma-Themes
 
 $(REPO)/%-gtk-theme.deb: %-gtk-theme
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-icon-theme: %
+%-icon-theme: % %-Plasma-Themes
 	rm -rf $@
-	rm -rf ./$<-Plasma-Themes
-	git clone --depth 1 https://github.com/L4ki/$<-Plasma-Themes.git
 	mkdir -p $@/usr/share/icons/
 	cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/
 	mkdir -p $@/DEBIAN
@@ -112,16 +109,13 @@ $(REPO)/%-gtk-theme.deb: %-gtk-theme
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
-	rm -rf $<-Plasma-Themes
 
 $(REPO)/%-icon-theme.deb: %-icon-theme
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-%-wallpapers: %
+%-wallpapers: % %-Plasma-Themes
 	rm -rf $@
-	rm -rf ./$<-Plasma-Themes
-	git clone --depth 1 https://github.com/L4ki/$<-Plasma-Themes.git
 	mkdir -p $@/usr/share/backgrounds/
 	cp -r ./$<-Plasma-Themes/$<\ Wallpapers/* $@/usr/share/icons/
 	mkdir -p $@/DEBIAN
@@ -129,7 +123,6 @@ $(REPO)/%-icon-theme.deb: %-icon-theme
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$(cat $<)/g" $@/DEBIAN/control
-	rm -rf $<-Plasma-Themes
 
 $(REPO)/%-wallpapers.deb: %-icon-theme
 	dpkg-deb --build $<
