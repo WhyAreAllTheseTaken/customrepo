@@ -1,9 +1,10 @@
-Package: wings-plasma-themes
-Version: 1.0.0-2
+Package: wings-plasma-theme
+Version: 1.0.0-3
 Architecture: all
 Section: x11
 Priority: optional
 Description: Wings Themes For Plasma Desktop
 Maintainer: WhyAreAllTheseTaken
 Homepage: https://github.com/L4ki/Wings-Plasma-Themes
+Depends: wings-plasma-icon-theme, wings-plasma-wallpapers
 
