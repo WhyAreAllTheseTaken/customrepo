@@ -1,5 +1,7 @@
 .PHONY: build packages install
 
+.SUFFIXES:
+
 ARCH=$(shell dpkg --print-architecture)
 
 build: updater
