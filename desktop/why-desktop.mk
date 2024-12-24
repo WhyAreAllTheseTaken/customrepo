@@ -70,9 +70,6 @@ $(REPO)/$(WHY_CYCLE_PACKAGE).deb: desktop/why-cycle_control
 	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/bin/
 	cp desktop/why-cycle.sh $(WHY_CYCLE_PACKAGE)/usr/bin/why-cycle
 	chmod +x $(WHY_CYCLE_PACKAGE)/usr/bin/why-cycle
-	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/sbin/
-	cp desktop/why-cycle-all.sh $(WHY_CYCLE_PACKAGE)/usr/sbin/why-cycle-all
-	chmod +x $(WHY_CYCLE_PACKAGE)/usr/sbin/why-cycle-all
 	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
 	cp desktop/why-cycle.service $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
 	cp desktop/why-cycle.timer $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
