@@ -65,6 +65,9 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/icons/
+	if [[ -d $<-Plasma-Themes/$<\ Icons\ Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Icons\ Themes/* $@/usr/share/icons/;\
+	fi
 	if [[ -d $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/;\
 	fi
