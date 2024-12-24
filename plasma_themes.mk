@@ -60,8 +60,10 @@ $(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
-	dpkg-deb --build $<
-	mv $<.deb $(REPO)
+	if [[ ! -z "$$( ls -A $</usr/share/themes/ )" ]]; then\
+		dpkg-deb --build $<;\
+		mv $<.deb $(REPO);\
+	fi
 
 %-icon-theme_all: % %-Plasma-Themes
 	echo "Packaging $@..."
@@ -83,8 +85,10 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
-	dpkg-deb --build $<
-	mv $<.deb $(REPO)
+	if [[ ! -z "$$( ls -A $</usr/share/icons/ )" ]]; then\
+		dpkg-deb --build $<;\
+		mv $<.deb $(REPO);\
+	fi
 
 %-wallpapers_all: % %-Plasma-Themes
 	echo "Packaging $@..."
