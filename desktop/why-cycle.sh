@@ -26,9 +26,9 @@ while getopts "rhed" option; do
                         swap_theme dawn;;
                     13 | 14 | 15 | 16)
                         swap_theme ice;;
-                    17 | 18 | 19 | 20)
+                    17 | 18 | 19 | 20 | 21)
                         swap_theme pink;;
-                    21 | 22 | 23)
+                    22 | 23)
                         swap_theme night;;
                 esac
             else
