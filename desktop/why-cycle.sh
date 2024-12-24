@@ -21,13 +21,15 @@ while getopts "rhed" option; do
 
                 case $hour in
                     0 | 1 | 2 | 3 | 4 | 5)
-                        swap_theme pink;;
+                        swap_theme night;;
                     6 | 7 | 8 | 9 | 10 | 11 | 12)
                         swap_theme dawn;;
                     13 | 14 | 15 | 16)
                         swap_theme ice;;
-                    17 | 18 | 19 | 20 | 21 | 22 | 23)
+                    17 | 18 | 19 | 20)
                         swap_theme pink;;
+                    21 | 22 | 23)
+                        swap_theme night;;
                 esac
             else
                 echo "why-cycle is not enabled by this user."

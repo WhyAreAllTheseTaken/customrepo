@@ -1,10 +1,10 @@
 Package: why-cycle
-Version: 0.2.0-1
+Version: 0.3.0-1
 Architecture: all
 Section: x11
 Priority: optional
 Description: A program that cycles through different themes over the day.
 Pre-Depends: bash, coreutils, systemd, why-theme (>=0.13),
-    why-theme-dawn (>=0.2.0-2), why-theme-pink (>= 0.7.0-2), why-theme-ice (>= 0.8.0-2)
+    why-theme-dawn (>=0.2.0-2), why-theme-pink (>= 0.7.0-2), why-theme-ice (>= 0.8.0-2), why-theme-night
 Maintainer: WhyAreAllTheseTaken
 

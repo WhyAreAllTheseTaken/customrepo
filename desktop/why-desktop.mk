@@ -109,5 +109,6 @@ $(REPO)/why-theme-%_all.deb: why-theme-%_all
 themes: $(REPO)/why-theme-ice_all.deb \
 	$(REPO)/why-theme-ice-light_all.deb \
 	$(REPO)/why-theme-dawn_all.deb \
+	$(REPO)/why-theme-night_all.deb \
 	$(REPO)/why-theme-pink_all.deb
 
