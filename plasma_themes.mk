@@ -142,7 +142,7 @@ $(REPO)/%-wallpapers_all.deb: %-wallpapers_all
 
 THEME_TARGETS=Infinity_themes Wings_themes Relax_themes Cool_themes Gradient_themes Flight_themes Vivid_themes Colorful_themes \
 			  Magna_themes Gently-Color_themes Bluish_themes Silvery_themes Viola_themes Vortex_themes Aretha_themes \
-              Pax_themes Shadows_themes Fancy_themes Desert_themes Bonny_themes Magna_themes
+              Pax_themes Shadows_themes Fancy_themes Desert_themes Bonny_themes Mega_themes
 
 $(THEME_TARGETS):: %_themes: $(REPO)/%-kde_all.deb $(REPO)/%-icon-theme_all.deb \
 	$(REPO)/%-wallpapers_all.deb $(REPO)/%-gtk-theme_all.deb
