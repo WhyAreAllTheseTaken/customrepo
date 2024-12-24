@@ -1,4 +1,4 @@
-Package: %package%-plasma-theme
+Package: %package%-kde
 Version: %version%
 Architecture: all
 Section: x11
@@ -7,4 +7,5 @@ Description: %name% Themes For Plasma Desktop
 Maintainer: WhyAreAllTheseTaken
 Homepage: https://github.com/L4ki/%name%-Plasma-Themes
 Recommends: %package%-icon-theme, %package%-wallpapers, %package%-gtk-theme
+Replaces: %package%-plasma-theme
 

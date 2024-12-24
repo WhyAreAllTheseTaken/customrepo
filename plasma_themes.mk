@@ -3,7 +3,7 @@
 	git clone --depth 1 https://github.com/L4ki/$@.git
 	ls $@
 
-%-plasma-theme_all: % %-Plasma-Themes
+%-kde_all: % %-Plasma-Themes
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/share/plasma/desktoptheme/
@@ -34,12 +34,13 @@
 		cp -r ./$<-Plasma-Themes/$<\ Color\ Schemes/* $@/usr/share/color-schemes/;\
 	fi
 	mkdir -p $@/DEBIAN
-	cp plasma-theme_control $@/DEBIAN/control
+	cp kde_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
+$(REPO)/%-kde_all.deb: %-plasma-theme_all
+	rm $@
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
@@ -53,6 +54,15 @@ $(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 	if [[ -d $<-Plasma-Themes/$<-GTK ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-GTK/* $@/usr/share/themes/;\
 	fi
+	if [[ -f $@/usr/share/themes/settings.ini ]]; then\
+		mkdir $@/usr/share/themes/%-GTK;\
+		mv -r $@/usr/share/themes/assets $@/usr/share/themes/%-GTK || true;\
+		mv -r $@/usr/share/themes/gtk-2.0 $@/usr/share/themes/%-GTK || true;\
+		mv -r $@/usr/share/themes/gtk-3.0 $@/usr/share/themes/%-GTK || true;\
+		mv -r $@/usr/share/themes/gtk-4.0 $@/usr/share/themes/%-GTK || true;\
+		mv $@/usr/share/themes/index.theme $@/usr/share/themes/%-GTK || true;\
+		mv $@/usr/share/themes/settings.ini $@/usr/share/themes/%-GTK || true;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp gtk-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
@@ -60,6 +70,7 @@ $(REPO)/%-plasma-theme_all.deb: %-plasma-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
+	rm $@
 	if [[ ! -z "$$( ls -A $</usr/share/themes/ )" ]]; then\
 		dpkg-deb --build $<;\
 		mv $<.deb $(REPO);\
@@ -78,6 +89,9 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	if [[ -d $<-Plasma-Themes/$<-Icons ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-Icons/* $@/usr/share/icons/;\
 	fi
+	if [[ -f $@/usr/share/icons/Text\ File.txt ]]; then\
+		rm $@/usr/share/icons/Text\ File.txt;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp icon-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
@@ -85,6 +99,7 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
+	rm $@
 	if [[ ! -z "$$( ls -A $</usr/share/icons/ )" ]]; then\
 		dpkg-deb --build $<;\
 		mv $<.deb $(REPO);\
@@ -107,12 +122,13 @@ $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-wallpapers_all.deb: %-wallpapers_all
+	rm $@
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
-THEME_TARGETS=Infinity_themes Wings_themes Colorful_themes Relax_themes Cool_themes Gradient_themes Flight_themes Vivid_themes 
+THEME_TARGETS=Infinity_themes Wings_themes Relax_themes Cool_themes Gradient_themes Flight_themes Vivid_themes Colorful_themes 
 
-$(THEME_TARGETS):: %_themes: $(REPO)/%-plasma-theme_all.deb $(REPO)/%-icon-theme_all.deb \
+$(THEME_TARGETS):: %_themes: $(REPO)/%-kde_all.deb $(REPO)/%-icon-theme_all.deb \
 	$(REPO)/%-wallpapers_all.deb $(REPO)/%-gtk-theme_all.deb
 
 plasma_theme_set: $(THEME_TARGETS)
