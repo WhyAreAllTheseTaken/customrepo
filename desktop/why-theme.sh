@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-setbg=0
-
 while getopts "lrbh" option; do
     case $option in
         l)
@@ -13,7 +11,10 @@ while getopts "lrbh" option; do
             why-theme "$(<~/.local/why-theme)"
             exit;;
         b)
-            setbg=1
+            echo "Using theme background..."
+            bg_file=/usr/share/why-desktop/theme/$2/default-bg
+            why-bg $(cat bg_file)
+            why-theme $2
             ;;
         h)
             echo "why-theme help:"
@@ -35,10 +36,4 @@ cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 i3-msg reload > /dev/null || true
 pkill -USR1 kitty || true
 pkill -USR1 zsh || true
-
-if [[ $setbg != 0 ]] then
-    echo "Using theme background..."
-    bg_file=/usr/share/why-desktop/theme/$1/default-bg
-    why-bg $(cat bg_file)
-fi
 

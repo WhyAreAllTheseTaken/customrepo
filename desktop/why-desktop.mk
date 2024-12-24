@@ -1,8 +1,6 @@
-WHY_DESKTOP_VERSION = 0.13.0
-WHY_DESKTOP_REVISION = 1
-WHY_DESKTOP_PACKAGE = why-desktop_$(WHY_DESKTOP_VERSION)-$(WHY_DESKTOP_REVISION)_all
+WHY_DESKTOP_PACKAGE = why-desktop_all
 
-$(REPO)/$(WHY_DESKTOP_PACKAGE).deb:
+$(REPO)/$(WHY_DESKTOP_PACKAGE).deb: desktop/why-desktop_control
 	echo "Packaging $(WHY_DESKTOP_PACKAGE)..."
 	rm -rf $(WHY_DESKTOP_PACKAGE)
 	mkdir -p $(WHY_DESKTOP_PACKAGE)/etc/skel/.config/i3
@@ -64,11 +62,7 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
-THEME_REVISION = 16
-THEME_PACKAGE_P = why-theme-
-THEME_PACKAGE_S = _$(THEME_REVISION)_all
-
-$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
+why-theme-%_all: desktop/theme/% desktop/theme/%/control
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp $</control $@/DEBIAN/control
@@ -83,13 +77,13 @@ $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S): desktop/theme/%
 	mkdir -p $@/usr/share/backgrounds
 	-cp -r $</bg/* $@/usr/share/backgrounds
 
-$(REPO)/$(THEME_PACKAGE_P)%$(THEME_PACKAGE_S).deb: $(THEME_PACKAGE_P)%$(THEME_PACKAGE_S)
+$(REPO)/why-theme-%_all.deb: why-theme-%_all
 	echo "Packaging $(@F)"
 	dpkg-deb --build $<
 	mv $(@F) $(REPO)
 
-themes: $(REPO)/$(THEME_PACKAGE_P)ice$(THEME_PACKAGE_S).deb \
-	$(REPO)/$(THEME_PACKAGE_P)ice-light$(THEME_PACKAGE_S).deb \
-	$(REPO)/$(THEME_PACKAGE_P)dawn$(THEME_PACKAGE_S).deb \
-	$(REPO)/$(THEME_PACKAGE_P)pink$(THEME_PACKAGE_S).deb
+themes: $(REPO)/why-theme-ice_all.deb \
+	$(REPO)/why-theme-ice-light_all.deb \
+	$(REPO)/why-theme-dawn_all.deb \
+	$(REPO)/why-theme-pink_all.deb
 

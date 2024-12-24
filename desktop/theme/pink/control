@@ -1,11 +1,11 @@
 Package: why-theme-pink
-Version: 0.6.0-1
+Version: 0.7.0-1
 Architecture: all
 Section: why
 Priority: optional
 Description: The pink city theme for my custom desktop.
     Palette: https://coolors.co/1f142f-523d66-ffaeff-ffd6ff-e0005d-ff4794-e000e0-ff5cff
-Depends: why-desktop (>=0.9.2), wings-icon-theme, materia-gtk-theme, fonts-noto, why-shell (>= 0.4) 
+Depends: why-desktop (>=0.9.2), magna-icon-theme, materia-gtk-theme, fonts-noto, why-shell (>= 0.4) 
 Pre-Depends: why-bg (>=0.11), why-theme (>=0.13), sudo, coreutils
 Provides: why-desktop-theme
 Maintainer: WhyAreAllTheseTaken
