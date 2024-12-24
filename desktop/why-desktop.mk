@@ -99,7 +99,7 @@ why-theme-%_all: desktop/theme/% desktop/theme/%/control
 	-cp -rT $</share $@/usr/share/why-desktop/theme/$(<F)/
 	mkdir -p $@/usr/share/backgrounds
 	-cp -r $</bg/* $@/usr/share/backgrounds
-	cp $</default-bg /usr/share/why-desktop/theme/$(<F)/
+	cp $</default-bg $@/usr/share/why-desktop/theme/$(<F)/
 
 $(REPO)/why-theme-%_all.deb: why-theme-%_all
 	echo "Packaging $(@F)"
