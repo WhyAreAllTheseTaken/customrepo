@@ -140,8 +140,10 @@ $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 
 $(REPO)/%-wallpapers_all.deb: %-wallpapers_all
 	-rm $@
-	dpkg-deb --build $<
-	mv $<.deb $(REPO)
+	if [[ ! -z "$$( ls -A $</usr/share/backgrounds/ )" ]]; then\
+		dpkg-deb --build $<;\
+		mv $<.deb $(REPO);\
+	fi
 
 THEME_TARGETS=Infinity_themes Wings_themes Relax_themes Cool_themes Gradient_themes Flight_themes Vivid_themes Colorful_themes \
 			  Magna_themes Gently-Color_themes Bluish_themes Silvery_themes Viola_themes Vortex_themes Aretha_themes \
