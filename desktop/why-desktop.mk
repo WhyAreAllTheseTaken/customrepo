@@ -78,6 +78,10 @@ $(REPO)/$(WHY_CYCLE_PACKAGE).deb: desktop/why-cycle_control
 	cp desktop/why-cycle.timer $(WHY_CYCLE_PACKAGE)/etc/systemd/system/
 	mkdir -p $(WHY_CYCLE_PACKAGE)/DEBIAN
 	cp desktop/why-cycle_control $(WHY_CYCLE_PACKAGE)/DEBIAN/control
+	cp desktop/why-cycle_postinst.sh $(WHY_CYCLE_PACKAGE)/DEBIAN/postinst
+	chmod +x $(WHY_CYCLE_PACKAGE)/DEBIAN/postinst
+	cp desktop/why-cycle_prerm.sh $(WHY_CYCLE_PACKAGE)/DEBIAN/prerm
+	chmod +x $(WHY_CYCLE_PACKAGE)/DEBIAN/prerm
 	dpkg-deb --build $(WHY_CYCLE_PACKAGE)
 	mv $(WHY_CYCLE_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_CYCLE_PACKAGE)
