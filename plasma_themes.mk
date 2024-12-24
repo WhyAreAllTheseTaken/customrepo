@@ -59,6 +59,9 @@ $(REPO)/%-kde_all.deb: %-kde_all
 	if [[ -d $<-Plasma-Themes/$<\ GTK\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ GTK\ Themes/* $@/usr/share/themes/;\
 	fi
+	if [[ -d $<-Plasma-Themes/$<-GTK-Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-GTK-Themes/* $@/usr/share/themes/;\
+	fi
 	if [[ -d $<-Plasma-Themes/$<-GTK ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-GTK/* $@/usr/share/themes/;\
 	fi
@@ -93,6 +96,9 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	fi
 	if [[ -d $<-Plasma-Themes/$<\ Icon\ Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Icon\ Themes/* $@/usr/share/icons/;\
+	fi
+	if [[ -d $<-Plasma-Themes/$<-Icon-Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-Icon-Themes/* $@/usr/share/icons/;\
 	fi
 	if [[ -d $<-Plasma-Themes/$<-Icons ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-Icons/* $@/usr/share/icons/;\
