@@ -22,7 +22,7 @@ while getopts "lrbh" option; do
             echo "-r - Reload current theme."
             echo "-b - Include the theme background."
             echo "-h - Display this help."
-            ;;
+            exit;;
     esac
 done
 
