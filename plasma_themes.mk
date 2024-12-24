@@ -74,6 +74,9 @@ $(REPO)/%-kde_all.deb: %-kde_all
 		mv $@/usr/share/themes/index.theme $@/usr/share/themes/$<-GTK || true;\
 		mv $@/usr/share/themes/settings.ini $@/usr/share/themes/$<-GTK || true;\
 	fi
+	if [[ -f $@/usr/share/themes/Text\ File.txt ]]; then\
+		rm $@/usr/share/themes/Text\ File.txt;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp gtk-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control

@@ -6,6 +6,6 @@ Priority: optional
 Description: %name% GTK Themes For Plasma Desktop
 Maintainer: WhyAreAllTheseTaken
 Homepage: https://github.com/L4ki/%name%-Plasma-Themes
-Recommends: %package%-icon-theme, %package%-wallpapers
-Suggests: %package%-kde
+Recommends: %package%-icon-theme
+Suggests: %package%-kde, %package%-wallpapers
 
