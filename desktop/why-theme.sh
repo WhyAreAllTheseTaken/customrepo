@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
-while getopts "lrd" option; do
+setbg=0
+
+while getopts "lrbh" option; do
     case $option in
         l)
             echo "Available themes:"
@@ -10,6 +12,16 @@ while getopts "lrd" option; do
             echo "Reloading theme..."
             why-theme "$(<~/.local/why-theme)"
             exit;;
+        b)
+            setbg=1
+            ;;
+        h)
+            echo "why-theme help:"
+            echo "-l - List available themes."
+            echo "-r - Reload current theme."
+            echo "-b - Include the theme background."
+            echo "-h - Display this help."
+            ;;
     esac
 done
 
@@ -23,4 +35,10 @@ cp -rTf /usr/share/why-desktop/theme/$1/home/ ~
 i3-msg reload > /dev/null || true
 pkill -USR1 kitty || true
 pkill -USR1 zsh || true
+
+if [[ $setbg != 0 ]] then
+    echo "Using theme background..."
+    bg_file=/usr/share/why-desktop/theme/$1/default-bg
+    why-bg $(cat bg_file)
+fi
 
