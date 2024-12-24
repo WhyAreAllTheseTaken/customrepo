@@ -110,7 +110,7 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 		rm $@/usr/share/icons/Text\ File.txt;\
 	fi
 	if [[ -f $@/usr/share/icons/index.theme ]]; then\
-		mkdir $@/usr/share/themes/$<;\
+		mkdir $@/usr/share/icons/$<;\
 		mv $@/usr/share/icons/16x16 $@/usr/share/icons/$< || true;\
 		mv $@/usr/share/icons/22x22 $@/usr/share/icons/$< || true;\
 		mv $@/usr/share/icons/8x8 $@/usr/share/icons/$< || true;\
