@@ -15,7 +15,7 @@ while getopts "lrbh" option; do
             bg_file=/usr/share/why-desktop/theme/$2/default-bg
             why-bg $(cat bg_file)
             why-theme $2
-            ;;
+            exit;;
         h)
             echo "why-theme help:"
             echo "-l - List available themes."
