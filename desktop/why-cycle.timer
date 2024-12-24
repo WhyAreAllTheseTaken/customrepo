@@ -6,5 +6,5 @@ OnCalendar=hourly
 Unit=why-cycle.service
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
 
