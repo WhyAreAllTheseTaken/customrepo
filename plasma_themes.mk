@@ -13,7 +13,12 @@
 	if [[ -d $<-Plasma-Themes/$<-Plasma-Themes ]]; then\
 		cp -r ./$<-Plasma-Themes/$<-Plasma-Themes/* $@/usr/share/plasma/desktoptheme/;\
 	fi
-	cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/
+	if [[ -d $<-Plasma-Themes/$<\ Global\ Themes ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Global\ Themes/* $@/usr/share/plasma/desktoptheme/;\
+	fi
+	if [[ -d $<-Plasma-Themes/$<-Global-6 ]]; then\
+		cp -r ./$<-Plasma-Themes/$<-Global-6/* $@/usr/share/plasma/desktoptheme/;\
+	fi
 	mkdir -p $@/usr/share/plasma/look-and-feel/
 	if [[ -d $<-Plasma-Themes/$<\ Splshscreens ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Splshscreens/* $@/usr/share/plasma/look-and-feel/;\
@@ -28,6 +33,9 @@
 	fi
 	if [[ -d $<-Plasma-Themes/$<\ Windows\ Decorations ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Windows\ Decorations/* $@/usr/share/aurorae/themes/;\
+	fi
+	if [[ -d $<-Plasma-Themes/Window\ Decorations\ For\ Plasma\ 6 ]]; then\
+		cp -r ./$<-Plasma-Themes/$<\ Window\ Decorations\ For\ Plasma\ 6/* $@/usr/share/aurorae/themes/;\
 	fi
 	if [[ -d $<-Plasma-Themes/$<\ Color\ Schemes ]]; then\
 		mkdir -p $@/usr/share/color-schemes/;\
