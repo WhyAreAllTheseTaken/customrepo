@@ -29,8 +29,10 @@
 	if [[ -d $<-Plasma-Themes/$<\ Windows\ Decorations ]]; then\
 		cp -r ./$<-Plasma-Themes/$<\ Windows\ Decorations/* $@/usr/share/aurorae/themes/;\
 	fi
-	mkdir -p $@/usr/share/color-schemes/
-	cp -r ./$<-Plasma-Themes/$<\ Color\ Schemes/* $@/usr/share/color-schemes/
+	if [[ -d $<-Plasma-Themes/$<\ Color\ Schemes ]]; then\
+		mkdir -p $@/usr/share/color-schemes/;\
+		cp -r ./$<-Plasma-Themes/$<\ Color\ Schemes/* $@/usr/share/color-schemes/;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp plasma-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
