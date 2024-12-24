@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 systemctl daemon-reload
-systemctl start why-cycle.service
+systemctl --global start why-cycle.service
 
-systemctl enable why-cycle.timer
-systemctl start why-cycle.timer
+systemctl --global enable why-cycle.timer
+systemctl --global start why-cycle.timer
 

@@ -73,9 +73,9 @@ $(REPO)/$(WHY_CYCLE_PACKAGE).deb: desktop/why-cycle_control
 	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/sbin/
 	cp desktop/why-cycle-all.sh $(WHY_CYCLE_PACKAGE)/usr/sbin/why-cycle-all
 	chmod +x $(WHY_CYCLE_PACKAGE)/usr/sbin/why-cycle-all
-	mkdir -p $(WHY_CYCLE_PACKAGE)/etc/systemd/system/
-	cp desktop/why-cycle.service $(WHY_CYCLE_PACKAGE)/etc/systemd/system/
-	cp desktop/why-cycle.timer $(WHY_CYCLE_PACKAGE)/etc/systemd/system/
+	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
+	cp desktop/why-cycle.service $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
+	cp desktop/why-cycle.timer $(WHY_CYCLE_PACKAGE)/usr/lib/systemd/user/
 	mkdir -p $(WHY_CYCLE_PACKAGE)/DEBIAN
 	cp desktop/why-cycle_control $(WHY_CYCLE_PACKAGE)/DEBIAN/control
 	cp desktop/why-cycle_postinst.sh $(WHY_CYCLE_PACKAGE)/DEBIAN/postinst

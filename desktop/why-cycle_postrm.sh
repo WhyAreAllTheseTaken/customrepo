@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-systemctl daemon-reload
+systemctl --global daemon-reload
 
