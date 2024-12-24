@@ -62,6 +62,20 @@ $(REPO)/$(WHY_APPS_PACKAGE).deb:
 	mv $(WHY_APPS_PACKAGE).deb $(REPO)
 	rm -rf $(WHY_APPS_PACKAGE)
 
+WHY_CYCLE_PACKAGE = why-cycle_all
+
+$(REPO)/$(WHY_CYCLE_PACKAGE).deb: desktop/why-cycle_control
+	echo "Packaging $(WHY_CYCLE_PACKAGE)..."
+	rm -rf $(WHY_CYCLE_PACKAGE)
+	mkdir -p $(WHY_CYCLE_PACKAGE)/usr/bin/
+	cp desktop/why-cycle.sh $(WHY_CYCLE_PACKAGE)/usr/bin/why-cycle
+	chmod +x $(WHY_CYCLE_PACKAGE)/usr/bin/why-cycle
+	mkdir -p $(WHY_CYCLE_PACKAGE)/DEBIAN
+	cp desktop/why-cycle_control $(WHY_CYCLE_PACKAGE)/DEBIAN/control
+	dpkg-deb --build $(WHY_CYCLE_PACKAGE)
+	mv $(WHY_CYCLE_PACKAGE).deb $(REPO)
+	rm -rf $(WHY_CYCLE_PACKAGE)
+
 why-theme-%_all: desktop/theme/% desktop/theme/%/control
 	rm -rf $@
 	mkdir -p $@/DEBIAN
