@@ -5,7 +5,7 @@ function swap_theme() {
 
     echo "Checking theme change requirement: $current -> $1..."
 
-    if [[ $current != $1]]; then
+    if [[ $current != $1 ]]; then
         why-theme -b $1
     fi
 }
