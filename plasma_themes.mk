@@ -39,7 +39,7 @@
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
-$(REPO)/%-kde_all.deb: %-plasma-theme_all
+$(REPO)/%-kde_all.deb: %-kde_all
 	-rm $@
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
