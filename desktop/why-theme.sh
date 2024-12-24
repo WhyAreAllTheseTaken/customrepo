@@ -13,7 +13,7 @@ while getopts "lrbh" option; do
         b)
             echo "Using theme background..."
             bg_file=/usr/share/why-desktop/theme/$2/default-bg
-            why-bg $(cat bg_file)
+            why-bg $(cat $bg_file)
             why-theme $2
             exit;;
         h)
