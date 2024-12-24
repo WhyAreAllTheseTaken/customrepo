@@ -35,7 +35,7 @@
 		cp -r ./$<-Plasma-Themes/$<\ Windows\ Decorations/* $@/usr/share/aurorae/themes/;\
 	fi
 	if [[ -d $<-Plasma-Themes/Window\ Decorations\ For\ Plasma\ 6 ]]; then\
-		cp -r ./$<-Plasma-Themes/$<\ Window\ Decorations\ For\ Plasma\ 6/* $@/usr/share/aurorae/themes/;\
+		cp -r ./$<-Plasma-Themes/Window\ Decorations\ For\ Plasma\ 6/* $@/usr/share/aurorae/themes/;\
 	fi
 	if [[ -d $<-Plasma-Themes/$<\ Color\ Schemes ]]; then\
 		mkdir -p $@/usr/share/color-schemes/;\
