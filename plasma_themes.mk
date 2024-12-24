@@ -55,13 +55,13 @@ $(REPO)/%-kde_all.deb: %-kde_all
 		cp -r ./$<-Plasma-Themes/$<-GTK/* $@/usr/share/themes/;\
 	fi
 	if [[ -f $@/usr/share/themes/settings.ini ]]; then\
-		mkdir $@/usr/share/themes/%-GTK;\
-		mv $@/usr/share/themes/assets $@/usr/share/themes/%-GTK || true;\
-		mv $@/usr/share/themes/gtk-2.0 $@/usr/share/themes/%-GTK || true;\
-		mv $@/usr/share/themes/gtk-3.0 $@/usr/share/themes/%-GTK || true;\
-		mv $@/usr/share/themes/gtk-4.0 $@/usr/share/themes/%-GTK || true;\
-		mv $@/usr/share/themes/index.theme $@/usr/share/themes/%-GTK || true;\
-		mv $@/usr/share/themes/settings.ini $@/usr/share/themes/%-GTK || true;\
+		mkdir $@/usr/share/themes/$<-GTK;\
+		mv $@/usr/share/themes/assets $@/usr/share/themes/$<-GTK || true;\
+		mv $@/usr/share/themes/gtk-2.0 $@/usr/share/themes/$<-GTK || true;\
+		mv $@/usr/share/themes/gtk-3.0 $@/usr/share/themes/$<-GTK || true;\
+		mv $@/usr/share/themes/gtk-4.0 $@/usr/share/themes/$<-GTK || true;\
+		mv $@/usr/share/themes/index.theme $@/usr/share/themes/$<-GTK || true;\
+		mv $@/usr/share/themes/settings.ini $@/usr/share/themes/$<-GTK || true;\
 	fi
 	mkdir -p $@/DEBIAN
 	cp gtk-theme_control $@/DEBIAN/control
