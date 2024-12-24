@@ -1,0 +1,10 @@
+[Unit]
+Description="Runs the why-cycle service once an hour."
+
+[Timer]
+OnCalendar=hourly
+Unit=why-cycle.service
+
+[Install]
+WantedBy=graphical.target
+

@@ -1,0 +1,8 @@
+[Unit]
+Description="Changes the user's themes to match the current time of day."
+
+[Service]
+ExecStart=/usr/sbin/why-cycle-all
+ExecReload=/usr/sbin/why-cycle-all
+Type=oneshot
+
