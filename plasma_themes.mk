@@ -109,6 +109,26 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	if [[ -f $@/usr/share/icons/Text\ File.txt ]]; then\
 		rm $@/usr/share/icons/Text\ File.txt;\
 	fi
+	if [[ -f $@/usr/share/icons/index.theme ]]; then\
+		mkdir $@/usr/share/themes/$<;\
+		mv $@/usr/share/icons/16x16 $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/22x22 $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/8x8 $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/actions $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/animations $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/applets $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/apps $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/categories $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/devices $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/emblems $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/emotes $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/mimetypes $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/places $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/preferences $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/status $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/icon-theme.cache $@/usr/share/icons/$< || true;\
+		mv $@/usr/share/icons/index.theme $@/usr/share/icons/$< || true;\
+	fi
 	mkdir -p $@/DEBIAN
 	cp icon-theme_control $@/DEBIAN/control
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
