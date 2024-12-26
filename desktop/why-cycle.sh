@@ -70,6 +70,8 @@ while getopts "lrhynsd" option; do
             echo pink > ~/.config/why-cycle/21
             echo pink > ~/.config/why-cycle/22
             echo night > ~/.config/why-cycle/23
+            
+            why-cycle -r
             exit;;
         l)
             for hour in $(seq 0 23);
@@ -83,6 +85,8 @@ while getopts "lrhynsd" option; do
         s)
             if [[ -d /usr/share/why-desktop/theme/$3 ]]; then
                 echo $3 > ~/.config/why-cycle/$2
+                
+                why-cycle -r
             else
                 echo "The theme '$3' does not exist." >&2
             fi
