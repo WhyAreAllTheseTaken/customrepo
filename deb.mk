@@ -1,5 +1,5 @@
 $(REPO)/%.deb: %
-	-@rm $@
+	-rm $@ &> /dev/null
 	if [[ ! -f $</DEBIAN/control ]]; then\
 		rm -rf $<;\
 	fi

@@ -79,7 +79,7 @@
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
-	-@rm $@
+	-rm $@ &> /dev/null
 	if [[ ! -z "$$( ls -A $</usr/share/themes/ )" ]]; then\
 		dpkg-deb --build $<;\
 		mv $<.deb $(REPO);\
@@ -131,7 +131,7 @@ $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
-	-@rm $@
+	-rm $@ &> /dev/null
 	if [[ ! -z "$$( ls -A $</usr/share/icons/ )" ]]; then\
 		dpkg-deb --build $<;\
 		mv $<.deb $(REPO);\
@@ -154,7 +154,7 @@ $(REPO)/%-icon-theme_all.deb: %-icon-theme_all
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
 
 $(REPO)/%-wallpapers_all.deb: %-wallpapers_all
-	-@rm $@
+	-rm $@ &> /dev/null
 	if [[ ! -z "$$( ls -A $</usr/share/backgrounds/ )" ]]; then\
 		dpkg-deb --build $<;\
 		mv $<.deb $(REPO);\
