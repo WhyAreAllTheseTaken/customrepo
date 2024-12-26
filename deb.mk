@@ -1,4 +1,4 @@
-$(REPO)/%.deb: % %/DEBIAN/control
+$(REPO)/%.deb: %
 	-rm $@
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
