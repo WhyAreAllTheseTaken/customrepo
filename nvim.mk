@@ -3,6 +3,7 @@ NVIM_PACKAGE = nvim_$(NVIM_VERSION)_$(ARCH)
 
 $(REPO)/$(NVIM_PACKAGE).deb:
 	echo "Building $(NVIM_PACKAGE)..."
+	rm -rf $@
 	rm -rf neovim
 	git clone --depth 1 --branch v$(NVIM_VERSION) https://github.com/neovim/neovim
 	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo

@@ -1,5 +1,5 @@
 Package: i3lock-color
-Version: 2.13.5-8
+Version: 2.13.5-9
 Architecture: amd64
 Section: x11
 Priority: optional

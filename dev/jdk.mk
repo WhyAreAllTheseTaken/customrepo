@@ -24,6 +24,7 @@ openjdk-21.0.2_arm64.tar.gz:
 
 openjdk-23-jdk_%: openjdk-23_%.tar.gz dev/jdk23_control 
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/usr/lib/jvm
 	tar -xzf $< --directory $@/usr/lib/jvm
 	mkdir -p $@/DEBIAN
@@ -36,6 +37,7 @@ openjdk-23-jdk_%: openjdk-23_%.tar.gz dev/jdk23_control
 
 openjdk-21-jdk_%: openjdk-21.0.2_%.tar.gz dev/jdk21_control 
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/usr/lib/jvm
 	tar -xzf $< --directory $@/usr/lib/jvm
 	mkdir -p $@/DEBIAN

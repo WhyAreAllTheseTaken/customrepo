@@ -2,6 +2,7 @@ RUSTUP_PACKAGE = rustup_all
 
 $(RUSTUP_PACKAGE): dev/rustup_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	mkdir -p $@/usr/share/rustup_deb
 	wget --show-progress -O $@/usr/share/rustup_deb/rustup_setup.sh https://sh.rustup.rs
@@ -16,6 +17,7 @@ RUST_CHAIN_PACKAGE = rust-toolchain_all
 
 rust-toolchain_all: dev/rust-toolchain_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp dev/rust-toolchain_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst
@@ -27,6 +29,7 @@ RUST_NIGHTLY_PACKAGE = rust-toolchain-nightly_all
 
 rust-toolchain-nightly_all: dev/rust-nightly_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp dev/rust-nightly_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst
@@ -38,6 +41,7 @@ MIRI_PACKAGE = cargo-miri_all
 
 $(MIRI_PACKAGE): dev/miri_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp dev/miri_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst

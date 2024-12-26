@@ -2,6 +2,7 @@ LARAVEL_PACKAGE = laravel-installer_all
 
 laravel-installer_all: dev/laravel_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp dev/laravel_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst

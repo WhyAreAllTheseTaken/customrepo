@@ -2,6 +2,7 @@ GHCUP_PACKAGE = ghcup_all
 
 ghcup_all: dev/ghcup_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	mkdir -p $@/usr/share/ghcup_deb
 	wget --show-progress -O $@/usr/share/ghcup_deb/ghcup_setup.sh https://get-ghcup.haskell.org
