@@ -2,6 +2,7 @@ JDK_PACKAGE = openjdk-latest-jdk_all
 
 $(JDK_PACKAGE): dev/jdk_control
 	echo "Packaging $@..."
+	rm -rf $@
 	mkdir -p $@/DEBIAN
 	cp dev/jdk_control $@/DEBIAN/control
 

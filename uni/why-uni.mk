@@ -10,7 +10,7 @@ $(WHY_UNI_PACKAGE): uni/why-uni_control
 	cp uni/why-uni_prerm.sh $@/DEBIAN/prerm
 	chmod +x $@/DEBIAN/prerm
 
-WHY_UNI_NVIDIA_PACKAGE = uni/why-uni-nvidia_all
+WHY_UNI_NVIDIA_PACKAGE = why-uni-nvidia_all
 
 $(WHY_UNI_NVIDIA_PACKAGE): uni/why-uni-nvidia_control
 	echo "Packaging $@..."
