@@ -11,5 +11,5 @@ MULTIMC_PACKAGE = multimc_$(MULTIMC_VERSION)_amd64
 
 $(REPO)/multimc_%_amd64.deb:
 	echo "Downloading $(MULTIMC_PACKAGE)..."
-	wget https://files.multimc.org/downloads/multimc_%.deb -O $@
+	wget https://files.multimc.org/downloads/multimc_$*.deb -O $@
 
