@@ -1,6 +1,6 @@
 JDK_PACKAGE = openjdk-latest-jdk_all
 
-$(JDK_PACKAGE): jdk_control
+$(JDK_PACKAGE): dev/jdk_control
 	echo "Packaging $@..."
 	mkdir -p $@/DEBIAN
 	cp dev/jdk_control $@/DEBIAN/control
