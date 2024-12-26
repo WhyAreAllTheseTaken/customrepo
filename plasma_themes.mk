@@ -1,4 +1,4 @@
-%-Plasma-Themes: %
+%-Plasma-Themes: 
 	rm -rf ./$@
 	git clone --depth 1 https://github.com/L4ki/$@.git
 	ls $@
@@ -46,11 +46,6 @@
 	sed -i "s/%package%/\l$</g" $@/DEBIAN/control
 	sed -i "s/%name%/$</g" $@/DEBIAN/control
 	sed -i "s/%version%/$$(cat $<)/g" $@/DEBIAN/control
-
-$(REPO)/%-kde_all.deb: %-kde_all
-	-rm $@
-	dpkg-deb --build $<
-	mv $<.deb $(REPO)
 
 %-gtk-theme_all: % %-Plasma-Themes
 	echo "Packaging $@..."
