@@ -83,9 +83,9 @@ while getopts "lrhynsd" option; do
         s)
             if [[ -f /usr/share/why-desktop/theme/$2 ]]; then
                 echo $3 > ~/.config/why-cycle/$2
-            exit;;
-            fi
+            else
                 echo "The specified theme does not exist." >&2
+            fi
             exit;;
         r)
             echo "Refreshing theme..."
