@@ -8,6 +8,8 @@ echo "Checking self-update..."
 cd /usr/customrepo && sudo -u customrepo -- make -s build
 echo "Updating self..."
 cd /usr/customrepo && make install
+echo "Repulling instructions..."
+cd /usr/customrepo && sudo -u customrepo -- git pull origin master
 echo "Building packages..."
 cd /usr/customrepo && sudo -u customrepo -- make -s --keep-going packages
 echo "Updating repository. This may take some time..."
