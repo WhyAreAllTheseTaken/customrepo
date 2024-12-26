@@ -1,22 +1,14 @@
-GHCUP_VERSION = 0.1.30.0
-GHCUP_REVISION = 2
-GHCUP_PACKAGE = ghcup_$(GHCUP_VERSION)-$(GHCUP_REVISION)_all
+GHCUP_PACKAGE = ghcup_all
 
-$(REPO)/$(GHCUP_PACKAGE).deb:
-	echo "Packaging $(GHCUP_PACKAGE)..."
-	mkdir -p $(GHCUP_PACKAGE)/DEBIAN
-	mkdir -p $(GHCUP_PACKAGE)/usr/share/ghcup_deb
-	wget --show-progress -O $(GHCUP_PACKAGE)/usr/share/ghcup_deb/ghcup_setup.sh https://get-ghcup.haskell.org
-	chmod +x $(GHCUP_PACKAGE)/usr/share/ghcup_deb/ghcup_setup.sh
-	#mkdir -p $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/
-	#cp ghcup_useradd.sh $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
-	#chmod +x $(GHCUP_PACKAGE)/etc/shadow-maint/useradd-post.d/ghcup.sh
-	cp dev/ghcup_postinst.sh $(GHCUP_PACKAGE)/DEBIAN/postinst
-	chmod +x $(GHCUP_PACKAGE)/DEBIAN/postinst
-	cp dev/ghcup_prerm.sh $(GHCUP_PACKAGE)/DEBIAN/prerm
-	chmod +x $(GHCUP_PACKAGE)/DEBIAN/prerm
-	cp dev/ghcup_control $(GHCUP_PACKAGE)/DEBIAN/control
-	dpkg-deb --build $(GHCUP_PACKAGE)
-	mv $(GHCUP_PACKAGE).deb $(REPO)
-	rm -rf $(GHCUP_PACKAGE)
+ghcup_all: dev/ghcup_control
+	echo "Packaging $@..."
+	mkdir -p $@/DEBIAN
+	mkdir -p $@/usr/share/ghcup_deb
+	wget --show-progress -O $@/usr/share/ghcup_deb/ghcup_setup.sh https://get-ghcup.haskell.org
+	chmod +x $@/usr/share/ghcup_deb/ghcup_setup.sh
+	cp dev/ghcup_postinst.sh $@/DEBIAN/postinst
+	chmod +x $@/DEBIAN/postinst
+	cp dev/ghcup_prerm.sh $@/DEBIAN/prerm
+	chmod +x $@/DEBIAN/prerm
+	cp dev/ghcup_control $@/DEBIAN/control
 

@@ -1,20 +1,11 @@
-LARAVEL_VERSION = 5.9.0
-LARAVEL_REVISION = 11
-LARAVEL_PACKAGE = laravel-installer_$(LARAVEL_VERSION)-$(LARAVEL_REVISION)_all
+LARAVEL_PACKAGE = laravel-installer_all
 
-$(REPO)/$(LARAVEL_PACKAGE).deb:
-	echo "Packaging $(LARAVEL_PACKAGE)..."
-	#mkdir -p $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/
-	#cp laravel_useradd.sh $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh
-	#chmod +x $(LARAVEL_PACKAGE)/etc/shadow-maint/useradd-post.d/laravel.sh
-	mkdir -p $(LARAVEL_PACKAGE)/DEBIAN
-	cp dev/laravel_postinst.sh $(LARAVEL_PACKAGE)/DEBIAN/postinst
-	chmod +x $(LARAVEL_PACKAGE)/DEBIAN/postinst
-	cp dev/laravel_prerm.sh $(LARAVEL_PACKAGE)/DEBIAN/prerm
-	chmod +x $(LARAVEL_PACKAGE)/DEBIAN/prerm
-	cp dev/laravel_control $(LARAVEL_PACKAGE)/DEBIAN/control
-	dpkg-deb --build $(LARAVEL_PACKAGE)
-	mv $(LARAVEL_PACKAGE).deb $(REPO)
-	rm -rf $(LARAVEL_PACKAGE)
-
+laravel-install_all: dev/laravel-control
+	echo "Packaging $@..."
+	mkdir -p $@/DEBIAN
+	cp dev/laravel_postinst.sh $@/DEBIAN/postinst
+	chmod +x $@/DEBIAN/postinst
+	cp dev/laravel_prerm.sh $@/DEBIAN/prerm
+	chmod +x $@/DEBIAN/prerm
+	cp dev/laravel_control $@/DEBIAN/control
 
