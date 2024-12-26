@@ -10,10 +10,10 @@ JDK21_PACKAGE = openjdk-21-jdk_amd64
 JDK23_PACKAGE_ARM64 = openjdk-23-jdk_arm64
 JDK21_PACKAGE_ARM64 = openjdk-21-jdk_arm64
 
-openjdk-23_amd64.tar.gz:
+openjdk-23-1_amd64.tar.gz:
 	wget --show-progress -O $@ https://download.java.net/java/GA/jdk23/3c5b90190c68498b986a97f276efd28a/37/GPL/openjdk-23_linux-x65_bin.tar.gz
 
-openjdk-23_arm64.tar.gz:
+openjdk-23-1_arm64.tar.gz:
 	wget --show-progress -O $@ https://download.java.net/java/GA/jdk23/3c5b90190c68498b986a97f276efd28a/37/GPL/openjdk-23_linux-aarch64_bin.tar.gz
 
 openjdk-21.0.2_amd64.tar.gz:
@@ -22,7 +22,7 @@ openjdk-21.0.2_amd64.tar.gz:
 openjdk-21.0.2_arm64.tar.gz:
 	wget --show-progress -O $@ https://download.java.net/java/GA/jdk23/3c5b90190c68498b986a97f276efd28a/37/GPL/openjdk-23_linux-aarch64_bin.tar.gz
 
-openjdk-23-jdk_%: openjdk-23_%.tar.gz dev/jdk23_control 
+openjdk-23-jdk_%: openjdk-23-1_%.tar.gz dev/jdk23_control 
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/usr/lib/jvm
