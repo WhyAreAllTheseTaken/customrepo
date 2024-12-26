@@ -1,5 +1,5 @@
 $(REPO)/%.deb: %
-	-rm $@
+	-@rm $@
 	dpkg-deb --build $<
 	mv $<.deb $(REPO)
 
