@@ -10,5 +10,5 @@ ghcup_all: dev/ghcup_control
 	chmod +x $@/DEBIAN/postinst
 	cp dev/ghcup_prerm.sh $@/DEBIAN/prerm
 	chmod +x $@/DEBIAN/prerm
-	cp dev/ghcup_control $@/DEBIAN/control
+	cp $< $@/DEBIAN/control
 

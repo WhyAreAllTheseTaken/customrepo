@@ -1,6 +1,12 @@
 WHY_DEV_PACKAGE = why-dev_all
 
-why-deb-%_all: dev/why-dev-%_control
+why-dev_all: dev/why-dev_control
+	echo "Packaging $@..."
+	rm -rf $@
+	mkdir -p $@/DEBIAN
+	cp $< $@/DEBIAN/control
+
+why-dev-%_all: dev/why-dev-%_control
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
@@ -16,6 +22,7 @@ why-dev-base_all: dev/why-dev-base_control
 	cp dev/why-dev-base_prerm.sh $@/DEBIAN/prerm
 	chmod +x $@/DEBIAN/prerm
 
+WHY_DEV_BASE_PACKAGE = why-dev-base_all
 WHY_DEV_ADA_PACKAGE = why-dev-ada_all
 WHY_DEV_HASKELL_PACKAGE = why-dev-haskell_all
 WHY_DEV_JAVA_PACKAGE = why-dev-java_all

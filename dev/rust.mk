@@ -28,9 +28,6 @@ RUST_NIGHTLY_PACKAGE = rust-toolchain-nightly_all
 rust-toolchain-nightly_all: dev/rust-nightly_control
 	echo "Packaging $@..."
 	mkdir -p $@/DEBIAN
-	#mkdir -p $@/etc/shadow-maint/useradd-post.d/
-	#cp rust-nightly_useradd.sh $@/etc/shadow-maint/useradd-post.d/rust-nightly.sh
-	#chmod +x $@/etc/shadow-maint/useradd-post.d/rust-nightly.sh
 	cp dev/rust-nightly_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst
 	cp dev/rust-nightly_prerm.sh $@/DEBIAN/prerm
@@ -42,9 +39,6 @@ MIRI_PACKAGE = cargo-miri_all
 $(MIRI_PACKAGE): dev/miri_control
 	echo "Packaging $@..."
 	mkdir -p $@/DEBIAN
-	#mkdir -p $@/etc/shadow-maint/useradd-post.d/
-	#cp miri_useradd.sh $@/etc/shadow-maint/useradd-post.d/miri.sh
-	#chmod +x $@/etc/shadow-maint/useradd-post.d/miri.sh
 	cp dev/miri_postinst.sh $@/DEBIAN/postinst
 	chmod +x $@/DEBIAN/postinst
 	cp dev/miri_prerm.sh $@/DEBIAN/prerm
