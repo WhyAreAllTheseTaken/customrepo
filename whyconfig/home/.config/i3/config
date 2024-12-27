@@ -267,12 +267,13 @@ hide_edge_borders both
 #exec --no-startup-id feh -xF --zoom fill /usr/share/backgrounds/bg1440.png & sleep 7; pkill feh
 
 # Startup
-exec_always --no-startup-id betterlockscreen -w
+exec_always --no-startup-id sleep 10; betterlockscreen -w
 exec_always --no-startup-id pkill picom; sleep 1; picom -b --config ~/.config/picom.conf
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id nm-applet
 exec_always --no-startup-id flameshot
 exec --no-startup-id lxpolkit
+exec --no-startup-id why-cycle -r
 
 # Startup Programs
 exec discord
@@ -291,6 +292,7 @@ exec kitty --name build --directory=~/dev /usr/bin/start_nnn
 # exec kitty --name display --hold cava
 exec obsidian
 # exec whatsdesk
+
 
 # Assignments
 assign [class="discord"] $ws11
