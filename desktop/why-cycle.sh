@@ -17,45 +17,45 @@ function init_theme() {
 }
 
 mkdir -p ~/.config/why-cycle
-init_theme 0 night
-init_theme 1 night
-init_theme 2 night
-init_theme 3 night
-init_theme 4 night
-init_theme 5 night
-init_theme 6 dawn
-init_theme 7 dawn
-init_theme 8 dawn
-init_theme 9 dawn
-init_theme 10 dawn
-init_theme 11 ice
-init_theme 12 ice
-init_theme 13 ice
-init_theme 14 ice
-init_theme 15 ice
-init_theme 16 ice
-init_theme 17 ice
-init_theme 18 ice
-init_theme 19 pink
-init_theme 20 pink
-init_theme 21 pink
-init_theme 22 pink
-init_theme 23 night
+init_theme "00" night
+init_theme "01" night
+init_theme "02" night
+init_theme "03" night
+init_theme "04" night
+init_theme "05" night
+init_theme "06" dawn
+init_theme "07" dawn
+init_theme "08" dawn
+init_theme "09" dawn
+init_theme "10" dawn
+init_theme "11" ice
+init_theme "12" ice
+init_theme "13" ice
+init_theme "14" ice
+init_theme "15" ice
+init_theme "16" ice
+init_theme "17" ice
+init_theme "18" ice
+init_theme "19" pink
+init_theme "20" pink
+init_theme "21" pink
+init_theme "22" pink
+init_theme "23" night
 
 while getopts "lrhynsd" option; do
     case $option in
         d)
             mkdir -p ~/.config/why-cycle
-            echo night > ~/.config/why-cycle/0
-            echo night > ~/.config/why-cycle/1
-            echo night > ~/.config/why-cycle/2
-            echo night > ~/.config/why-cycle/3
-            echo night > ~/.config/why-cycle/4
-            echo night > ~/.config/why-cycle/5
-            echo dawn > ~/.config/why-cycle/6
-            echo dawn > ~/.config/why-cycle/7
-            echo dawn > ~/.config/why-cycle/8
-            echo dawn > ~/.config/why-cycle/9
+            echo night > ~/.config/why-cycle/00
+            echo night > ~/.config/why-cycle/01
+            echo night > ~/.config/why-cycle/02
+            echo night > ~/.config/why-cycle/03
+            echo night > ~/.config/why-cycle/04
+            echo night > ~/.config/why-cycle/05
+            echo dawn > ~/.config/why-cycle/06
+            echo dawn > ~/.config/why-cycle/07
+            echo dawn > ~/.config/why-cycle/08
+            echo dawn > ~/.config/why-cycle/09
             echo dawn > ~/.config/why-cycle/10
             echo ice > ~/.config/why-cycle/11
             echo ice > ~/.config/why-cycle/12
@@ -74,7 +74,7 @@ while getopts "lrhynsd" option; do
             why-cycle -r
             exit;;
         l)
-            for hour in $(seq 0 23);
+            for hour in $(seq -f "%02g" 0 23);
             do
                 path=~/.config/why-cycle/$hour
                 theme=$(cat $path)
