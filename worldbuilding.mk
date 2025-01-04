@@ -1,4 +1,4 @@
-why-worldbuilding_all: dev/why-world_control
+why-worldbuilding_all: why-world_control
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
