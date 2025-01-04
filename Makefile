@@ -32,5 +32,5 @@ packages: $(REPO)/$(CPMV_PACKAGE).deb $(REPO)/$(JDK_PACKAGE).deb $(REPO)/$(LTSA_
 	$(REPO)/$(WHY_DEV_MINECRAFT_PACKAGE).deb $(REPO)/$(WHY_DEV_ML_PACKAGE).deb $(REPO)/$(WHY_DEV_ML_NVIDIA_PACKAGE).deb $(REPO)/$(WHY_DEV_NET_PACKAGE).deb \
 	$(REPO)/$(WHY_DEV_PHP_PACKAGE).deb $(REPO)/$(WHY_DEV_PROLOG_PACKAGE).deb $(REPO)/$(WHY_DEV_RUST_PACKAGE).deb $(REPO)/$(WHY_DEV_UNITY_PACKAGE).deb \
 	$(REPO)/$(WHY_WRITE_PACKAGE).deb $(REPO)/$(WHY_DEV_REPO_PACKAGE).deb $(REPO)/$(WHY_CYCLE_PACKAGE).deb themes \
-	plasma_theme_set $(REPO)/$(MULTIMC_PACKAGE).deb discord_versions
+	plasma_theme_set $(REPO)/$(MULTIMC_PACKAGE).deb discord_versions $(REPO)/why-world_all.deb
 
