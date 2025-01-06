@@ -1,0 +1,10 @@
+Package: %name%-web
+Version: 0.0.0-1
+Architecture: all
+Section: misc
+Priority: optional
+Description: The %name% web app.
+Depends: bash, chromium
+Homepage: %url%
+Maintainer: WhyAreAllTheseTaken
+

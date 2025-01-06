@@ -327,10 +327,10 @@ bindsym $mod+j exec eclipse
 bindsym $mod+b exec /opt/BlueMail/bluemail --disable-gpu-sandbox
 bindsym $mod+g exec gimp
 bindsym $mod+shift+d exec onlyoffice-desktopeditors
-bindsym $mod+shift+s exec chromium --new-window --app=https://soundcloud.com
-bindsym $mod+shift+t exec chromium --new-window --app=https://track.toggl.com/timer
-bindsym $mod+control+t exec chromium --new-window --app=https://todoist.com
-bindsym $mod+shift+g exec chromium --new-window --app=https://github.com
+bindsym $mod+shift+s exec soundcloud-web
+bindsym $mod+shift+t exec toggl-track-web
+bindsym $mod+control+t exec todoist-web
+bindsym $mod+shift+g exec github-web
 bindsym $mod+m exec whatsdesk
 
 # Screenshot keybinds
