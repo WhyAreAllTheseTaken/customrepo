@@ -1,5 +1,5 @@
 Package: %name%-web
-Version: 0.0.0-5
+Version: 0.0.1-1
 Architecture: all
 Section: misc
 Priority: optional
