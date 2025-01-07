@@ -123,8 +123,8 @@ set $ws15 "15:Mu"
 set $ws16 "16:Ta"
 # Messages
 set $ws17 "17:Ms"
-# Timetables
-set $ws18 "18:Tt"
+# Calendar
+set $ws18 "18:Ca"
 # Notes
 set $ws19 "19:No"
 # Monitor
@@ -275,21 +275,16 @@ exec --no-startup-id why-cycle -r
 # Startup Programs
 exec discord
 exec /opt/BlueMail/bluemail --disable-gpu-sandbox
-# exec chromium --new-window --app=https://soundcloud.com
-exec chromium --new-window --app=https://track.toggl.com/timer
-exec chromium --new-window --app=https://todoist.com
-exec chromium --new-window --app=https://github.com
-# exec steam
-# exec kitty --name top sudo htop
+exec toggl-track-web
+exec todoist-web
+exec github-web
+exec google-calendar-web
+exec steam
 exec kitty --name edit --directory=~/dev /usr/bin/start_nnn
 exec kitty --name build --directory=~/dev /usr/bin/start_nnn
 # exec kitty --name server --directory=~/server /usr/bin/start_nnn
 # exec kitty --name sfiles --directory=~/server /usr/bin/start_nnn
-# exec kitty --name display --hold neofetch
-# exec kitty --name display --hold cava
 exec obsidian
-# exec whatsdesk
-
 
 # Assignments
 assign [class="discord"] $ws11
@@ -303,6 +298,7 @@ assign [class="Chromium" instance="toggl.com"] $ws16
 assign [class="Chromium" instance="todoist.com"] $ws16
 assign [class="Chromium" instance="timetable"] $ws18
 assign [class="Chromium" instance="github.com"] $ws13
+assign [class="Chromium" instance="calendar.google.com"] $ws18
 assign [class="kitty" instance="top"] $ws20
 assign [class="kitty" instance="edit"] $ws2
 assign [class="kitty" instance="build"] $ws3
@@ -331,6 +327,7 @@ bindsym $mod+shift+s exec soundcloud-web
 bindsym $mod+shift+t exec toggl-track-web
 bindsym $mod+control+t exec todoist-web
 bindsym $mod+shift+g exec github-web
+bindsym $mod+control+c exec google-calendar-web
 bindsym $mod+m exec whatsdesk
 
 # Screenshot keybinds
