@@ -33,5 +33,5 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/$(WHY_DEV_PHP_PACKAGE).deb repo/$(WHY_DEV_PROLOG_PACKAGE).deb repo/$(WHY_DEV_RUST_PACKAGE).deb repo/$(WHY_DEV_UNITY_PACKAGE).deb \
 	repo/$(WHY_WRITE_PACKAGE).deb repo/$(WHY_DEV_REPO_PACKAGE).deb repo/$(WHY_CYCLE_PACKAGE).deb themes \
 	plasma_theme_set repo/$(MULTIMC_PACKAGE).deb discord_versions repo/why-worldbuilding_all.deb repo/why-dev-image_all.deb \
-	repo/fabric-installer_amd64.deb web_sites
+	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb
 

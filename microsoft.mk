@@ -1,8 +1,10 @@
-MS_VERSION = 1.1
-MS_REVISION = debian12
-MS_PACKAGE = packages-microsoft-prod_$(MS_VERSION)-$(MS_REVISION)_all
+MS_PACKAGE = packages-microsoft-prod_all
 
-$(REPO)/$(MS_PACKAGE).deb:
-	echo "Downloading $(MS_PACKAGE)..."
-	wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O $(REPO)/$(MS_PACKAGE).deb
+$(REPO)/packages-microsoft-prod_all.deb:
+	echo "Downloading $@..."
+	wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O $@
+
+$(REPO)/code_amd64.deb:
+	echo "Downloading $@..."
+	wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O $@
 
