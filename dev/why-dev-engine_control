@@ -1,10 +1,10 @@
 Package: why-dev-engine
-Version: 0.1.0-1
+Version: 0.1.0-2
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for game engine development.
-Depends: why-dev-rust, why-dev-base, libxrandr-dev, libxinerama-dev, glslc
-    libxcursor-dev, libxi-dev, cmake
+Depends: why-dev-rust, why-dev-base, libxrandr-dev, libxinerama-dev,
+    libxcursor-dev, libxi-dev, cmake, glslc
 Maintainer: WhyAreAllTheseTaken
 
