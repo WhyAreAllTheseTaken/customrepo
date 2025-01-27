@@ -1,0 +1,10 @@
+Package: fabric-installer
+Version: %version%-1
+Architecture: all
+Section: games
+Priority: optional
+Description: Fabric is a modular, lightweight mod loader for Minecraft
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://fabricmc.net
+Depends: minecraft-launcher, default-jre | java-runtime (>= 1.8), bash
+

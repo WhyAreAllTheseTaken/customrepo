@@ -1,10 +1,9 @@
 Package: why-dev-minecraft
-Version: 0.0.0-2
+Version: 0.1.0-2
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for minecraft development.
-Depends: why-dev-java, minecraft-launcher, why-dev-net
+Depends: why-dev-java, minecraft-launcher, why-dev-net, fabric-installer, openjdk-23-jdk | java-runtime (>= 22)
 Maintainer: WhyAreAllTheseTaken
-
 

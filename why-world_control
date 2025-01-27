@@ -1,0 +1,9 @@
+Package: why-worldbuilding
+Version: 0.0.0-1
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for worldbuilding.
+Depends: gplates
+Maintainer: WhyAreAllTheseTaken
+
