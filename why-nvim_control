@@ -1,9 +1,10 @@
 Package:why-neovim
-Version: 0.1.4-1
+Version: 0.1.4-2
 Architecture: all
 Section: devel
 Priority: optional
 Description: My personal configuration of nnn.
-Depends: neovim, packer-nvim 
+Depends: neovim, packer-nvim
+Pre-Depends: bash
 Maintainer: WhyAreAllTheseTaken
 
