@@ -1,9 +1,11 @@
 Package: rust-toolchain-nightly
-Version: 1.85.0+git202411276b6a867ae-5
+Version: 1.86.0+git20250130a730edcd6-1
 Architecture: all
 Section: rust
 Priority: optional
 Description: The nightly build of the rust toolchain.
 Pre-Depends: bash, sudo, coreutils, rustup
+Provides: rustc-nightly (=1.86.0-1), cargo-nightly (=1.86.0-1),
+    cargo-clippy-nightly (=0.1.86-1), rust-doc-nightly (=1.86.1)
 Maintainer: WhyAreAllTheseTaken
 
