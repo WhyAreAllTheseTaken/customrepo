@@ -18,6 +18,8 @@ why-neovim_all: why-nvim_control
 	cp -r whyconfig/home/.config/nvim/* $@/etc/skel/.config/nvim/
 	mkdir -p $@/DEBIAN
 	cp why-nvim_control $@/DEBIAN/control
+	cp why-nvim_postinst.sh $@/DEBIAN/postinst
+	chmod +x $@/DEBIAN/postinst
 
 WHY_ZSH_PACKAGE = why-shell_all
 
