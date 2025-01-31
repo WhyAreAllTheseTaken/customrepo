@@ -1,12 +1,12 @@
 Package: cargo-miri
-Version: 0.1.0+git202411276b6a867ae-5
+Version: 0.1.0+git20250130a730edcd6-1
 Architecture: all
 Section: rust
 Priority: optional
 Description: Miri is an Undefined Behavior detection tool for Rust.
     It can run binaries and test suites of cargo projects and detect
     unsafe code that fails to uphold its safety requirements.
-Pre-Depends: bash, sudo, coreutils, rustup, rust-toolchain-nightly (>=1.85.0)
+Pre-Depends: bash, sudo, coreutils, rustup, rust-toolchain-nightly (>=1.86.0)
 Maintainer: WhyAreAllTheseTaken
 
 
