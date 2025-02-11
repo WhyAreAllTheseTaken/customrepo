@@ -310,6 +310,7 @@ assign [title=".*on QEMU/KVM.*"] $ws21
 assign [class="obsidian"] $ws19
 assign [class="Minecraft"] $ws4
 assign [class="worldsim"] $ws4
+assign [class="Unity"] $ws3
 
 for_window [class="feh"] floating enable
 
