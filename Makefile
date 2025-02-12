@@ -12,10 +12,10 @@ REPO = repo
 
 include *.mk desktop/*.mk dev/*.mk uni/*.mk
 
-updater: $(REPO)/$(CUDA_KEYRING_PACKAGE).deb $(REPO)/$(UPDATER_PACKAGE).deb $(REPO)/$(MS_PACKAGE).deb
+updater: $(REPO)/$(UPDATER_PACKAGE).deb $(REPO)/$(MS_PACKAGE).deb
 
 install:
-	apt install ./$(REPO)/$(MS_PACKAGE).deb ./$(REPO)/$(UPDATER_PACKAGE).deb ./$(REPO)/$(CUDA_KEYRING_PACKAGE).deb
+	apt install ./$(REPO)/$(MS_PACKAGE).deb ./$(REPO)/$(UPDATER_PACKAGE).deb
 
 packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).deb repo/$(NVIM_PACKAGE).deb repo/$(PACKER_PACKAGE).deb \
 	repo/$(FRITURE_PACKAGE).deb repo/$(I3_BLOCKS_PACKAGE).deb repo/$(NNN_PLUGS_PACKAGE).deb \
