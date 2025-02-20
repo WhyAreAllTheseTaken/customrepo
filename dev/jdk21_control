@@ -1,5 +1,5 @@
 Package: openjdk-21-jdk
-Version: 21.0.2+13-11
+Version: 21.0.2+13-12
 Architecture: amd64
 Section: java
 Priority: optional

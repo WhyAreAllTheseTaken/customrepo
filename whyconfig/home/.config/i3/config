@@ -311,6 +311,7 @@ assign [class="obsidian"] $ws19
 assign [class="Minecraft"] $ws4
 assign [class="worldsim"] $ws4
 assign [class="Unity"] $ws3
+assign [class="steam_app_230410"] $ws4
 
 for_window [class="feh"] floating enable
 
