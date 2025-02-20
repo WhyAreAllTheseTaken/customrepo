@@ -1,11 +1,11 @@
 Package: rust-toolchain
-Version: 1.84.1-2
+Version: 1.85.0-1
 Architecture: all
 Section: rust
 Priority: optional
 Description: A complete rust toolchain.
 Pre-Depends: bash, sudo, coreutils, rustup
-Provides: rustc (=1.84.1-1), cargo (=1.84.1-1), rustfmt (=1.8.0-1),
-    cargo-clippy (=0.1.84-1), rust-doc (=1.84.1)
+Provides: rustc (=1.85.0-1), cargo (=1.85.0-1), rustfmt (=1.8.0-1),
+    cargo-clippy (=0.1.85-0), rust-doc (=1.85.0)
 Maintainer: WhyAreAllTheseTaken
 
