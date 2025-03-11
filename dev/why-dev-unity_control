@@ -1,10 +1,10 @@
 Package: why-dev-unity
-Version: 0.0.0-2
+Version: 0.1.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for Unity development.
-Depends: unityhub, why-dev-base
+Depends: unityhub, why-dev-base, code
 Maintainer: WhyAreAllTheseTaken
 
 
