@@ -36,6 +36,6 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
 	repo/$(CHANGELOG_PACKAGE).deb
 
-%: %.tar.gz:
+%: %.tar.gz
 	tar -xvfz $< -C $@
 
