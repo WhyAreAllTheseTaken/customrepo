@@ -14,13 +14,16 @@ changelog-from-release_%_linux_armv6.tar.gz:
 	wget --show-progress -O $@ https://github.com/rhysd/changelog-from-release/releases/download/v$*/$@
 
 changelog-from-release_%_linux_amd64: changelog-from-release_%_linux_amd64.tar.gz
-	tar xvfz $<
+	mkdir -p $@
+	tar xvfz $< -C $@
 
 changelog-from-release_%_linux_arm64: changelog-from-release_%_linux_arm64.tar.gz
-	tar xvfz $<
+	mkdir -p $@
+	tar xvfz $< -C $@
 
 changelog-from-release_%_linux_armv6: changelog-from-release_%_linux_armv6.tar.gz
-	tar xvfz $<
+	mkdir -p $@
+	tar xvfz $< -C $@
 
 changelog-from-release_amd64: dev/changelog_control changelog-from-release_$(CHANGELOG_VERSION)_linux_amd64
 	echo "Packaging $@..."
@@ -46,7 +49,7 @@ changelog-from-release_arm: dev/changelog_control changelog-from-release_$(CHANG
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
-	mkdir -p $@/usr/bin/
+	mkdir -p $@/usr/bitn/
 	cp $(filter-out $<,$^)/changelog-from-release $@/usr/bin/
 	chmod +x $@/usr/bin/changelog-from-release
 	cp $< $@/DEBIAN/control
