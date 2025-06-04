@@ -14,7 +14,7 @@ changelog-from-release_%_linux_armv6.tar.gz:
 	wget --show-progress -O $@ https://github.com/rhysd/changelog-from-release/releases/download/v$*/$@
 
 changelog-from-release_%: changelog-from-release_%.tar.gz
-	tar -xvfz $< -C $@
+	tar xvfz $< -C $@
 
 changelog-from-release_%: dev/changelog_control changelog-from-release_$(CHANGELOG_VERSION)_linux_%
 	echo "Packaging $@..."
