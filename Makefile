@@ -4,6 +4,9 @@ SHELL := /usr/bin/bash
 
 .SUFFIXES:
 
+%: %.tar.gz
+	tar -xvfz $< -C $@
+
 ARCH=$(shell dpkg --print-architecture)
 
 build: updater
@@ -35,7 +38,4 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	plasma_theme_set repo/$(MULTIMC_PACKAGE).deb discord_versions repo/why-worldbuilding_all.deb repo/why-dev-image_all.deb \
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
 	repo/$(CHANGELOG_PACKAGE).deb
-
-%: %.tar.gz
-	tar -xvfz $< -C $@
 

@@ -13,7 +13,10 @@ changelog-from-release_%_linux_armv6.tar.gz:
 	echo "Downloading $@..."
 	wget --show-progress -O $@ https://github.com/rhysd/changelog-from-release/releases/download/v$*/$@
 
-changelog-from-release_%: dev/changelog_control changelog-from-release-$(CHANGELOG_VERSION)_linux_%
+changelog-from-release_%: changelog-from-release_%.tar.gz
+	tar -xvfz $< -C $@
+
+changelog-from-release_%: dev/changelog_control changelog-from-release_$(CHANGELOG_VERSION)_linux_%
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
