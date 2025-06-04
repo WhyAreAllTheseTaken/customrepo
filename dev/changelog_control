@@ -1,0 +1,14 @@
+Package: changelog-from-release
+Version: 3.9.0-1
+Architecture: %arch%
+Section: misc
+Priority: optional
+Maintainer: WhyAreAllTheseTaken
+Description: Generate Changelog from GitHub Releases
+	changelog-from-release is a (too) small command line tool to generate changelog
+	from GitHub Releases. It fetches releases of the repository via GitHub API and
+	generates changelog in Markdown format.
+	References like #123 or @rhysd are automatically linked.
+
+
+

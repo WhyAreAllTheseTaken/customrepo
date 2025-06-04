@@ -1,6 +1,6 @@
 Package: openjdk-23-jdk
-Version: 23+37-12
-Architecture: amd64
+Version: 23+37-13
+Architecture: %arch%
 Section: java
 Priority: optional
 Description: OpenJDK Development Kit (JDK)

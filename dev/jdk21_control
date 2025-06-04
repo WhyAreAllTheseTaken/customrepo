@@ -1,6 +1,6 @@
 Package: openjdk-21-jdk
-Version: 21.0.2+13-12
-Architecture: amd64
+Version: 21.0.2+13-13
+Architecture: %arch%
 Section: java
 Priority: optional
 Description: OpenJDK Development Kit (JDK)
