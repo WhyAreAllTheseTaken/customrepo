@@ -4,9 +4,6 @@ SHELL := /usr/bin/bash
 
 .SUFFIXES:
 
-%: %.tar.gz
-	tar -xvfz $< -C $@
-
 ARCH=$(shell dpkg --print-architecture)
 
 build: updater

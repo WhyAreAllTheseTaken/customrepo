@@ -248,7 +248,7 @@ include theme.conf
 # finds out, if available)
 
 bindsym $mod+d exec rofi -show run -lines 15 -terminal kitty
-bindsym $mod+z exec rofi -show ssh -lines 15 -terminal kitty
+bindsym $mod+z exec rofi -show ssh -lines 15 -terminal kitty -ssh-command kitten ssh
 bindsym $mod+tab exec rofi -show window -lines 15 -terminal kitty
 bindsym $mod+shift+w exec rofi -show drun -lines 15 -terminal kitty
 
