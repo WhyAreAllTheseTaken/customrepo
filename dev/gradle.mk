@@ -13,7 +13,7 @@ gradle_all: dev/gradle_control gradle-$(GRADLE_VERSION)
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	mkdir -p $@/opt/gradle/
-	cp $(filter-out $<,$^) $@/opt/gradle/
+	cp -rv $(filter-out $<,$^) $@/opt/gradle/
 	cp $< $@/DEBIAN/control
 	sed -i "s/%version%/$(GRADLE_VERSION)/g" $@/DEBIAN/control
 	cp dev/gradle_postinst.sh $@/DEBIAN/postinst

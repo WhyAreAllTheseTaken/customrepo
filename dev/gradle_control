@@ -1,5 +1,5 @@
 Package: gradle
-Version: %version%-2
+Version: %version%-3
 Architecture: all
 Section: java
 Priority: optional
