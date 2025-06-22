@@ -1,0 +1,11 @@
+Package: gradle
+Version: %version%-1
+Architecture: all
+Section: java
+Priority: optional
+Description: The Gradle build system.
+Pre-Depends: bash, coreutils
+Depends: default-jre-headless (>= 16) | openjdk-23-jdk
+Suggests: gradle-doc
+Maintainer: WhyAreAllTheseTaken
+
