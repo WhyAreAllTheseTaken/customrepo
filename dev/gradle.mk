@@ -4,16 +4,16 @@ GRADLE_PACKAGE = gradle_all
 gradle-%-bin.zip:
 	wget --show-progress -O $@ "https://services.gradle.org/distributions/gradle-$*-bin.zip"
 
-gradle-%-bin: gradle-%-bin.zip
+gradle-%: gradle-%-bin.zip
 	mkdir -p $@
-	unzip $< -d $@
+	unzip $<
 
-gradle_all: dev/gradle_control gradle-$(GRADLE_VERSION)-bin
+gradle_all: dev/gradle_control gradle-$(GRADLE_VERSION)
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	mkdir -p $@/opt/gradle/
-	cp $(filter-out $<,$^)/gradle $@/opt/gradle/
+	cp $(filter-out $<,$^) $@/opt/gradle/
 	cp $< $@/DEBIAN/control
 	sed -i "s/%version%/$(GRADLE_VERSION)/g" $@/DEBIAN/control
 	cp dev/gradle_postinst.sh $@/DEBIAN/postinst
