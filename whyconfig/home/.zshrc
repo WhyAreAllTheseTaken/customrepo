@@ -44,4 +44,5 @@ source ~/.zshtheme
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
 path+=("$HOME/.config/composer/vendor/bin/")
+path+=("/opt/gradle/bin/")
 
