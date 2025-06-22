@@ -8,7 +8,7 @@ gradle-%-bin: gradle-%-bin.zip
 	mkdir -p $@
 	unzip $< -d $@
 
-gradle_all: dev/gradle_control gradle-$(CHANGELOG_VERSION)-bin
+gradle_all: dev/gradle_control gradle-$(GRADLE_VERSION)-bin
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
