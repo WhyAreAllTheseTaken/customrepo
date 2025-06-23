@@ -4,7 +4,7 @@ vineflower-%.jar:
 	echo "Downloading $@..."
 	wget --show-progress -O $@ https://github.com/Vineflower/vineflower/releases/download/$*/vineflower-$*.jar
 
-vineflower_all: dev/vineflower_control vineflower_$(VINEFLOWER_VERSION).jar
+vineflower_all: dev/vineflower_control vineflower-$(VINEFLOWER_VERSION).jar
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
