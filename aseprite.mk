@@ -11,7 +11,7 @@ aseprite:
 	git clone --depth 1 --branch v$(ASEPRITE_VERSION) https://github.com/aseprite/aseprite.git
 	cd aseprite && git submodule update --init --recursive
 
-aseprite/build: aseprite skia
+aseprite_done: aseprite skia
 	echo "Compiling $@..."
 	rm -rf $@
 	mkdir $@
@@ -30,13 +30,14 @@ aseprite/build: aseprite skia
 	export CC=clang; \
 	export CXX=clang++; \
 	cd aseprite/build && ninja aseprite
+	touch aseprite_done
 
-aseprite_$(ARCH): aseprite_control aseprite/build
+aseprite_$(ARCH): aseprite_control aseprite_done
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
 	mkdir -p $@/opt/aseprite/
-	cp -rv $(filter-out $<,$^)/bin/* $@/opt/aseprite/
+	cp -rv aseprite/build/bin/* $@/opt/aseprite/
 	cp $< $@/DEBIAN/control
 	sed -i "s/%version%/$(ASEPRITE_VERSION)/g" $@/DEBIAN/control
 	sed -i "s/%arch%/$(ARCH)/g" $@/DEBIAN/control
