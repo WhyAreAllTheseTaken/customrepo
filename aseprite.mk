@@ -13,8 +13,8 @@ aseprite:
 
 aseprite_done: aseprite skia-release
 	echo "Compiling $@..."
-	rm -rf $@
-	mkdir $@
+	rm -rf aseprite/build
+	mkdir aseprite/build
 	export CC=clang; \
 	export CXX=clang++; \
 	cd aseprite/build && cmake \
