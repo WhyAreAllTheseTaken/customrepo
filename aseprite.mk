@@ -11,7 +11,7 @@ aseprite:
 	git clone --depth 1 --branch v$(ASEPRITE_VERSION) https://github.com/aseprite/aseprite.git
 	cd aseprite && git submodule update --init --recursive
 
-aseprite_done: aseprite skia-release
+aseprite_done2: aseprite skia-release
 	echo "Compiling $@..."
 	rm -rf $@
 	mkdir $@
@@ -21,7 +21,7 @@ aseprite_done: aseprite skia-release
 	  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 	  -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
 	  -DCMAKE_EXE_LINKER_FLAGS:STRING=-stdlib=libc++ \
-	  -DLAF_BACKEND=skia-release \
+	  -DLAF_BACKEND=skia \
 	  -DSKIA_DIR=/usr/customrepo/skia-release \
 	  -DSKIA_LIBRARY_DIR=/usr/customrepo/skia-release/out/Release-x64 \
 	  -DSKIA_LIBRARY=/usr/customrepo/skia-release/out/Release-x64/libskia.a \
@@ -30,9 +30,9 @@ aseprite_done: aseprite skia-release
 	export CC=clang; \
 	export CXX=clang++; \
 	cd aseprite/build && ninja aseprite
-	touch aseprite_done
+	touch aseprite_done2
 
-aseprite_$(ARCH): aseprite_control aseprite_done
+aseprite_$(ARCH): aseprite_control aseprite_done2
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN

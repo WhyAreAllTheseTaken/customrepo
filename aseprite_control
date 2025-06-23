@@ -1,5 +1,5 @@
 Package: aseprite
-Version: %version%-1
+Version: %version%-2
 Architecture: %arch%
 Section: graphics
 Priority: optional
