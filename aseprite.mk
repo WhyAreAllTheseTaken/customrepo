@@ -1,32 +1,17 @@
 ASEPRITE_VERSION=1.2.40
 
-depot_tools:
-	git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
+skia.zip:
+	wget --show-progress -O $@ "https://github.com/aseprite/skia/releases/download/m124-08a5439a6b/Skia-Linux-Debug-x64.zip"
 
-depot_tools_done: depot_tools
-	echo "Setting up depot tools..."
-	cd depot_tools && ./ensure_bootstrap
-
-skia:
-	git clone --depth 1 --branch aseprite-m102 https://github.com/aseprite/skia.git
-
-skia_done: skia depot_tools_done
-	echo "Compiling skia..."
-	export CC=clang; \
-	export CXX=clang++; \
-	export PATH="depot_tools:$${PATH}"; \
-	echo $$PATH; \
-	cd skia; \
-	python3 tools/git-sync-deps; \
-	gn gen out/Release-x64 --args='is_debug=false is_official_build=true skia_use_system_expat=false skia_use_system_icu=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_use_sfntly=false skia_use_freetype=true skia_use_harfbuzz=true skia_pdf_subset_harfbuzz=true skia_use_system_freetype2=false skia_use_system_harfbuzz=false cc="clang" cxx="clang++" extra_cflags_cc=["-stdlib=libc++"] extra_ldflags=["-stdlib=libc++"]'; \
-	ninja -C out/Release-x64 skia modules
-	touch skia_done
+skia: skia.zip
+	mkdir -p $@
+	unzip $< -d $@
 
 aseprite:
 	git clone --depth 1 --branch v$(ASEPRITE_VERSION) https://github.com/aseprite/aseprite.git
 	cd aseprite && git submodule update --init --recursive
 
-aseprite/build: aseprite skia_done
+aseprite/build: aseprite skia
 	echo "Compiling $@..."
 	rm -rf $@
 	mkdir $@
