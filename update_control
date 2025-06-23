@@ -1,5 +1,5 @@
 Package: custom-repo
-Version: 0.11.0-1
+Version: 0.12.0-1
 Architecture: all
 Section: misc
 Priority: optional
@@ -10,7 +10,8 @@ Depends: dpkg-dev, make, build-essential, gcc, curl, patch, wget, tar, unzip, ni
     libboost-test-dev (>= 1.35), libboost-system-dev (>=1.35), libqt5opengl5-dev, libqt5svg5-dev,
     libqt5xmlpatterns5-dev, libgdal-dev (>=2.0), libcgal-dev, libproj-dev, libqwt-qt5-dev,
     zlib1g-dev, libxrender-dev, libice-dev, libsm-dev, libfreetype6-dev, graphviz, libgmp-dev,
-    libfontconfig1-dev, gpg, packages-microsoft-prod, sed
+    libfontconfig1-dev, gpg, packages-microsoft-prod, sed,
+    clang, libc++-dev, libc++abi-dev, libx11-dev, libxcursor-dev, libxi-dev, libgl1-mesa-dev, libfontconfig1-dev, python3
 Pre-Depends: coreutils, bash, passwd
 Maintainer: WhyAreAllTheseTaken
 
