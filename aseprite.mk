@@ -1,4 +1,4 @@
-ASEPRITE_VERSION=1.2.40
+ASEPRITE_VERSION=1.3.14
 
 skia.zip:
 	wget --show-progress -O $@ "https://github.com/aseprite/skia/releases/download/m124-08a5439a6b/Skia-Linux-Debug-x64.zip"
