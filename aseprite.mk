@@ -22,9 +22,9 @@ aseprite/build: aseprite skia
 	  -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
 	  -DCMAKE_EXE_LINKER_FLAGS:STRING=-stdlib=libc++ \
 	  -DLAF_BACKEND=skia \
-	  -DSKIA_DIR=../../skia \
-	  -DSKIA_LIBRARY_DIR=../../skia/out/Release-x64 \
-	  -DSKIA_LIBRARY=../../skia/out/Release-x64/libskia.a \
+	  -DSKIA_DIR=/usr/customrepo/skia \
+	  -DSKIA_LIBRARY_DIR=/usr/customrepo/skia/out/Release-x64 \
+	  -DSKIA_LIBRARY=/usr/customrepo/skia/out/Release-x64/libskia.a \
 	  -G Ninja \
 	  ..
 	export CC=clang; \
