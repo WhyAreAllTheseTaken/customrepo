@@ -1,0 +1,10 @@
+Package: aseprite
+Version: %version%-1
+Architecture: %arch%
+Section: graphics
+Priority: optional
+Description: Aseprite is a program to create animated sprites.
+Pre-Depends: bash, coreutils
+Maintainer: WhyAreAllTheseTaken
+
+
