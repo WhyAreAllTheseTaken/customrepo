@@ -1,4 +1,5 @@
 #!/usr/bin/bash
-unlink /usr/bin/aseprite
+unlink /usr/bin/aseprite || true
+
 
 
