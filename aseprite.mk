@@ -3,14 +3,18 @@ ASEPRITE_VERSION=1.2.40
 depot_tools:
 	git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
 
+depot_tools_done: depot_tools
+	echo "Setting up depot tools..."
+	cd depot_tools && ./ensure_bootstrap
+
 skia:
 	git clone --depth 1 --branch aseprite-m102 https://github.com/aseprite/skia.git
 
-skia_done: skia depot_tools
+skia_done: skia depot_tools_done
 	echo "Compiling skia..."
 	export CC=clang; \
 	export CXX=clang++; \
-	export PATH="$${PWD}/depot_tools:$${PATH}"; \
+	export PATH="depot_tools:$${PATH}"; \
 	echo $$PATH; \
 	cd skia; \
 	python3 tools/git-sync-deps; \
