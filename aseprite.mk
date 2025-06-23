@@ -6,7 +6,7 @@ depot_tools:
 skia:
 	git clone --depth 1 --branch aseprite-m102 https://github.com/aseprite/skia.git
 
-skia_done: skia
+skia_done: skia depot_tools
 	echo "Compiling skia..."
 	export CC=clang; \
 	export CXX=clang++; \
