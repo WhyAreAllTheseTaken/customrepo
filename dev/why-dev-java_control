@@ -1,9 +1,9 @@
 Package: why-dev-java
-Version: 0.2.0-1
+Version: 0.3.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for java development.
-Depends: maven, openjdk-latest-jdk, openjdk-21-jdk, why-dev-base, gradle (>= 8)
+Depends: maven, openjdk-latest-jdk, openjdk-21-jdk, why-dev-base, gradle (>= 8), visualvm
 Maintainer: WhyAreAllTheseTaken
 
