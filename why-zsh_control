@@ -1,9 +1,9 @@
 Package:why-shell
-Version: 0.10.0-1
+Version: 0.11.0-1
 Architecture: all
 Section: shells
 Priority: optional
 Description: My personal configuration for a shell.
-Depends: zsh, why-nnn, tree
+Depends: zsh, why-nnn, tree, htop
 Maintainer: WhyAreAllTheseTaken
 
