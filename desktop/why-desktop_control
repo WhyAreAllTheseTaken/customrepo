@@ -1,12 +1,12 @@
 Package: why-desktop
-Version: 0.16.0-2
+Version: 0.16.0-3
 Architecture: all
 Section: why
 Priority: optional
 Description: My custom desktop.
 Depends: dunst, i3, i3blocks, i3blocks-contrib, picom, flameshot, feh, lightdm,
     xorg, rofi, pavucontrol, hicolor-icon-theme, pasystray, network-manager-gnome,
-    lxpolkit, brightnessctl, procps, betterlockscreen, dbus-x11, lxappearance
+    lxpolkit, brightnessctl, procps, betterlockscreen, dbus-x11, lxappearance, materia-gtk-theme
 Recommends: why-desktop-theme, why-apps (>=0.7.0-1)
 Pre-Depends: bash, coreutils, lightdm-gtk-greeter, sudo
 Provides: why-bg (=0.11.9), why-theme (=0.13.4)
