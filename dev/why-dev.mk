@@ -35,4 +35,5 @@ WHY_DEV_PROLOG_PACKAGE = why-dev-prolog_all
 WHY_DEV_RUST_PACKAGE = why-dev-rust_all
 WHY_DEV_UNITY_PACKAGE = why-dev-unity_all
 WHY_DEV_REPO_PACKAGE = why-dev-repo_all
+WHY_DEV_GFX_PACKAGE = why-dev-gfx_all
 

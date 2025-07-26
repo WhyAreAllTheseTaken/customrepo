@@ -31,6 +31,7 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/$(WHY_DEV_ADA_PACKAGE).deb repo/$(WHY_DEV_BASE_PACKAGE).deb repo/$(WHY_DEV_HASKELL_PACKAGE).deb repo/$(WHY_DEV_JAVA_PACKAGE).deb \
 	repo/$(WHY_DEV_MINECRAFT_PACKAGE).deb repo/$(WHY_DEV_ML_PACKAGE).deb repo/$(WHY_DEV_ML_NVIDIA_PACKAGE).deb repo/$(WHY_DEV_NET_PACKAGE).deb \
 	repo/$(WHY_DEV_PHP_PACKAGE).deb repo/$(WHY_DEV_PROLOG_PACKAGE).deb repo/$(WHY_DEV_RUST_PACKAGE).deb repo/$(WHY_DEV_UNITY_PACKAGE).deb \
+	repo/$(WHY_DEV_GFX_PACKAGE).deb \
 	repo/$(WHY_WRITE_PACKAGE).deb repo/$(WHY_DEV_REPO_PACKAGE).deb repo/$(WHY_CYCLE_PACKAGE).deb themes \
 	plasma_theme_set discord_versions repo/why-worldbuilding_all.deb repo/why-dev-image_all.deb \
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
