@@ -3,6 +3,6 @@ $(REPO)/%.deb: %
 	if [[ ! -f $</DEBIAN/control ]]; then\
 		rm -rf $<;\
 	fi
-	dpkg-deb --build $<
+	dpkg-deb --root-owner-group --build $<
 	mv $<.deb $(REPO)
 
