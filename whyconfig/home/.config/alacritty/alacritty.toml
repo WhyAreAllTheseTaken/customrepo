@@ -5,13 +5,16 @@ import = [
 live_config_reload = true
 
 [window]
-padding = { x = 0.5, y = 0.5 }
+padding = { x = 4, y = 4 }
 decorations = "none"
+
+[colors]
+draw_bold_text_with_bright_colors = true
 
 [font]
 normal = { family = "Noto Mono", style = "Regular" }
-bold = { family = "Noto Mono", style = "Bold" }
-italic = { family = "Noto Mono", style = "Italic" }
+#bold = { family = "Noto Mono", style = "Bold" }
+#italic = { family = "Noto Mono", style = "Italic" }
 size = 14.0
 
 [cursor]
