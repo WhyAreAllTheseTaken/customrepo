@@ -26,7 +26,7 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/$(VIVALDI_PACKAGE).deb repo/$(WHY_UNI_PACKAGE).deb repo/$(WHY_DEV_PACKAGE).deb repo/$(JABREF_PACKAGE).deb \
 	repo/$(LARAVEL_PACKAGE).deb repo/$(UPGRADE_PACKAGE).deb \
 	repo/$(RUST_CHAIN_PACKAGE).deb repo/$(RUST_NIGHTLY_PACKAGE).deb repo/$(MIRI_PACKAGE).deb \
-	repo/$(JDK21_PACKAGE).deb repo/$(JDK23_PACKAGE).deb repo/$(JDK21_PACKAGE_ARM64).deb repo/$(JDK23_PACKAGE_ARM64).deb \
+	repo/$(JDK23_PACKAGE).deb repo/$(JDK21_PACKAGE_ARM64).deb repo/$(JDK23_PACKAGE_ARM64).deb \
 	repo/$(WHY_UNI_NVIDIA_PACKAGE).deb repo/$(STEAM_PACKAGE).deb repo/$(WHY_STEAM_PACKAGE).deb repo/$(MINECRAFT_PACKAGE).deb \
 	repo/$(WHY_DEV_ADA_PACKAGE).deb repo/$(WHY_DEV_BASE_PACKAGE).deb repo/$(WHY_DEV_HASKELL_PACKAGE).deb repo/$(WHY_DEV_JAVA_PACKAGE).deb \
 	repo/$(WHY_DEV_MINECRAFT_PACKAGE).deb repo/$(WHY_DEV_ML_PACKAGE).deb repo/$(WHY_DEV_ML_NVIDIA_PACKAGE).deb repo/$(WHY_DEV_NET_PACKAGE).deb \
@@ -36,5 +36,6 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
 	repo/$(CHANGELOG_PACKAGE).deb repo/$(GRADLE_PACKAGE).deb repo/vineflower_all.deb blockbench
 
-nonDefaultPackages: repo/$(BLUEMAIL_PACKAGE).deb repo/$(MULTIMC_PACKAGE).deb repo/bluemail_amd64.deb repo/$(GPLATES_PACKAGE).deb
+nonDefaultPackages: repo/$(BLUEMAIL_PACKAGE).deb repo/$(MULTIMC_PACKAGE).deb repo/bluemail_amd64.deb repo/$(GPLATES_PACKAGE).deb \
+	repo/$(JDK21_PACKAGE).deb
 
