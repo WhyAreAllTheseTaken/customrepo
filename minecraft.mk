@@ -6,7 +6,7 @@ $(REPO)/$(MINECRAFT_PACKAGE).deb:
 	echo "Downloading $(MINECRAFT_PACKAGE)..."
 	wget https://launcher.mojang.com/download/Minecraft.deb -O $@
 
-$(REPO)/libgdk-pixbuf2.0-0: libgdk_control
+libgdk-pixbuf2.0-0: libgdk_control
 	echo "Packaging $@..."
 	rm -rf $@
 	mkdir -p $@/DEBIAN
