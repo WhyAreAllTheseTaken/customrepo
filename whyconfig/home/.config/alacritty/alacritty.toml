@@ -14,7 +14,7 @@ italic = { family = "Noto Mono", style = "Italic" }
 size = 14.0
 [font.offset]
 x = 0
-y = 0
+y = -4
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
