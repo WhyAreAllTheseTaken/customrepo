@@ -7,6 +7,8 @@ if test -f /etc/lightdm/lightdm-gtk-greeter.conf; then
 fi
 mv /etc/lightdm/lightdm-gtk-greeter.conf.why /etc/lightdm/lightdm-gtk-greeter.conf
 
+mkdir -p /usr/share/desktop-directories/
+
 for dir in /home/*/
 do
     dir=${dir%*/}
