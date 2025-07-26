@@ -35,7 +35,8 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	repo/$(WHY_WRITE_PACKAGE).deb repo/$(WHY_DEV_REPO_PACKAGE).deb repo/$(WHY_CYCLE_PACKAGE).deb themes \
 	plasma_theme_set discord_versions repo/why-worldbuilding_all.deb repo/why-dev-image_all.deb \
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
-	repo/$(CHANGELOG_PACKAGE).deb repo/$(GRADLE_PACKAGE).deb repo/vineflower_all.deb blockbench repo/libgdk-pixbuf2.0-0_all.deb repo/skelfixer_all.deb
+	repo/$(CHANGELOG_PACKAGE).deb repo/$(GRADLE_PACKAGE).deb repo/vineflower_all.deb blockbench repo/libgdk-pixbuf2.0-0_all.deb repo/skelfixer_all.deb \
+	repo/material-gtk-theme_all.deb
 
 nonDefaultPackages: repo/$(BLUEMAIL_PACKAGE).deb repo/$(MULTIMC_PACKAGE).deb repo/bluemail_amd64.deb repo/$(GPLATES_PACKAGE).deb \
 	repo/$(JDK21_PACKAGE).deb

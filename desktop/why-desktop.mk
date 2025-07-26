@@ -82,6 +82,10 @@ why-theme-%_all: desktop/theme/% desktop/theme/%/control
 	-cp -r $</bg/* $@/usr/share/backgrounds
 	cp $</default-bg $@/usr/share/why-desktop/theme/$(<F)/
 
+repo/materia-gtk-theme_all.deb:
+	echo "Downloading $@..."
+	wget --show-progress -O $@ "https://deb.debian.org/debian/pool/main/m/materia-gtk-theme/materia-gtk-theme_20200916-0.2_all.deb"
+
 themes: $(REPO)/why-theme-ice_all.deb \
 	$(REPO)/why-theme-ice-light_all.deb \
 	$(REPO)/why-theme-dawn_all.deb \
