@@ -35,6 +35,8 @@ $(WHY_TERM_PACKAGE): desktop/why-terminal_control
 	rm -rf $@
 	mkdir -p $@/etc/skel/.config/kitty/
 	cp -r whyconfig/home/.config/kitty/kitty.conf $@/etc/skel/.config/kitty/
+	mkdir -p $@/etc/skel/.config/alacritty/
+	cp -r whyconfig/home/.config/alacritty/alacritty.toml $@/etc/skel/.config/alacritty/
 	mkdir -p $@/DEBIAN
 	cp $< $@/DEBIAN/control
 

@@ -1,0 +1,41 @@
+[general]
+import = [
+    "theme.toml"
+]
+live_config_reload = true
+
+[window]
+padding = {
+    x = 0.5
+    y = 0.5
+}
+decorations = "none"
+
+[font]
+normal = {
+    family = "Noto Mono",
+    style = "Regular"
+}
+bold = {
+    family = "Noto Mono",
+    style = "Bold"
+}
+italic = {
+    family = "Noto Mono",
+    style = "Italic"
+}
+size = 14.0
+
+[cursor]
+style = {
+    shape = "Beam",
+    blinking = "On"
+}
+vi_mode_style = {
+    shape = "Block"
+    blinking = "Off"
+}
+
+[mouse]
+hide_when_typing = true
+
