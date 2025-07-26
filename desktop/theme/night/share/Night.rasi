@@ -96,7 +96,7 @@ element.alternate.normal {
 }
 element.alternate.urgent {
     text-color: @alternate-urgent-foreground;
-    background-color: @alternate-urgent-background;
+    background-color: @urgent-background;
 }
 element.alternate.active {
     text-color: @alternate-active-foreground;
