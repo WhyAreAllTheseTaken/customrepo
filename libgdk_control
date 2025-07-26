@@ -1,9 +1,9 @@
 Package: libgdk-pixbuf2.0-0
-Version: 2.42.12-3
+Version: 2.40.0-0
 Architecture: all
 Section: libs
 Priority: optional
 Description: A fallback package for packages rhat haven't migrated to libgdk
 Maintainer: WhyAreAllTheseTaken
-Depends: libgdk-pixbuf-2.0-0 (>=2.42.12)
+Depends: libgdk-pixbuf-2.0-0 (>= 2.40.0)
 
