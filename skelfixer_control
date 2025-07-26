@@ -1,0 +1,9 @@
+Package: skelfixer
+Version: 1.0.0-0
+Architecture: all
+Section: admin
+Priority: optional
+Description: Updates home directory configs from /etc/skel
+Depends: bash, coreutils
+Maintainer: WhyAreAllTheseTaken
+
