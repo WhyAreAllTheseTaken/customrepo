@@ -11,6 +11,8 @@ $(WHY_DESKTOP_PACKAGE): desktop/why-desktop_control
 	cp whyconfig/home/.config/betterlockscreen/betterlockscreenrc $@/etc/skel/.config/betterlockscreen
 	mkdir -p $@/etc/skel/.config/
 	cp -r whyconfig/home/.config/picom.conf $@/etc/skel/.config/
+	cp -r whyconfig/home/.config/user-dirs.dirs $@/etc/skel/.config/
+	cp -r whyconfig/home/.config/user-dirs.locale $@/etc/skel/.config/
 	mkdir -p $@/etc/skel/.local/
 	echo "ice" > $@/etc/skel/.local/why-theme 
 	echo "/usr/share/backgrounds/why-ice.png" > $@/etc/skel/.local/why-bg-path 

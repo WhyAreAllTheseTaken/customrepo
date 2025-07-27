@@ -26,5 +26,9 @@ do
     chown -R $user:$user /home/$user/.config/betterlockscreen
     cp /etc/skel/.config/picom.conf /home/$user/.config/picom.conf
     chown $user:$user /home/$user/.config/picom.conf
+    cp /etc/skel/.config/user-dirs.dirs /home/$user/.config/user-dirs.dirs
+    chown $user:$user /home/$user/.config/user-dirs.dirs
+    cp /etc/skel/.config/user-dirs.locale /home/$user/.config/user-dirs.locale
+    chown $user:$user /home/$user/.config/user-dirs.locale
 done
 
