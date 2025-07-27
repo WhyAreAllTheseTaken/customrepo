@@ -12,9 +12,9 @@ x = 1
 y = 0
 
 [font]
-normal = { family = "Noto Mono", style = "Regular" }
-bold = { family = "Noto Mono", style = "Bold" }
-italic = { family = "Noto Mono", style = "Italic" }
+normal = { family = "NotoMono", style = "Regular" }
+bold = { family = "NotoMono", style = "Bold" }
+italic = { family = "NotoMono", style = "Italic" }
 size = 14.0
 
 [font.offset]
