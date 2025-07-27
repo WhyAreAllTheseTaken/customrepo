@@ -1,5 +1,5 @@
 Package: why-desktop
-Version: 0.17.0-0
+Version: 0.17.0-1
 Architecture: all
 Section: x11
 Priority: optional
@@ -8,7 +8,7 @@ Depends: dunst, i3, i3blocks, i3blocks-contrib, picom, flameshot, feh, lightdm,
     xorg, rofi, pavucontrol, hicolor-icon-theme, pasystray, network-manager-gnome,
     lxpolkit, brightnessctl, procps, betterlockscreen, dbus-x11, lxappearance, materia-gtk-theme
 Recommends: why-desktop-theme, why-apps (>=0.12)
-Breaks: why-terminal (<0.4)
+Breaks: why-terminal (<< 0.4)
 Pre-Depends: bash, coreutils, lightdm-gtk-greeter, sudo
 Provides: why-bg (=0.11.9), why-theme (=0.13.4)
 Maintainer: WhyAreAllTheseTaken
