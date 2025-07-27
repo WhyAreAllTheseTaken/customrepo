@@ -81,7 +81,7 @@
 $(REPO)/%-gtk-theme_all.deb: %-gtk-theme_all
 	-rm $@ &> /dev/null
 	if [[ ! -z "$$( ls -A $</usr/share/themes/ )" ]]; then\
-		dpkg-deb --build $<;\
+		dpkg-deb --root-owner-group --build $<;\
 		mv $<.deb $(REPO);\
 	fi
 
