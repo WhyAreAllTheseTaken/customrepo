@@ -1,9 +1,9 @@
 Package: why-terminal
-Version: 0.3.6-0
+Version: 0.4.0-0
 Architecture: all
 Section: x11
 Priority: optional
-Description: My personal configuration for Kitty and Alacritty.
-Depends: alacritty, kitty
+Description: My personal configuration for Alacritty.
+Depends: alacritty (>=0.14)
 Maintainer: WhyAreAllTheseTaken
 

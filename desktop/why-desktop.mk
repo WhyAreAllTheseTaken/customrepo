@@ -39,6 +39,8 @@ $(WHY_TERM_PACKAGE): desktop/why-terminal_control
 	cp -r whyconfig/home/.config/alacritty/alacritty.toml $@/etc/skel/.config/alacritty/
 	mkdir -p $@/DEBIAN
 	cp $< $@/DEBIAN/control
+	cp desktop/why-terminal_postinst.sh $@/DEBIAN/postinst
+	chmod +x $@/DEBIAN/postinst
 
 WHY_APPS_PACKAGE = why-apps_all
 

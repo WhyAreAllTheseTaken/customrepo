@@ -50,7 +50,7 @@ focus_follows_mouse no
 focus_on_window_activation none
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/kitty
+bindsym $mod+Return exec /usr/bin/alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -222,7 +222,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Are you sure you want to logout?' -B 'Yes' 'i3-msg exit'"
 
 bindsym $mod+l exec betterlockscreen -l blur
 
@@ -247,10 +247,10 @@ include theme.conf
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-bindsym $mod+d exec rofi -show run -lines 15 -terminal kitty
-bindsym $mod+z exec rofi -show ssh -lines 15 -ssh-command "kitty -e kitty +kitten ssh {host} [-p {port}]"
-bindsym $mod+tab exec rofi -show window -lines 15 -terminal kitty
-bindsym $mod+shift+w exec rofi -show drun -lines 15 -terminal kitty
+bindsym $mod+d exec rofi -show run -lines 15 -terminal alacritty
+bindsym $mod+z exec rofi -show ssh -lines 15 -ssh-command "alacritty -e ssh {host} [-p {port}]"
+bindsym $mod+tab exec rofi -show window -lines 15 -terminal alacritty
+bindsym $mod+shift+w exec rofi -show drun -lines 15 -terminal alacritty
 
 # i3 Gaps
 default_border pixel 0
@@ -274,16 +274,15 @@ exec --no-startup-id why-cycle -r
 
 # Startup Programs
 exec discord
-exec /opt/BlueMail/bluemail --disable-gpu-sandbox
 exec toggl-track-web
 exec todoist-web
 exec github-web
 exec google-calendar-web
 exec steam
-exec kitty --name edit --directory=~/dev /usr/bin/start_nnn
-exec kitty --name build --directory=~/dev /usr/bin/start_nnn
-# exec kitty --name server --directory=~/server /usr/bin/start_nnn
-# exec kitty --name sfiles --directory=~/server /usr/bin/start_nnn
+exec alacritty --name edit --directory=~/dev /usr/bin/start_nnn
+exec alacritty --name build --directory=~/dev /usr/bin/start_nnn
+# exec alacritty --name server --directory=~/server /usr/bin/start_nnn
+# exec alacritty --name sfiles --directory=~/server /usr/bin/start_nnn
 exec obsidian
 
 # Assignments
@@ -291,7 +290,6 @@ assign [class="discord"] $ws11
 assign [class="steam"] $ws12
 assign [class="whatsdesk"] $ws17
 assign [class="googlemessages"] $ws17
-assign [class="BlueMail"] $ws14
 assign [title="Steam"] $ws12
 assign [class="Chromium" instance="soundcloud.com"] $ws15
 assign [class="Chromium" instance="toggl.com"] $ws16
@@ -299,12 +297,13 @@ assign [class="Chromium" instance="todoist.com"] $ws16
 assign [class="Chromium" instance="timetable"] $ws18
 assign [class="Chromium" instance="github.com"] $ws13
 assign [class="Chromium" instance="calendar.google.com"] $ws18
-assign [class="kitty" instance="top"] $ws20
-assign [class="kitty" instance="edit"] $ws2
-assign [class="kitty" instance="build"] $ws3
-assign [class="kitty" instance="server"] $ws5
-assign [class="kitty" instance="sfiles"] $ws6
-assign [class="kitty" instance="display"] $ws10
+assign [class="Chromium" instance="gmail.com"] $ws14
+assign [class="alacritty" instance="top"] $ws20
+assign [class="alacritty" instance="edit"] $ws2
+assign [class="alacritty" instance="build"] $ws3
+assign [class="alacritty" instance="server"] $ws5
+assign [class="alacritty" instance="sfiles"] $ws6
+assign [class="alacritty" instance="display"] $ws10
 assign [class="Virt-manager"] $ws22
 assign [title=".*on QEMU/KVM.*"] $ws21
 assign [class="obsidian"] $ws19
@@ -317,12 +316,9 @@ for_window [class="feh"] floating enable
 
 # Keybinds
 bindsym $mod+shift+a exec pavucontrol
-bindsym $mod+c exec kitty cava
 bindsym $mod+w exec vivaldi --new-window
-bindsym $mod+e exec kitty /usr/bin/start_nnn
-bindsym $mod+t exec kitty htop
-bindsym $mod+j exec eclipse
-bindsym $mod+b exec /opt/BlueMail/bluemail --disable-gpu-sandbox
+bindsym $mod+e exec alacritty /usr/bin/start_nnn
+bindsym $mod+t exec alacritty htop
 bindsym $mod+g exec gimp
 bindsym $mod+shift+d exec onlyoffice-desktopeditors
 bindsym $mod+shift+s exec soundcloud-web
@@ -330,7 +326,7 @@ bindsym $mod+shift+t exec toggl-track-web
 bindsym $mod+control+t exec todoist-web
 bindsym $mod+shift+g exec github-web
 bindsym $mod+control+c exec google-calendar-web
-bindsym $mod+m exec whatsdesk
+bindsym $mod+b exec gmail-web
 
 # Screenshot keybinds
 bindsym Print exec flameshot screen

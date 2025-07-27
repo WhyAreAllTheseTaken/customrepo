@@ -1,12 +1,12 @@
 Package: why-apps
-Version: 0.11.0-1
+Version: 0.12.0-0
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: Apps for why-desktop.
-Depends: why-terminal, why-shell, thunar,
+Depends: why-terminal (>= 0.4), why-shell, thunar,
     toggl-track-web, todoist-web, soundcloud-web, github-web,
     google-calendar-web,
-    vivaldi-stable, discord, vlc, gparted, obs-studio
+    vivaldi-stable, discord, vlc, gparted, obs-studio, gmail-web
 Maintainer: WhyAreAllTheseTaken
 
