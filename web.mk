@@ -11,5 +11,5 @@
 	sed -i "s=%url%=$$(cat $<)=g" $@/DEBIAN/control
 
 web_sites: repo/github-web_all.deb repo/soundcloud-web_all.deb repo/todoist-web_all.deb \
-	repo/toggl-track-web_all.deb repo/google-calendar-web_all.deb
+	repo/toggl-track-web_all.deb repo/google-calendar-web_all.deb repo/gmail-web_all.deb
 
