@@ -279,8 +279,8 @@ exec todoist-web
 exec github-web
 exec google-calendar-web
 exec steam
-exec alacritty --name edit --directory=~/dev /usr/bin/start_nnn
-exec alacritty --name build --directory=~/dev /usr/bin/start_nnn
+exec alacritty --class alacritty,edit --working-directory=~/dev -e /usr/bin/start_nnn
+exec alacritty --class alacritty,build --working-directory=~/dev -e /usr/bin/start_nnn
 # exec alacritty --name server --directory=~/server /usr/bin/start_nnn
 # exec alacritty --name sfiles --directory=~/server /usr/bin/start_nnn
 exec obsidian
@@ -305,7 +305,7 @@ assign [class="alacritty" instance="server"] $ws5
 assign [class="alacritty" instance="sfiles"] $ws6
 assign [class="alacritty" instance="display"] $ws10
 assign [class="Virt-manager"] $ws22
-assign [title=".*on QEMU/KVM.*"] $ws21
+assign [title=".*on QEMU/KVM*"] $ws21
 assign [class="obsidian"] $ws19
 assign [class="Minecraft"] $ws4
 assign [class="worldsim"] $ws4
@@ -317,8 +317,8 @@ for_window [class="feh"] floating enable
 # Keybinds
 bindsym $mod+shift+a exec pavucontrol
 bindsym $mod+w exec vivaldi --new-window
-bindsym $mod+e exec alacritty /usr/bin/start_nnn
-bindsym $mod+t exec alacritty htop
+bindsym $mod+e exec alacritty -e /usr/bin/start_nnn
+bindsym $mod+t exec alacritty -e htop
 bindsym $mod+g exec gimp
 bindsym $mod+shift+d exec onlyoffice-desktopeditors
 bindsym $mod+shift+s exec soundcloud-web
