@@ -9,6 +9,15 @@ mv /etc/lightdm/lightdm-gtk-greeter.conf.why /etc/lightdm/lightdm-gtk-greeter.co
 
 mkdir -p /usr/share/desktop-directories/
 
+mkdir -p /etc/skel/.local/desk
+mkdir -p /etc/skel/down
+mkdir -p /etc/skel/.local/template
+mkdir -p /etc/skel/.pub
+mkdir -p /etc/skel/doc
+mkdir -p /etc/skel/mus
+mkdir -p /etc/skel/pic
+mkdir -p /etc/skel/vid
+
 for dir in /home/*/
 do
     dir=${dir%*/}
@@ -30,5 +39,22 @@ do
     chown $user:$user /home/$user/.config/user-dirs.dirs
     cp /etc/skel/.config/user-dirs.locale /home/$user/.config/user-dirs.locale
     chown $user:$user /home/$user/.config/user-dirs.locale
+    mkdir -p /home/$user/.local/desk
+    mkdir -p /home/$user/down
+    mkdir -p /home/$user/.local/template
+    mkdir -p /home/$user/.pub
+    mkdir -p /home/$user/doc
+    mkdir -p /home/$user/mus
+    mkdir -p /home/$user/pic
+    mkdir -p /home/$user/vid
+    chown $user:$user /home/$user/.local
+    chown $user:$user /home/$user/.local/desk
+    chown $user:$user /home/$user/down
+    chown $user:$user /home/$user/.local/template
+    chown $user:$user /home/$user/.pub
+    chown $user:$user /home/$user/doc
+    chown $user:$user /home/$user/mus
+    chown $user:$user /home/$user/pic
+    chown $user:$user /home/$user/vid
 done
 
