@@ -1,9 +1,9 @@
 Package: why-terminal
-Version: 0.4.2-0
+Version: 0.4.2-1
 Architecture: all
 Section: x11
 Priority: optional
 Description: My personal configuration for Alacritty.
-Depends: alacritty (>=0.14)
+Depends: alacritty (>=0.14), fonts-material-design-icons-iconfont, fonts-font-awesome
 Maintainer: WhyAreAllTheseTaken
 
