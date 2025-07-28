@@ -15,11 +15,7 @@ y = 0
 normal = { family = "NotoMono", style = "Regular" }
 bold = { family = "NotoMono", style = "Bold" }
 italic = { family = "NotoMono", style = "Italic" }
-size = 14.0
-
-[font.offset]
-x = 0
-y = -1
+size = 11.0
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
