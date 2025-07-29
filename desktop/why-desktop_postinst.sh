@@ -27,6 +27,9 @@ do
     mkdir -p /home/$user/.config/i3/
     cp /etc/skel/.config/i3/config /home/$user/.config/i3/config
     chown -R $user:$user /home/$user/.config/i3
+    mkdir -p /home/$user/.config/dunst/
+    cp /etc/skel/.config/dunst/dunstrc /home/$user/.config/dunst/dunstrc
+    chown -R $user:$user /home/$user/.config/dunst
     mkdir -p /home/$user/.config/i3blocks/
     cp /etc/skel/.config/i3blocks/i3blocks.conf /home/$user/.config/i3blocks/i3blocks.conf
     chown -R $user:$user /home/$user/.config/i3blocks
