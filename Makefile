@@ -15,7 +15,7 @@ include *.mk desktop/*.mk dev/*.mk uni/*.mk
 updater: $(REPO)/$(UPDATER_PACKAGE).deb $(REPO)/$(MS_PACKAGE).deb repo/morgwai-ntsync_all.deb
 
 install:
-	apt install ./$(REPO)/$(MS_PACKAGE).deb ./$(REPO)/$(UPDATER_PACKAGE).deb
+	apt install ./$(REPO)/$(MS_PACKAGE).deb ./$(REPO)/$(UPDATER_PACKAGE).deb ./repo/morgwai-ntsync_all.deb
 
 packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).deb repo/$(NVIM_PACKAGE).deb repo/$(PACKER_PACKAGE).deb \
 	repo/$(FRITURE_PACKAGE).deb repo/$(I3_BLOCKS_PACKAGE).deb repo/$(NNN_PLUGS_PACKAGE).deb \
