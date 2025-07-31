@@ -1,0 +1,11 @@
+Package: morgwai-ntsync
+Version: 0.0.0-0
+Architecture: all
+Section: kernel
+Priority: optional
+Description: Patched Wine packages with ntsync support.
+Depends: apt
+Maintainer: WhyAreAllTheseTaken
+Homepage: https://build.opensuse.org/package/show/home:morgwai:ntsync/ntsync-kernel
+
+
