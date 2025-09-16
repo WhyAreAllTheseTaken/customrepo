@@ -5,10 +5,8 @@ $(REPO)/discord_%_amd64.deb:
 		rm $@;\
 	fi
 
-discord_versions: $(REPO)/discord_0.0.104_amd64.deb \
-	$(REPO)/discord_0.0.105_amd64.deb \
-	$(REPO)/discord_0.0.106_amd64.deb \
-	$(REPO)/discord_0.0.107_amd64.deb \
-	$(REPO)/discord_0.0.108_amd64.deb \
-	$(REPO)/discord_0.0.109_amd64.deb
+discord_versions: $(REPO)/discord_0.0.110_amd64.deb \
+	$(REPO)/discord_0.0.111_amd64.deb \
+	$(REPO)/discord_0.0.112_amd64.deb \
+	$(REPO)/discord_0.0.113_amd64.deb
 

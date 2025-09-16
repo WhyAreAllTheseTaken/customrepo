@@ -1,0 +1,10 @@
+Package: why-utils
+Version: 0.1.0-1
+Architecture: all
+Section: utils
+Priority: optional
+Description: A collection of utilities that you probably want on your system.
+Depends: jmptfs, mtp-tools, libudisks2-dev, gvfs-backends
+Maintainer: WhyAreAllTheseTaken
+
+

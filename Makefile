@@ -17,6 +17,12 @@ updater: $(REPO)/$(UPDATER_PACKAGE).deb $(REPO)/$(MS_PACKAGE).deb repo/morgwai-n
 install:
 	apt install ./$(REPO)/$(MS_PACKAGE).deb ./$(REPO)/$(UPDATER_PACKAGE).deb ./repo/morgwai-ntsync_all.deb
 
+why-utils_all: utils_control
+	echo "Packaging $@..."
+	rm -rf $@
+	mkdir -p $@/DEBIAN
+	cp $< $@/DEBIAN/control
+
 packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).deb repo/$(NVIM_PACKAGE).deb repo/$(PACKER_PACKAGE).deb \
 	repo/$(FRITURE_PACKAGE).deb repo/$(I3_BLOCKS_PACKAGE).deb repo/$(NNN_PLUGS_PACKAGE).deb \
 	repo/$(I3LOCK_COLOR_PACKAGE).deb repo/$(BETTER_LOCK_PACKAGE).deb repo/$(OBSIDIAN_PACKAGE).deb \
@@ -36,7 +42,7 @@ packages: repo/$(CPMV_PACKAGE).deb repo/$(JDK_PACKAGE).deb repo/$(LTSA_PACKAGE).
 	plasma_theme_set discord_versions repo/why-worldbuilding_all.deb repo/why-dev-image_all.deb \
 	repo/fabric-installer_amd64.deb web_sites repo/code_amd64.deb repo/why-dev-engine_all.deb repo/why-dev-cpp_all.deb \
 	repo/$(CHANGELOG_PACKAGE).deb repo/$(GRADLE_PACKAGE).deb repo/vineflower_all.deb blockbench repo/libgdk-pixbuf2.0-0_all.deb repo/skelfixer_all.deb \
-	repo/materia-gtk-theme_all.deb repo/morgwai-ntsync_all.deb
+	repo/materia-gtk-theme_all.deb repo/morgwai-ntsync_all.deb repo/why-utils_all.deb
 
 nonDefaultPackages: repo/$(BLUEMAIL_PACKAGE).deb repo/$(MULTIMC_PACKAGE).deb repo/bluemail_amd64.deb repo/$(GPLATES_PACKAGE).deb \
 	repo/$(JDK21_PACKAGE).deb
