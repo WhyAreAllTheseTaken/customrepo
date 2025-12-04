@@ -1,4 +1,4 @@
-GRADLE_VERSION = 8.14.2
+GRADLE_VERSION = 9.2.1
 GRADLE_PACKAGE = gradle_all
 
 gradle-%-bin.zip:
