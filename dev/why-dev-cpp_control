@@ -1,9 +1,9 @@
 Package: why-dev-cpp
-Version: 0.2.0-0
+Version: 0.3.0-0
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for C++ development.
-Depends: build-essential, gdb, why-dev-base, gcc-doc, bison
+Depends: build-essential, gdb, why-dev-base, gcc-doc, bison, flex
 Maintainer: WhyAreAllTheseTaken
 
