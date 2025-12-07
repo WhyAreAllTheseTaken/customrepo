@@ -1,0 +1,10 @@
+Package: why-dev-riscv
+Version: 0.0.0-0
+Architecture: all
+Section: metapackages
+Priority: optional
+Description: My personal package for RISC-V development.
+Depends: gcc-riscv64-unknown-elf, crossbuild-essential-riscv64,
+    binutils-riscv64-unknown-elf
+Maintainer: WhyAreAllTheseTaken
+

@@ -5,6 +5,6 @@ Section: metapackages
 Priority: optional
 Description: My personal package for minecraft development.
 Depends: why-dev-java, minecraft-launcher, why-dev-net, fabric-installer, openjdk-23-jdk | java-runtime (>= 22), vineflower, blockbench,
-    filezilla
+    filezilla, why-dev-riscv
 Maintainer: WhyAreAllTheseTaken
 
