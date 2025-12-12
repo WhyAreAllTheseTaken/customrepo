@@ -1,5 +1,5 @@
 Package: why-apps
-Version: 0.13.0-0
+Version: 0.14.0-0
 Architecture: all
 Section: metapackages
 Priority: optional
@@ -8,6 +8,6 @@ Depends: why-terminal (>= 0.4), why-shell, thunar,
     toggl-track-web, todoist-web, soundcloud-web, github-web,
     google-calendar-web,
     vivaldi-stable, discord, vlc, gparted, obs-studio, gmail-web,
-    timeshift
+    timeshift, baobab
 Maintainer: WhyAreAllTheseTaken
 
