@@ -278,7 +278,7 @@ exec toggl-track-web
 exec todoist-web
 exec github-web
 exec google-calendar-web
-exec steam
+exec gtk-launch steam
 exec alacritty --class alacritty,edit --working-directory=dev -e /usr/bin/start_nnn
 exec alacritty --class alacritty,build --working-directory=dev -e /usr/bin/start_nnn
 # exec alacritty --name server --directory=~/server /usr/bin/start_nnn
