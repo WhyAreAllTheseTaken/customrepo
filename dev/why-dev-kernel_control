@@ -1,10 +1,10 @@
 Package: why-dev-kernel
-Version: 0.1.0-1
+Version: 0.1.0-2
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for developing my custom kernel.
-Depends: why-dev-base, nasm, mtools, gcc, binutils, why-dev-rust, xorriso
+Depends: why-dev-base, nasm, mtools, gcc, binutils, why-dev-rust, xorriso, qemu-system-x86
 Maintainer: WhyAreAllTheseTaken
 
 
