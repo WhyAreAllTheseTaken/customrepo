@@ -4,7 +4,7 @@ Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for development.
-Depends: why-dev-minecraft, why-dev-rust, why-dev-repo, why-dev-engine
+Depends: why-dev-minecraft, why-dev-rust, why-dev-repo, why-dev-engine, why-dev-kernel
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
