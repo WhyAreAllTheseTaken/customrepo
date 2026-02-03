@@ -1,10 +1,10 @@
 Package: why-uni
-Version: 1.1.0-1
+Version: 1.2.0-1
 Architecture: all
 Section: metapackages
 Priority: optional
 Description: My personal package for university.
-Depends: why-write, obsidian, shotcut, why-dev-cpp, why-dev-ml, why-dev-security
+Depends: why-write, obsidian, shotcut, why-dev-ml, why-dev-security
 Pre-Depends: bash, sudo
 Maintainer: WhyAreAllTheseTaken
 
