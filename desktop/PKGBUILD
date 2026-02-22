@@ -2,7 +2,7 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=1
+pkgrel=2
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
