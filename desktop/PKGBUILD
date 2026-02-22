@@ -1,0 +1,46 @@
+pkgname="why-desktop"
+pkgver=0.22.1
+pkgrel=1
+pkgdesc="My custom desktop"
+arch=(any)
+depends=(dunst i3 i3blocks i3blocks-contrib picom flameshot feh lightdm
+    xorg rofi pavucontrol hicolor-icon-theme pasystray network-manager-gnome
+    lxpolkit brightnessctl procps betterlockscreen dbus-x11 lxappearance materia-gtk-theme
+    fonts-weather-icons xinput libgtk-3-bin bash coreutils lightdm-gtk-greeter sudo
+    )
+provides=("why-bg=0.11.9" "why-theme=0.13.4")
+source=("whyconfig:../whyconfig" "why-bg.sh" "why-theme.sh" "why-desktop-postinst.sh")
+install="why-desktop_install.sh"
+
+package() {
+    cd "$pkgname"
+	mkdir -p $pkgdir/etc/skel/.config/i3
+	cp whyconfig/home/.config/i3/config $pkgdir/etc/skel/.config/i3
+	mkdir -p $pkgdir/etc/skel/.config/i3blocks
+	cp whyconfig/home/.config/i3blocks/i3blocks.conf $pkgdir/etc/skel/.config/i3blocks
+	mkdir -p $pkgdir/etc/skel/.config/betterlockscreen
+	cp whyconfig/home/.config/betterlockscreen/betterlockscreenrc $pkgdir/etc/skel/.config/betterlockscreen
+	mkdir -p $pkgdir/etc/skel/.config/
+	cp -r whyconfig/home/.config/picom.conf $pkgdir/etc/skel/.config/
+	cp -r whyconfig/home/.config/user-dirs.dirs $pkgdir/etc/skel/.config/
+	cp -r whyconfig/home/.config/user-dirs.locale $pkgdir/etc/skel/.config/
+	mkdir -p $pkgdir/etc/skel/.config/dunst/
+	cp -r whyconfig/home/.config/dunst/dunstrc $pkgdir/etc/skel/.config/dunst
+	mkdir -p $pkgdir/etc/skel/.local/
+	echo "ice" > $pkgdir/etc/skel/.local/why-theme 
+	echo "/usr/share/backgrounds/why-ice.png" > $pkgdir/etc/skel/.local/why-bg-path 
+	mkdir -p $pkgdir/etc/lightdm/
+	cp whyconfig/etc/lightdm/lightdm-gtk-greeter.conf $pkgdir/etc/lightdm/lightdm-gtk-greeter.conf.why
+	mkdir -p $pkgdir/usr/bin/
+	cp why-bg.sh $pkgdir/usr/bin/why-bg
+	chmod +x $pkgdir/usr/bin/why-bg
+	cp why-theme.sh $pkgdir/usr/bin/why-theme
+	chmod +x $pkgdir/usr/bin/why-theme
+	mkdir -p $pkgdir/DEBIAN
+	cp $< $pkgdir/DEBIAN/control
+	cp desktop/why-desktop_postinst.sh $pkgdir/DEBIAN/postinst
+	chmod +x $pkgdir/DEBIAN/postinst
+	cp desktop/why-desktop_prerm.sh $pkgdir/DEBIAN/prerm
+	chmod +x $pkgdir/DEBIAN/prerm
+}
+
