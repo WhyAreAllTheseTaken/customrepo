@@ -1,15 +1,17 @@
+#!/usr/bin/bash
+
 pkgname="why-desktop"
 pkgver=0.22.1
 pkgrel=1
 pkgdesc="My custom desktop"
 arch=(any)
-depends=(dunst i3 i3blocks i3blocks-contrib picom flameshot feh lightdm
-    xorg rofi pavucontrol hicolor-icon-theme pasystray network-manager-gnome
+depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
+    xorg-server rofi pavucontrol hicolor-icon-theme pasystray network-manager-gnome
     lxpolkit brightnessctl procps betterlockscreen dbus-x11 lxappearance materia-gtk-theme
-    fonts-weather-icons xinput libgtk-3-bin bash coreutils lightdm-gtk-greeter sudo
+    fonts-weather-icons xorg-xinput gtk3 bash coreutils lightdm-gtk-greeter sudo
     )
 provides=("why-bg=0.11.9" "why-theme=0.13.4")
-source=("whyconfig:../whyconfig" "why-bg.sh" "why-theme.sh" "why-desktop-postinst.sh")
+source=("whyconfig:../whyconfig" "why-bg.sh" "why-theme.sh")
 install="why-desktop_install.sh"
 
 package() {
@@ -36,11 +38,5 @@ package() {
 	chmod +x $pkgdir/usr/bin/why-bg
 	cp why-theme.sh $pkgdir/usr/bin/why-theme
 	chmod +x $pkgdir/usr/bin/why-theme
-	mkdir -p $pkgdir/DEBIAN
-	cp $< $pkgdir/DEBIAN/control
-	cp desktop/why-desktop_postinst.sh $pkgdir/DEBIAN/postinst
-	chmod +x $pkgdir/DEBIAN/postinst
-	cp desktop/why-desktop_prerm.sh $pkgdir/DEBIAN/prerm
-	chmod +x $pkgdir/DEBIAN/prerm
 }
 

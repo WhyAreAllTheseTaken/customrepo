@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+pkgname="why-cycle"
+pkgver=0.4.6
+pkgrel=1
+pkgdesc="A program that cycles through different themes over the day."
+arch=(any)
+depends=(bash coreutils systemd why-theme
+    why-theme-dawn why-theme-pink why-theme-ice why-theme-night
+    )
+source=("why-cycle.sh" "why-cycle.service" "why-cycle.timer")
+install="why-cycle_install.sh"
+
+package() {
+    cd "$pkgname"
+	mkdir -p $pkgname/usr/bin/
+	cp why-cycle.sh $pkgname/usr/bin/why-cycle
+	chmod +x $pkgname/usr/bin/why-cycle
+	mkdir -p $pkgname/usr/lib/systemd/user/
+	cp why-cycle.service $pkgname/usr/lib/systemd/user/
+	cp why-cycle.timer $pkgname/usr/lib/systemd/user/
+}
+
+
