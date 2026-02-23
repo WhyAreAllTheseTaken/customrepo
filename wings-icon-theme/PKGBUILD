@@ -1,12 +1,13 @@
 pkgname=wings-icon-theme-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc="Wings Icon Themes"
 arch=("any")
 makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 replaces=()
+options=(!strip)
 source=('Wings-Plasma-Themes::git+https://github.com/L4ki/Wings-Plasma-Themes')
 sha256sums=('SKIP')
 
