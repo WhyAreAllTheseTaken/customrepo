@@ -2,12 +2,12 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=4
+pkgrel=5
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
     xorg-server rofi pavucontrol hicolor-icon-theme pasystray network-manager-applet
-    lxpolkit brightnessctl procps betterlockscreen lxappearance materia-gtk-theme
+    polkit brightnessctl procps betterlockscreen lxappearance materia-gtk-theme
     ttf-weather-icons xorg-xinput gtk3 bash coreutils lightdm-gtk-greeter sudo
     )
 provides=("why-bg=0.11.9" "why-theme=0.13.4")
