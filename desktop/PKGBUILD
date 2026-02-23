@@ -2,7 +2,7 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=7
+pkgrel=8
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
@@ -11,7 +11,7 @@ depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
     ttf-weather-icons xorg-xinput gtk3 bash coreutils lightdm-gtk-greeter sudo
     )
 provides=("why-bg=0.11.9" "why-theme=0.13.4")
-source=("i3config" "i3blocks.conf" "betterlockscreenrc" "dunstrc" "why-bg.sh" "why-theme.sh" "theme.conf" "picom.conf" "user-dirs.dirs", "user-dirs.locale"
+source=("i3config" "i3blocks.conf" "betterlockscreenrc" "dunstrc" "why-bg.sh" "why-theme.sh" "theme.conf" "picom.conf" "user-dirs.dirs" "user-dirs.locale"
     "lightdm-gtk-greeter.conf")
 install="install.sh"
 
