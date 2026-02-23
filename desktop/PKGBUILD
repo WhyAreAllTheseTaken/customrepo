@@ -2,7 +2,7 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=11
+pkgrel=12
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
@@ -17,6 +17,7 @@ install="install.sh"
 sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
 
 package() {
+    ls
     cd "$pkgname-$pkgver"
 	mkdir -p $pkgdir/etc/skel/.config/i3
 	cp i3config $pkgdir/etc/skel/.config/i3
