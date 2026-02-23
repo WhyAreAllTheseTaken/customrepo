@@ -2,7 +2,7 @@
 
 pkgname="why-apps"
 pkgver=0.14
-pkgrel=2
+pkgrel=3
 pkgdesc="Apps for why-desktop"
 arch=(any)
 depends=(
@@ -12,6 +12,8 @@ depends=(
     vivaldi-stable discord vlc gparted obs-studio gmail-web
     timeshift baobab
     )
-md5sums('SKIP')
 
+
+verify() {
+}
 
