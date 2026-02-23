@@ -2,7 +2,7 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=13
+pkgrel=14
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
@@ -18,7 +18,7 @@ sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP
 
 package() {
 	mkdir -p $pkgdir/etc/skel/.config/i3
-	cp i3config $pkgdir/etc/skel/.config/i3
+	cp i3config $pkgdir/etc/skel/.config/i3/config
 	mkdir -p $pkgdir/etc/skel/.config/i3blocks
 	cp i3blocks.conf $pkgdir/etc/skel/.config/i3blocks
 	mkdir -p $pkgdir/etc/skel/.config/betterlockscreen
