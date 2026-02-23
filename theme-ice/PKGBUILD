@@ -2,7 +2,7 @@
 
 pkgname="why-theme-ice"
 pkgver=0.9.3
-pkgrel=2
+pkgrel=3
 pkgdesc="The ice theme for my custom desktop"
 arch=(any)
 depends=(
@@ -34,8 +34,8 @@ package() {
 	cp .zshtheme $pkgdir/usr/share/why-desktop/theme/ice/home/
 	cp .zshprompt $pkgdir/usr/share/why-desktop/theme/ice/home/
 	cp .gtkrc-2.0 $pkgdir/usr/share/why-desktop/theme/ice/home/
-	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/share/
-	cp Ice.rasi $pkgdir/usr/share/why-desktop/theme/ice/share/
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/
+	cp Ice.rasi $pkgdir/usr/share/why-desktop/theme/ice/
 	mkdir -p $pkgdir/usr/share/backgrounds
 	cp why-ice.png $pkgdir/usr/share/backgrounds
 	cp default-bg $pkgdir/usr/share/why-desktop/theme/ice/
