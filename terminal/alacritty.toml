@@ -12,9 +12,9 @@ x = 1
 y = 0
 
 [font]
-normal = { family = "NotoSansNerdFontMono", style = "Regular" }
-bold = { family = "NotoSansNerdFontMono", style = "Bold" }
-italic = { family = "NotoSansNerdFontMono", style = "Italic" }
+normal = { family = "NotoSansMono", style = "Regular" }
+bold = { family = "NotoSansMono", style = "Bold" }
+italic = { family = "NotoSansMono", style = "Italic" }
 size = 12.0
 
 [cursor]
