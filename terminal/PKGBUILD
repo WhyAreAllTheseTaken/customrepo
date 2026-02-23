@@ -2,11 +2,11 @@
 
 pkgname="why-terminal"
 pkgver=0.4.2
-pkgrel=10
+pkgrel=11
 pkgdesc="My personal configuration for alacritty."
 arch=(any)
 depends=(
-    "alacritty>=0.14" ttf-material-design-icons ttf-font-awesome
+    "alacritty>=0.14" ttf-material-design-icons ttf-font-awesome ttf-noto-sans-mono-vf
     )
 source=("alacritty.toml")
 install="install.sh"
