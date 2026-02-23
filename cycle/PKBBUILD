@@ -2,14 +2,14 @@
 
 pkgname="why-cycle"
 pkgver=0.4.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A program that cycles through different themes over the day."
 arch=(any)
 depends=(bash coreutils systemd why-theme
     why-theme-dawn why-theme-pink why-theme-ice why-theme-night
     )
 source=("why-cycle.sh" "why-cycle.service" "why-cycle.timer")
-install="why-cycle_install.sh"
+install="install.sh"
 
 package() {
     cd "$pkgname"

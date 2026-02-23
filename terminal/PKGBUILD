@@ -2,21 +2,19 @@
 
 pkgname="why-terminal"
 pkgver=0.4.2
-pkgrel=1
+pkgrel=2
 pkgdesc="My personal configuration for alacritty."
 arch=(any)
 depends=(
     "alacritty>=0.14" fonts-material-design-icons-iconfont fonts-font-awesome
     )
-source=("whyconfig:../whyconfig")
-install="why-terminal_install.sh"
+source=("alacritty.toml")
+install="install.sh"
 
 package() {
     cd "$pkgname"
-	mkdir -p $pkgdir/etc/skel/.config/kitty/
-	cp -r whyconfig/home/.config/kitty/kitty.conf $pkgdir/etc/skel/.config/kitty/
 	mkdir -p $pkgdir/etc/skel/.config/alacritty/
-	cp -r whyconfig/home/.config/alacritty/alacritty.toml $pkgdir/etc/skel/.config/alacritty/
+	cp -r alacritty.toml $pkgdir/etc/skel/.config/alacritty/
 }
 
 
