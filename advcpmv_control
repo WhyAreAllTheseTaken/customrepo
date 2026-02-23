@@ -1,9 +1,0 @@
-Package: advcpmv
-Version: 0.9-4
-Architecture: %arch%
-Section: utils
-Priority: optional
-Description: A modified version of cp and mv with progress bars.
-Homepage: https://github.com/jarun/advcpmv
-Maintainer: WhyAreAllTheseTaken
-

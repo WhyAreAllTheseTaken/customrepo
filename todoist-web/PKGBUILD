@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+pkgname="todoist-web"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="The Todoist web app."
+arch=(any)
+depends=(
+    bash chromium
+    )
+source=("todoist.sh")
+sha256sums=("SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/bin/
+	cp todoist.sh $pkgdir/usr/bin/todoist-web
+	chmod +x $pkgdir/usr/bin/todoist-web
+}
+
+
+

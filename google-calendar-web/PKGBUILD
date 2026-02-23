@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+pkgname="google-calendar-web"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="The Google Calendar web app."
+arch=(any)
+depends=(
+    bash chromium
+    )
+source=("google-calendar.sh")
+sha256sums=("SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/bin/
+	cp google-calendar.sh $pkgdir/usr/bin/google-calendar-web
+	chmod +x $pkgdir/usr/bin/google-calendar-web
+}
+

@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 
 pkgname="why-apps"
-pkgver=0.14
-pkgrel=4
+pkgver=0.15
+pkgrel=1
 pkgdesc="Apps for why-desktop"
 arch=(any)
 depends=(
     why-terminal why-shell thunar
-    toggl-track-web todoist-web soundcloud-web github-web
+    todoist-web github-web
     google-calendar-web
-    vivaldi-stable discord vlc gparted obs-studio gmail-web
+    vivaldi discord vlc vlc-plugins-all gparted obs-studio gmail-web
     timeshift baobab
     )
 

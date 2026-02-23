@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+pkgname="github-web"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="The Github web app."
+arch=(any)
+depends=(
+    bash chromium
+    )
+source=("github.sh")
+sha256sums=("SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/bin/
+	cp github.sh $pkgdir/usr/bin/github-web
+	chmod +x $pkgdir/usr/bin/github-web
+}
+

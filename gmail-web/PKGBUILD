@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+pkgname="gmail-web"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="The GMail web app."
+arch=(any)
+depends=(
+    bash chromium
+    )
+source=("gmail.sh")
+sha256sums=("SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/bin/
+	cp gmail.sh $pkgdir/usr/bin/gmail-web
+	chmod +x $pkgdir/usr/bin/gmail-web
+}
+
+
