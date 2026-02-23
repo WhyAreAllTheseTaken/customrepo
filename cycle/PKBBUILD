@@ -2,7 +2,7 @@
 
 pkgname="why-cycle"
 pkgver=0.4.6
-pkgrel=6
+pkgrel=7
 pkgdesc="A program that cycles through different themes over the day."
 arch=(any)
 depends=(bash coreutils systemd why-theme
@@ -13,7 +13,6 @@ install="install.sh"
 sha256sums=("SKIP" "SKIP" "SKIP")
 
 package() {
-    cd "$pkgname-$pkgver"
 	mkdir -p $pkgname/usr/bin/
 	cp why-cycle.sh $pkgname/usr/bin/why-cycle
 	chmod +x $pkgname/usr/bin/why-cycle
