@@ -2,7 +2,7 @@
 
 pkgname="why-terminal"
 pkgver=0.4.2
-pkgrel=8
+pkgrel=9
 pkgdesc="My personal configuration for alacritty."
 arch=(any)
 depends=(

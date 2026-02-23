@@ -2,7 +2,7 @@
 
 pkgname="why-cycle"
 pkgver=0.4.6
-pkgrel=7
+pkgrel=8
 pkgdesc="A program that cycles through different themes over the day."
 arch=(any)
 depends=(bash coreutils systemd why-theme

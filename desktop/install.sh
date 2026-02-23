@@ -23,6 +23,7 @@ post_install() {
     do
         dir=${dir%*/}
         user=${dir##*/}
+        echo "Setting up user $user in $dir".
         mkdir -p /home/$user/.config/
         chown $user:$user /home/$user/.config
         mkdir -p /home/$user/.config/i3/
