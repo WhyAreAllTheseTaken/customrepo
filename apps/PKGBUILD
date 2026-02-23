@@ -12,5 +12,6 @@ depends=(
     vivaldi-stable discord vlc gparted obs-studio gmail-web
     timeshift baobab
     )
+md5sums('SKIP')
 
 

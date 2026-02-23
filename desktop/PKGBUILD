@@ -14,6 +14,7 @@ provides=("why-bg=0.11.9" "why-theme=0.13.4")
 source=("i3config" "i3blocks.conf" "betterlockscreenrc" "dunstrc" "why-bg.sh" "why-theme.sh" "theme.conf" "picom.conf" "user-dirs.dirs" "user-dirs.locale"
     "lightdm-gtk-greeter.conf")
 install="install.sh"
+md5sums('SKIP')
 
 package() {
     cd "$pkgname"
