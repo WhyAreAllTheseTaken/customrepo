@@ -2,7 +2,7 @@
 
 pkgname="why-theme-ice"
 pkgver=0.9.3
-pkgrel=1
+pkgrel=2
 pkgdesc="The ice theme for my custom desktop"
 arch=(any)
 depends=(
@@ -11,7 +11,7 @@ depends=(
 provides=(why-desktop-theme)
 install="install.sh"
 source=(
-    "default-bg" "why-ice.png" "ice.rasi" "alacritty_theme.toml" "dunstrc" "flameshot.ini" "gtk-3.0.ini"
+    "default-bg" "why-ice.png" "Ice.rasi" "alacritty_theme.toml" "dunstrc" "flameshot.ini" "gtk-3.0.ini"
     "i3_theme.conf" "config.rasi" ".zshtheme" ".zshprompt" ".gtkrc-2.0"
 )
 sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
@@ -35,7 +35,7 @@ package() {
 	cp .zshprompt $pkgdir/usr/share/why-desktop/theme/ice/home/
 	cp .gtkrc-2.0 $pkgdir/usr/share/why-desktop/theme/ice/home/
 	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/share/
-	cp ice.rasi $pkgdir/usr/share/why-desktop/theme/ice/share/
+	cp Ice.rasi $pkgdir/usr/share/why-desktop/theme/ice/share/
 	mkdir -p $pkgdir/usr/share/backgrounds
 	cp why-ice.png $pkgdir/usr/share/backgrounds
 	cp default-bg $pkgdir/usr/share/why-desktop/theme/ice/
