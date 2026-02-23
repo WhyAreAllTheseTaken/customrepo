@@ -1,0 +1,45 @@
+#!/usr/bin/bash
+
+pkgname="why-theme-ice"
+pkgver=0.9.3
+pkgrel=1
+pkgdesc="The ice theme for my custom desktop"
+arch=(any)
+depends=(
+    "why-desktop>=0.9.2" wings-icon-theme material-gtk-theme ttf-noto-sans-vf "why-shell>=0.4" "rofi>=1.7.5" bash
+    )
+provides=(why-desktop-theme)
+install="install.sh"
+source=(
+    "default-bg" "why-ice.png" "ice.rasi" "alacritty_theme.toml" "dunstrc" "flameshot.ini" "gtk-3.0.ini"
+    "i3_theme.conf" "config.rasi" ".zshtheme" ".zshprompt" ".gtkrc-2.0"
+)
+sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/alacritty
+	cp alacritty_theme.toml $pkgdir/usr/share/why-desktop/theme/ice/config/alacritty/theme.toml
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/dunst
+	cp dunstrc $pkgdir/usr/share/why-desktop/theme/ice/config/dunst/
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/flameshot
+	cp flameshot.ini $pkgdir/usr/share/why-desktop/theme/ice/config/flameshot/
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/gtk-3.0
+	cp gtk-3.0.ini $pkgdir/usr/share/why-desktop/theme/ice/config/gtk-3.0/settings.ini
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/i3
+	cp i3_theme.conf $pkgdir/usr/share/why-desktop/theme/ice/config/i3/theme.conf
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/config/rofi
+	cp config.rasi $pkgdir/usr/share/why-desktop/theme/ice/config/rofi/config.rasi
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/home/
+	cp .zshtheme $pkgdir/usr/share/why-desktop/theme/ice/home/
+	cp .zshprompt $pkgdir/usr/share/why-desktop/theme/ice/home/
+	cp .gtkrc-2.0 $pkgdir/usr/share/why-desktop/theme/ice/home/
+	mkdir -p $pkgdir/usr/share/why-desktop/theme/ice/share/
+	cp ice.rasi $pkgdir/usr/share/why-desktop/theme/ice/share/
+	mkdir -p $pkgdir/usr/share/backgrounds
+	cp why-ice.png $pkgdir/usr/share/backgrounds
+	cp default-bg $pkgdir/usr/share/why-desktop/theme/ice/
+}
+
+
+
