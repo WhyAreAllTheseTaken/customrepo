@@ -2,7 +2,7 @@
 
 pkgname="why-cycle"
 pkgver=0.4.6
-pkgrel=4
+pkgrel=5
 pkgdesc="A program that cycles through different themes over the day."
 arch=(any)
 depends=(bash coreutils systemd why-theme
@@ -10,6 +10,7 @@ depends=(bash coreutils systemd why-theme
     )
 source=("why-cycle.sh" "why-cycle.service" "why-cycle.timer")
 install="install.sh"
+sha256sums=("SKIP" "SKIP" "SKIP")
 
 verify() {
     true
