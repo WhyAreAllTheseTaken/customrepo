@@ -2,7 +2,7 @@
 
 pkgname="why-shell"
 pkgver=0.11.0
-pkgrel=1
+pkgrel=2
 pkgdesc="My personal configuration for a shell."
 arch=(any)
 depends=(
@@ -14,8 +14,8 @@ sha256sums=("SKIP" "SKIP" "SKIP")
 
 package() {
 	mkdir -p $pkgdir/etc/skel/
-	cp whyconfig/home/.zshenv $pkgdir/etc/skel/.zshenv
-	cp whyconfig/home/.zshrc $pkgdir/etc/skel/.zshrc
-	cp whyconfig/home/.zshrc.zni $pkgdir/etc/skel/.zshrc.zni
+	cp .zshenv $pkgdir/etc/skel/.zshenv
+	cp .zshrc $pkgdir/etc/skel/.zshrc
+	cp .zshrc.zni $pkgdir/etc/skel/.zshrc.zni
 }
 
