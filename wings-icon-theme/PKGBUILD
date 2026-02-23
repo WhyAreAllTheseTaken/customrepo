@@ -1,6 +1,6 @@
 pkgname=wings-icon-theme-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=1
-pkgrel=3
+pkgver=2024.12.19
+pkgrel=1
 pkgdesc="Wings Icon Themes"
 arch=("any")
 makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
