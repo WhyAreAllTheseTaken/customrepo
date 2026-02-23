@@ -16,12 +16,8 @@ source=("i3config" "i3blocks.conf" "betterlockscreenrc" "dunstrc" "why-bg.sh" "w
 install="install.sh"
 sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
 
-verify() {
-    true
-}
-
 package() {
-    cd "$pkgname"
+    cd "$pkgname-$pkgver"
 	mkdir -p $pkgdir/etc/skel/.config/i3
 	cp i3config $pkgdir/etc/skel/.config/i3
 	mkdir -p $pkgdir/etc/skel/.config/i3blocks

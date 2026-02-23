@@ -2,7 +2,7 @@
 
 pkgname="why-terminal"
 pkgver=0.4.2
-pkgrel=6
+pkgrel=7
 pkgdesc="My personal configuration for alacritty."
 arch=(any)
 depends=(
@@ -12,12 +12,8 @@ source=("alacritty.toml")
 install="install.sh"
 sha256sums=("SKIP")
 
-verify() {
-    true
-}
-
 package() {
-    cd "$pkgname"
+    cd "$pkgname-$pkgver"
 	mkdir -p $pkgdir/etc/skel/.config/alacritty/
 	cp -r alacritty.toml $pkgdir/etc/skel/.config/alacritty/
 }
