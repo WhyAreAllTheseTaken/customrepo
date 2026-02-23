@@ -19,6 +19,7 @@ post_install() {
     mkdir -p /etc/skel/pic
     mkdir -p /etc/skel/vid
 
+    echo "Looking for users to configure..."
     for dir in /home/*/
     do
         dir=${dir%*/}
