@@ -1,0 +1,56 @@
+pkgname=wings-icon-theme-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=1
+pkgrel=1
+pkgdesc="Wings Icon Themes"
+arch=("any")
+makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+replaces=()
+source=('Wings-Plasma-Themes::git+https://github.com/L4ki/Wings-Plasma-Themes')
+sha256sums=('SKIP')
+
+pkgver() {
+	cd Wings-Plasma-Themes
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/icons/
+	if [[ -d Wings-Plasma-Themes/Wings\ Icons\ Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Icons\ Themes/* $pkgdir/usr/share/icons/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings\ Icon\ Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Icon\ Themes/* $pkgdir/usr/share/icons/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-Icon-Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-Icon-Themes/* $pkgdir/usr/share/icons/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-Icons ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-Icons/* $pkgdir/usr/share/icons/;\
+	fi
+	if [[ -f $pkgdir/usr/share/icons/Text\ File.txt ]]; then\
+		rm $pkgdir/usr/share/icons/Text\ File.txt;\
+	fi
+	if [[ -f $pkgdir/usr/share/icons/index.theme ]]; then\
+		mkdir $pkgdir/usr/share/icons/Wings;\
+		mv $pkgdir/usr/share/icons/16x16 $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/22x22 $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/8x8 $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/actions $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/animations $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/applets $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/apps $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/categories $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/devices $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/emblems $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/emotes $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/mimetypes $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/places $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/preferences $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/status $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/icon-theme.cache $pkgdir/usr/share/icons/Wings || true;\
+		mv $pkgdir/usr/share/icons/index.theme $pkgdir/usr/share/icons/Wings || true;\
+	fi
+}
+

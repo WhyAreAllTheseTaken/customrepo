@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="The ice theme for my custom desktop"
 arch=(any)
 depends=(
-    "why-desktop>=0.9.2" wings-icon-theme material-gtk-theme ttf-noto-sans-vf "why-shell>=0.4" "rofi>=1.7.5" bash
+    "why-desktop>=0.9.2" wings-icon-theme materia-gtk-theme ttf-noto-sans-vf "why-shell>=0.4" "rofi>=1.7.5" bash
     )
 provides=(why-desktop-theme)
 install="install.sh"
