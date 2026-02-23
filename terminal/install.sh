@@ -16,3 +16,8 @@ post_install() {
     done
 }
 
+post_upgrade() {
+    post_install
+}
+
+

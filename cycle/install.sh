@@ -23,3 +23,13 @@ post_remove() {
 pre_remove() {
     systemctl --global disable why-cycle.timer
 }
+
+pre_upgrade() {
+    pre_remove
+}
+
+post_upgrade() {
+    post_install
+}
+
+

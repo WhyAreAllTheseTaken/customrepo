@@ -74,3 +74,7 @@ pre_remove() {
     fi
 }
 
+post_upgrade() {
+    post_install
+}
+
