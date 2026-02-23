@@ -2,7 +2,7 @@
 
 pkgname="why-terminal"
 pkgver=0.4.2
-pkgrel=4
+pkgrel=5
 pkgdesc="My personal configuration for alacritty."
 arch=(any)
 depends=(
@@ -12,6 +12,7 @@ source=("alacritty.toml")
 install="install.sh"
 
 verify() {
+    true
 }
 
 package() {

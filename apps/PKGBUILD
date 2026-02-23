@@ -2,7 +2,7 @@
 
 pkgname="why-apps"
 pkgver=0.14
-pkgrel=3
+pkgrel=4
 pkgdesc="Apps for why-desktop"
 arch=(any)
 depends=(
@@ -15,5 +15,6 @@ depends=(
 
 
 verify() {
+    true
 }
 
