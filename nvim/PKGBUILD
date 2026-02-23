@@ -2,11 +2,11 @@
 
 pkgname="why-neovim"
 pkgver=0.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc="My personal configuration for neovim."
 arch=(any)
 depends=(
-    neovim packer-nvim bash sudo
+    neovim nvim-packer-git bash sudo
     )
 source=("guide.md" "init.lua" "lua_init.lua" "set.lua" "packer.lua" "remap.lua" "fugitive.lua" "lsp.lua" "tokyonight.lua" "tree.lua" "treesitter.lua" "undotree.lua" "highlights.scm" "injections.scm")
 sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
