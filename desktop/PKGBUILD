@@ -2,13 +2,14 @@
 
 pkgname="why-desktop"
 pkgver=0.22.1
-pkgrel=18
+pkgrel=19
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
     xorg-server rofi pavucontrol hicolor-icon-theme pasystray network-manager-applet
     polkit brightnessctl procps betterlockscreen lxappearance materia-gtk-theme
     ttf-weather-icons xorg-xinput gtk3 bash coreutils lightdm-gtk-greeter sudo
+    why-nnn why-terminal
     )
 provides=("why-bg=0.11.9" "why-theme=0.13.4")
 source=("i3config" "i3blocks.conf" "betterlockscreenrc" "dunstrc" "why-bg.sh" "why-theme.sh" "theme.conf" "picom.conf" "user-dirs.dirs" "user-dirs.locale"

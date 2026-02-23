@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+pkgname="why-shell"
+pkgver=0.11.0
+pkgrel=1
+pkgdesc="My personal configuration for a shell."
+arch=(any)
+depends=(
+    zsh why-nnn tree htop fastfetch
+    )
+source=(".zshenv" ".zshrc" ".zshrc.zni")
+install="install.sh"
+sha256sums=("SKIP" "SKIP" "SKIP")
+
+package() {
+	mkdir -p $pkgdir/etc/skel/
+	cp whyconfig/home/.zshenv $pkgdir/etc/skel/.zshenv
+	cp whyconfig/home/.zshrc $pkgdir/etc/skel/.zshrc
+	cp whyconfig/home/.zshrc.zni $pkgdir/etc/skel/.zshrc.zni
+}
+

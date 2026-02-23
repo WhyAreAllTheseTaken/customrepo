@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+pkgname="why-nnn"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="My personal configuration for nnn."
+arch=(any)
+depends=(
+    nnn nnn-plugins advcpmv zsh
+    )
+source=("start_nnn.sh")
+sha256sums=("SKIP")
+
+package() {
+	mkdir -p $pkgdir/usr/bin/
+	cp start_nnn.sh $pkgdir/usr/bin/start_nnn
+	chmod +x $pkgdir/usr/bin/start_nnn
+}
+
+

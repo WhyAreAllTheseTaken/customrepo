@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+
+pkgname="why-neovim"
+pkgver=0.1.4
+pkgrel=1
+pkgdesc="My personal configuration for neovim."
+arch=(any)
+depends=(
+    neovim packer-nvim bash sudo
+    )
+source=("guide.md" "init.lua" "lua_init.lua" "set.lua" "packer.lua" "remap.lua" "fugitive.lua" "lsp.lua" "tokyonight.lua" "tree.lua" "treesitter.lua" "undotree.lua" "highlights.scm" "injections.scm")
+sha256sums=("SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP" "SKIP")
+install="install.sh"
+
+package() {
+	mkdir -p $pkgdir/etc/skel/.config/nvim
+    cp guide.md $pkgdir/etc/skel/.config/nvim/guide.md
+    cp init.lua $pkgdir/etc/skel/.config/nvim/init.lua
+	mkdir -p $pkgdir/etc/skel/.config/nvim/lua/why
+    cp lua_init.lua $pkgdir/etc/skel/.config/nvim/lua/why/init.lua
+    cp set.lua $pkgdir/etc/skel/.config/nvim/lua/why/set.lua
+    cp packer.lua $pkgdir/etc/skel/.config/nvim/lua/why/packer.lua
+    cp remap.lua $pkgdir/etc/skel/.config/nvim/lua/why/remap.lua
+	mkdir -p $pkgdir/etc/skel/.config/nvim/after/plugin
+    cp fugitive.lua $pkgdir/etc/skel/.config/nvim/after/plugin/fugitive.lua
+    cp lsp.lua $pkgdir/etc/skel/.config/nvim/after/plugin/lsp.lua
+    cp tokyonight.lua $pkgdir/etc/skel/.config/nvim/after/plugin/tokyonight.lua
+    cp tree.lua $pkgdir/etc/skel/.config/nvim/after/plugin/tree.lua
+    cp treesitter.lua $pkgdir/etc/skel/.config/nvim/after/plugin/treesitter.lua
+    cp undotree.lua $pkgdir/etc/skel/.config/nvim/after/plugin/undotree.lua
+	mkdir -p $pkgdir/etc/skel/.config/nvim/after/queries/blade
+    cp highlights.scm $pkgdir/etc/skel/.config/nvim/after/queries/blade/highlights.scm
+    cp injections.scm $pkgdir/etc/skel/.config/nvim/after/queries/blade/injections.scm
+}
+
+

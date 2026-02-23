@@ -1,0 +1,17 @@
+pkgname="nnn-plugins"
+pkgver=4.7
+pkgrel=1
+pkgdesc="The default plugins for nnn"
+arch=(any)
+depends=(
+    "nnn>=4.7"
+    )
+makedepends=(git)
+
+package() {
+	rm -rf nnn
+	git clone --depth 1 --branch v4.7 https://github.com/jarun/nnn.git
+	mkdir -p $pkgdir/etc/skel/.config/nnn/plugins
+	cp -r nnn/plugins/* $pkgdir/etc/skel/.config/nnn/plugins
+}
+
