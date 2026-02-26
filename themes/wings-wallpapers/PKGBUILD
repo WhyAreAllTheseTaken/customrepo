@@ -1,0 +1,27 @@
+pkgname=wings-wallpapers-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=2024.12.19
+pkgrel=1
+pkgdesc="Wings Wallpapers for Plasma Desktop"
+arch=("any")
+makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+options=(!strip !debug)
+source=('Wings-Plasma-Themes::git+https://github.com/L4ki/Wings-Plasma-Themes')
+sha256sums=('SKIP')
+
+pkgver() {
+	cd Wings-Plasma-Themes
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/backgrounds/
+	if [[ -d Wings-Plasma-Themes/Wings\ Wallpapers ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Wallpapers/* $pkgdir/usr/share/backgrounds/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-Wallpapers ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-Wallpapers/* $pkgdir/usr/share/backgrounds/;\
+	fi
+}
+

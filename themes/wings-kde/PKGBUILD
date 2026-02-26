@@ -1,0 +1,58 @@
+pkgname=wings-kde-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=2024.12.19
+pkgrel=1
+pkgdesc="Wings Theme for Plasma Desktop"
+arch=("any")
+depends=("wings-icon-theme" "wings-gtk-theme")
+makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+options=(!strip !debug)
+source=('Wings-Plasma-Themes::git+https://github.com/L4ki/Wings-Plasma-Themes')
+sha256sums=('SKIP')
+
+pkgver() {
+	cd Wings-Plasma-Themes
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/plasma/desktoptheme/
+	if [[ -d Wings-Plasma-Themes/Wings\ Plasma\ Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Plasma\ Themes/* $pkgdir/usr/share/plasma/desktoptheme/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-Plasma-Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-Plasma-Themes/* $pkgdir/usr/share/plasma/desktoptheme/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings\ Global\ Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Global\ Themes/* $pkgdir/usr/share/plasma/desktoptheme/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-Global-6 ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-Global-6/* $pkgdir/usr/share/plasma/desktoptheme/;\
+	fi
+	mkdir -p $pkgdir/usr/share/plasma/look-and-feel/
+	if [[ -d Wings-Plasma-Themes/Wings\ Splshscreens ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Splshscreens/* $pkgdir/usr/share/plasma/look-and-feel/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings\ SDDM\ Themes ]]; then\
+		mkdir -p $pkgdir/usr/share/sddm/themes/;\
+		cp -r ./Wings-Plasma-Themes/Wings\ SDDM\ Themes/* $pkgdir/usr/share/sddm/themes/;\
+	fi
+	mkdir -p $pkgdir/usr/share/aurorae/themes/
+	if [[ -d Wings-Plasma-Themes/Wings\ Window\ Decorations ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Window\ Decorations/* $pkgdir/usr/share/aurorae/themes/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings\ Windows\ Decorations ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ Windows\ Decorations/* $pkgdir/usr/share/aurorae/themes/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Window\ Decorations\ For\ Plasma\ 6 ]]; then\
+		cp -r ./Wings-Plasma-Themes/Window\ Decorations\ For\ Plasma\ 6/* $pkgdir/usr/share/aurorae/themes/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings\ Color\ Schemes ]]; then\
+		mkdir -p $pkgdir/usr/share/color-schemes/;\
+		cp -r ./Wings-Plasma-Themes/Wings\ Color\ Schemes/* $pkgdir/usr/share/color-schemes/;\
+	fi
+}
+
+
+

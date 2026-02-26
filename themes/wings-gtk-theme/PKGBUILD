@@ -1,0 +1,44 @@
+pkgname=wings-gtk-theme-git # '-bzr', '-git', '-hg' or '-svn'
+pkgver=2024.12.19
+pkgrel=1
+pkgdesc="Wings GTK Theme for Plasma Desktop"
+arch=("any")
+depends=("wings-icon-theme")
+makedepends=(git) # 'bzr', 'git', 'mercurial' or 'subversion'
+provides=("${pkgname%-git}")
+conflicts=("${pkgname%-git}")
+options=(!strip !debug)
+source=('Wings-Plasma-Themes::git+https://github.com/L4ki/Wings-Plasma-Themes')
+sha256sums=('SKIP')
+
+pkgver() {
+	cd Wings-Plasma-Themes
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/themes/
+	if [[ -d Wings-Plasma-Themes/Wings\ GTK\ Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings\ GTK\ Themes/* $pkgdir/usr/share/themes/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-GTK-Themes ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-GTK-Themes/* $pkgdir/usr/share/themes/;\
+	fi
+	if [[ -d Wings-Plasma-Themes/Wings-GTK ]]; then\
+		cp -r ./Wings-Plasma-Themes/Wings-GTK/* $pkgdir/usr/share/themes/;\
+	fi
+	if [[ -f $pkgdir/usr/share/themes/settings.ini ]]; then\
+		mkdir $pkgdir/usr/share/themes/Wings-GTK;\
+		mv $pkgdir/usr/share/themes/assets $pkgdir/usr/share/themes/Wings-GTK || true;\
+		mv $pkgdir/usr/share/themes/gtk-2.0 $pkgdir/usr/share/themes/Wings-GTK || true;\
+		mv $pkgdir/usr/share/themes/gtk-3.0 $pkgdir/usr/share/themes/Wings-GTK || true;\
+		mv $pkgdir/usr/share/themes/gtk-4.0 $pkgdir/usr/share/themes/Wings-GTK || true;\
+		mv $pkgdir/usr/share/themes/index.theme $pkgdir/usr/share/themes/Wings-GTK || true;\
+		mv $pkgdir/usr/share/themes/settings.ini $pkgdir/usr/share/themes/Wings-GTK || true;\
+	fi
+	if [[ -f $pkgdir/usr/share/themes/Text\ File.txt ]]; then\
+		rm $pkgdir/usr/share/themes/Text\ File.txt;\
+	fi
+}
+
+
