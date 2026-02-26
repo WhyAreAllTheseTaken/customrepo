@@ -2,11 +2,11 @@
 
 pkgname="why-shell"
 pkgver=0.11.0
-pkgrel=2
+pkgrel=3
 pkgdesc="My personal configuration for a shell."
 arch=(any)
 depends=(
-    zsh why-nnn tree htop fastfetch
+    zsh why-nnn tree htop fastfetch why-neovim
     )
 source=(".zshenv" ".zshrc" ".zshrc.zni")
 install="install.sh"
