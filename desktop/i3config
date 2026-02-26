@@ -266,7 +266,7 @@ hide_edge_borders both
 # Startup
 exec_always --no-startup-id betterlockscreen -w
 exec_always --no-startup-id pkill picom; sleep 1; picom -b --config ~/.config/picom.conf
-exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id flameshot
 exec --no-startup-id lxpolkit

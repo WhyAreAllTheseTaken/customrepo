@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 pkgname="why-desktop"
-pkgver=0.22.1
-pkgrel=20
+pkgver=0.23.0
+pkgrel=21
 pkgdesc="My custom desktop"
 arch=(any)
 depends=(dunst i3-wm i3blocks i3blocks-contrib picom flameshot feh lightdm
