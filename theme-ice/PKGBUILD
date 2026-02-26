@@ -2,13 +2,13 @@
 
 pkgname="why-theme-ice"
 pkgver=0.9.3
-pkgrel=4
+pkgrel=5
 pkgdesc="The ice theme for my custom desktop"
 arch=(any)
 depends=(
     "why-desktop>=0.9.2" wings-icon-theme materia-gtk-theme ttf-noto-sans-vf 
     ttf-noto-sans-egyptian-hieroglyphs ttf-noto-sans-javanese-variable
-    ttf-noto-sans-mongolian ttf-noto-sans-mono-cjk-vf otf-noto-sans-cuneiform
+    ttf-noto-sans-mono-cjk-vf otf-noto-sans-cuneiform
     "why-shell>=0.4" "rofi>=1.7.5" bash
     )
 provides=(why-desktop-theme)
