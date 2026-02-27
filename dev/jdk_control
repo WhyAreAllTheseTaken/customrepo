@@ -1,9 +1,0 @@
-Package: openjdk-latest-jdk
-Version: 23-10
-Architecture: all
-Section: java
-Priority: optional
-Description: The latest version of OpenJDK.
-Pre-Depends: openjdk-23-jdk
-Maintainer: WhyAreAllTheseTaken
-

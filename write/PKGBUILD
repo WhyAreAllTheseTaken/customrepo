@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+pkgname="why-write"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for Writing."
+arch=(any)
+depends=(
+    why-neovim, texlive, onlyoffice, jabref
+    )
+

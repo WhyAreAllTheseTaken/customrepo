@@ -1,9 +1,0 @@
-Package: why-dev-ada
-Version: 0.0.0-2
-Architecture: all
-Section: metapackages
-Priority: optional
-Description: My personal package for Ada development.
-Depends: alire, why-dev-base
-Maintainer: WhyAreAllTheseTaken
-

@@ -1,9 +1,0 @@
-Package: why-write
-Version: 0.0.0-2
-Architecture: all
-Section: metapackages
-Priority: optional
-Description: My personal package for writing papers.
-Depends: why-neovim, texlive-full, onlyoffice-desktopeditors, jabref
-Maintainer: WhyAreAllTheseTaken
-

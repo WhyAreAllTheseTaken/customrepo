@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+pkgname="why-uni"
+pkgver=1.3.0
+pkgrel=1
+pkgdesc="Metapackage for University."
+arch=(any)
+depends=(
+    why-write obsidian shotcut why-dev-ml why-dev-security why-dev-unity
+    )
+install="install.sh"
+

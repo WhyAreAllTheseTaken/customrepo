@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-
-java -Xmx2G -jar /usr/share/ltsatool/ltsa.jar
-

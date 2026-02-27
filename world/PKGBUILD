@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+pkgname="why-world"
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Metapackage for world building."
+arch=(any)
+depends=(
+    why-write gplates
+    )
+
+
