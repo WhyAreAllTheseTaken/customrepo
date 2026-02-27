@@ -2,11 +2,11 @@
 
 pkgname="why-dev-minecraft"
 pkgver=0.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Metapackage for Minecraft development."
 arch=(any)
 depends=(
-    why-dev-java minecraft-launcher why-dev-net fabirc-installer 
+    why-dev-java minecraft-launcher why-dev-net fabric-installer 
     vineflower blockbench why-dev-riscv filezilla "jdk-openjdk>=23"
     )
 

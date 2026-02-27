@@ -2,11 +2,11 @@
 
 pkgname="why-dev-net"
 pkgver=0.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Metapackage for Network development."
 arch=(any)
 depends=(
-    traceroute ping wget curl iputils-ping
+    traceroute wget curl iputils
     )
 
 
