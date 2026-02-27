@@ -2,10 +2,10 @@
 
 pkgname="why-write"
 pkgver=0.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Metapackage for Writing."
 arch=(any)
 depends=(
-    why-neovim, texlive, onlyoffice, jabref
+    why-neovim texlive onlyoffice jabref
     )
 
