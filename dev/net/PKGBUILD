@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-net"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for Network development."
+arch=(any)
+depends=(
+    traceroute ping wget curl iputils-ping
+    )
+
+
+
+

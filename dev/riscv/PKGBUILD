@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-riscv"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for RISC-V development."
+arch=(any)
+depends=(
+    why-dev-base riscv64-elf-gcc riscv64-elf-binutils
+    )
+

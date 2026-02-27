@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-security"
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Metapackage for Security."
+arch=(any)
+depends=(
+    tcpflow
+    )
+
+

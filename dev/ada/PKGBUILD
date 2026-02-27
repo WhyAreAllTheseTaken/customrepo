@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-ada"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for Ada development."
+arch=(any)
+depends=(
+    why-dev-base alire
+    )
+

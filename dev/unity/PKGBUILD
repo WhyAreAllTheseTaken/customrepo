@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-unity"
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Metapackage for Unity."
+arch=(any)
+depends=(
+    why-dev-base unityhub code
+    )
+
+
+

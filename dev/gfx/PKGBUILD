@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-gfx"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for computer graphics."
+arch=(any)
+depends=(
+    why-dev-base vulkan-tools mesa-utils gimp
+    why-dev-image    
+)
+
+
+
+

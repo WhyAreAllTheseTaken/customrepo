@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-java"
+pkgver=0.3.0
+pkgrel=1
+pkgdesc="Metapackage for Java Development."
+arch=(any)
+depends=(
+    why-dev-base maven jdk-openjdk jdk21-openjdk gradle 
+    gradle-doc visualvm
+    )
+
+
+
+
+
+
+

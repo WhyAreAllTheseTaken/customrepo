@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-haskell"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for Haskell Development."
+arch=(any)
+depends=(
+    why-dev-base ghcup-hs
+    )
+
+
+
+
+

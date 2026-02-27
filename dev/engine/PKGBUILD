@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-engine"
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Metapackage for Rust game engine development."
+arch=(any)
+depends=(
+    why-dev-base why-dev-rust libxrandr libxinerama libxcursor 
+    libxi cmake shaderc why-dev-gfx
+    )
+
+
+

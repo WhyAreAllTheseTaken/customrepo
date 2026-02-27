@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-minecraft"
+pkgver=0.5.0
+pkgrel=1
+pkgdesc="Metapackage for Minecraft development."
+arch=(any)
+depends=(
+    why-dev-java minecraft-launcher why-dev-net fabirc-installer 
+    vineflower blockbench why-dev-riscv filezilla "jdk-openjdk>=23"
+    )
+
+

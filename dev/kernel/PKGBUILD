@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-kernel"
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Metapackage for Kernel development."
+arch=(any)
+depends=(
+    why-dev-base why-dev-rust why-dev-cpp nasm mtools
+    xorriso qemu-system-x86
+    )
+

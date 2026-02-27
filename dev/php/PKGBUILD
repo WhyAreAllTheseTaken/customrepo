@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-php"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for PHP development."
+arch=(any)
+depends=(
+    why-dev-base php composer ruby ruby-irb laravel why-dev-base 
+    npm why-dev-image
+    )
+
+
+
+
+

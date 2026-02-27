@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-image"
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Metapackage for image editing."
+arch=(any)
+depends=(
+    inkscape gimp
+    )
+
+
+
+
+
+

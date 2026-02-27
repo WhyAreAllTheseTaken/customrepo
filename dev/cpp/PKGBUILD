@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-cpp"
+pkgver=0.3.0
+pkgrel=1
+pkgdesc="Metapackage for C/C++ development."
+arch=(any)
+depends=(
+    why-dev-base base-devel gdb bison flex
+    )
+
+

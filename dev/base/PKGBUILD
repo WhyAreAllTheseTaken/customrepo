@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-base"
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Base package for my development setup."
+arch=(any)
+depends=(
+    why-neovim cloc grep sed gzip
+    )
+install="install.sh"

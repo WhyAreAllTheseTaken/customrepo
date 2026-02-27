@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+pkgname="why-dev-ml"
+pkgver=0.3.0
+pkgrel=1
+pkgdesc="Metapackage for Machine Learning development."
+arch=(any)
+depends=(
+    python jupyter-notebook python-sklearn
+    python-sklearn-pandas python-seaborn
+    python-matplotlib python-pandas
+    python-virtualenv python-pip python-open3d
+    python-opencv python-imageio
+    )
+
+
+
