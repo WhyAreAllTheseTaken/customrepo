@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 pkgname="why-desktop"
-pkgver=0.23.0
+pkgver=0.23.1
 pkgrel=21
 pkgdesc="My custom desktop"
 arch=(any)
