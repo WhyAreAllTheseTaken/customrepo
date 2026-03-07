@@ -39,7 +39,7 @@ alias nnn="nnn -eor"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
-alias gradle="/opt/gradle/bin/gradle --console=plain --no-daemon"
+alias gradle="gradle --console=plain --no-daemon"
 alias vineflower="java -jar /usr/share/vineflower.jar"
 
 source ~/.zshtheme
