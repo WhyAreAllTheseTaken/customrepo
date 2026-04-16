@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
 pkgname="why-dev"
-pkgver=0.5.0
+pkgver=0.6.0
 pkgrel=1
 pkgdesc="Metapackage for development."
 arch=(any)
 depends=(
-    why-dev-base why-dev-minecraft why-dev-kernel
+    why-dev-base why-dev-minecraft why-dev-kernel why-dev-unity
     )
