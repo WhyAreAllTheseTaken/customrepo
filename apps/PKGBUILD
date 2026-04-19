@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 pkgname="why-apps"
-pkgver=0.15
+pkgver=0.16
 pkgrel=1
 pkgdesc="Apps for why-desktop"
 arch=(any)
@@ -10,6 +10,7 @@ depends=(
     todoist-web github-web
     google-calendar-web
     vivaldi discord vlc vlc-plugins-all gparted obs-studio gmail-web
-    timeshift baobab
+    timeshift baobab gvfs-smb gvfs-mtp gvfs gvfs-gphoto2 gvfs-afc 
+    gvfs-nfs
     )
 
