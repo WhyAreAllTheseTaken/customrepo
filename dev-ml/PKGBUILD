@@ -1,16 +1,15 @@
 #!/usr/bin/bash
 
 pkgname="why-dev-ml"
-pkgver=0.3.0
-pkgrel=3
+pkgver=0.4.0
+pkgrel=1
 pkgdesc="Metapackage for Machine Learning development."
 arch=(any)
 depends=(
     python jupyter-notebook python-scikit-learn
-    python-sklearn-pandas python-seaborn
+    python-seaborn
     python-matplotlib python-pandas
-    python-virtualenv python-pip python-open3d
-    python-opencv python-imageio
+    python-virtualenv python-pip python-imageio
     )
 
 
