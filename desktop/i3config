@@ -273,7 +273,7 @@ exec --no-startup-id lxpolkit
 exec --no-startup-id why-cycle -r
 
 # Startup Programs
-exec discord
+exec discord --no-sandbox
 exec toggl-track-web
 exec todoist-web
 exec github-web
